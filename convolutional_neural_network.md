@@ -11,11 +11,9 @@ and the right is a 2D feature map resulted from convolving.
 
 <img src="https://github.com/TravisH0301/learning/blob/master/images/convnet1.gif" width="400">
 
-An element of the feature map can be referred as a neuron, however, this term is not generally used to describe convolutional layer. Filters contain features 
-and convolving allows the model to detect the features on receptive field, which is a portion of the input features that filter performs multiplication. 
+An element of the feature map can be referred as a neuron, however, this term is not generally used to describe convolutional layer. Filters contain weights that represent a particular feature and convolving allows the model to detect the feature on receptive field, which is a portion of the input features that filter performs multiplication. 
 And the feature map will contain information about how the receptive field is like in regards to the feature of the filter. Hence, this is how convolutional layer
-learns abstract information of the input data. Note that for tensors (3D features), dot product may be used to describe convolving instead of element-wise 
-multiplication as element-wise multiplication of two tensors, X & Y are eqaul to dot product of X & trasposed Y. 
+learns abstract information of the input data. Besides the weights of a filter, they also have a bias. And note that for tensors (3D features), dot product may be used to describe convolving instead of element-wise multiplication as element-wise multiplication of two tensors, X & Y are eqaul to dot product of X & trasposed Y. 
 
 Multiple filters can be applied in the convolutional layer. (Numbers can be power of 2 between 32 to 1024) An extra filter will result in an additional feature map as illustrated 
 in the image below. And note that the depth of a filter has to be equal to the depth of an input feature. The final output feature map is made by stacking all feature maps,
