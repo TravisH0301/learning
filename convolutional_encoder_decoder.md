@@ -9,9 +9,9 @@ Mapping low resultion features lead to sparse features, yet, learning through co
 If gray-scale images are used, the model will user 1 channel for its input and output layers. Or if RGB-scale images are used, 
 the model will take 3 channels. 
 
-![](https://github.com/TravisH0301/learning/blob/master/images/convolutional_encode_decode.png)
+<img src="https://github.com/TravisH0301/learning/blob/master/images/convolutional_encode_decode.png" width="400">
 
 Below is the image segmentation of Lung CT images performed by the model. The left is the original CT image, the centre is the 
 manually masked CT image and the right is the segmented CT image using the Convolutional Encoder Decoder model. 
 
-![](https://github.com/TravisH0301/learning/blob/master/images/lung_ct.png)
+<img src="https://github.com/TravisH0301/learning/blob/master/images/lung_ct.png" width="400">
