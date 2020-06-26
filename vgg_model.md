@@ -33,6 +33,6 @@ https://keras.io/api/applications/vgg/
 
 In the following notebook, VGG16 model is implemented to classify COVID-19 based on lung CT scans. 
 
-[notebook link]
+https://www.kaggle.com/travishong/covid-19-lung-ct-segmentation-classification
 
 
