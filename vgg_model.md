@@ -3,9 +3,10 @@ VGG model is a convolutional neural network created by researchers at Oxford's V
 with error rate of 7.3%. VGG is composed of 13 convolutional layers and 3 dense layers, making it total of 16 layers (with weights). In addition, there are an input layer,
 an output layer and pooling layers. VGG architecture is illustrated below. Note that this is VGG16 and there is also VGG19 which has 19 layers.
 
-<img0>
-
-<img1>
+<p align="center">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/vgg0.png" width="400">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/vgg1.png" width="400">
+</p>
 
 The convolutional layers have 3x3 filters with a stride 1 and same padding, while maxpooling layers have 2x2 filters with a stride 2. And the dense layers have 4096 neurons.
 These stacked layers result in a very large network with 138 million (approx) parameters. For stacked convolutional layers, two convolutional layers with 3x3 filters
