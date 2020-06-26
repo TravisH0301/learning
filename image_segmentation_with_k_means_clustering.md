@@ -40,4 +40,4 @@ and the centroid of a cluster and diving the sum by the number of data points. A
 Implementation of K-means Clustering for image segmenation can be seen in the following notebook. In this notebook, Open CV (CV2) is used to process image and perform 
 K-means Clustering. 
 
-<notebook>
+[notebook]
