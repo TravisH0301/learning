@@ -40,4 +40,25 @@ Early stopping of training can limit the increase of weight size (either -ve or 
 triggered at different events. For example when generalised error (bias^2 + variance) increases, it can be triggered or when validation accuracy no longer increases, 
 it can be triggered as well. On the otherside, early stopping can prevent the model to reach the minimised error function due to stopping early. Hence, a use of 
 regularisation is more recommended sometimes. 
+ 
+## Optimisation for input features
+### Input normalisation
+Normalisation on input features allow the error function to have more round and uniform shape. Below image illustrates contours of the error function when it's 
+un-normalised (LEFT) and normalised (RIGHT). When features are normalised, gradient descent process becomes more efficient. 
+Input features can be in different units, yet, they have to be within similar ranges. ex) -1 ~ 1, 0 ~ 1, 1 ~ 2<br>
+Note that both training and testing datasets must have the same normalisation process.
 
+<p align="center">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/nn_opt1.png" width="400">
+</p>
+
+## Vanishing/Exploding gradients
+Vanishing and exploding gradients occurs at shallow level of the network layers. The partial derivative of error with respect to the weight at shallow level layer 
+is associated with all the weights that are in deeper layers. Hence, when the weights at deeper layers are less than 1, the gradient at the shallow level layer 
+will become very small whereas when the weights at deeper layers are larger than 1, the gradient at the shallow level layer will become very large. 
+This results in vanishing and exploding gradients at shallow level layers. Both gradients will cause stagnance in learning. NN models with deep architecture will 
+be prone to these effects. 
+
+In the similar context, activation units at deeper layers can be vanishing or exploding gradients. These effects are connected and will happen together. 
+
+### Weight initialisation 
