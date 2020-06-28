@@ -54,11 +54,17 @@ Note that both training and testing datasets must have the same normalisation pr
 
 ## Vanishing/Exploding gradients
 Vanishing and exploding gradients occurs at shallow level of the network layers. The partial derivative of error with respect to the weight at shallow level layer 
-is associated with all the weights that are in deeper layers. Hence, when the weights at deeper layers are less than 1, the gradient at the shallow level layer 
-will become very small whereas when the weights at deeper layers are larger than 1, the gradient at the shallow level layer will become very large. 
-This results in vanishing and exploding gradients at shallow level layers. Both gradients will cause stagnance in learning. NN models with deep architecture will 
-be prone to these effects. 
+is associated with all the weights that are in deeper layers. Hence, when the gradients at deeper layers are small, the gradients at shallow layers will be vanishing.
+And large gradients at deeper layers will result in exploding gradients at shallow layers. 
 
-In the similar context, activation units at deeper layers can be vanishing or exploding gradients. These effects are connected and will happen together. 
+This is related to the depth of the network. Deeper the network is, more prone it is to vanishing/exploding gradients. Also, initialisation of weight is related to this.
+Since weights or activations are transferred to the next layers, initial weights of the network is important. If initial weights are less than 1, then weights or activations
+at deeper layers will be vanishing. And when backpropagation is performed on such small weights, gradients at shallow layers will be vanishing. Likewise initial weights 
+larger than 1 will cause exploding weights/activations at deeper layers and exploding gradients gradients at shallow layers. 
 
-### Weight initialisation 
+_This link includes example of backpropagation with real numbers and shows how gradients at one layer is associated with deeper layers._
+<br>https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+
+### Weight initialisation
+As initial weights are related to vanishing/exploding gradients, weight initialisation can be adjusted to partially resolve the issue. 
+ 
