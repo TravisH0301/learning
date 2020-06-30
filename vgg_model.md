@@ -31,7 +31,7 @@ it is a heavy model of 528MB. The following Keras documentation can be referred 
 
 https://keras.io/api/applications/vgg/
 
-In the following notebook, VGG16 model is implemented to classify COVID-19 based on lung CT scans. 
+In the following notebook, VGG16 model is implemented for supervised classification of lung CT scans for COVID-19.
 
 https://www.kaggle.com/travishong/covid-19-lung-ct-segmentation-classification
 
