@@ -19,3 +19,7 @@ manually masked CT image and the right is the segmented CT image using the Convo
 <p align="center">
 <img src="https://github.com/TravisH0301/learning/blob/master/images/lung_ct.png" width="400">
 </p>
+
+## Implementation
+Implementation of convolutional encoder decoder for supervised image segmentation is demonstrated in the following notebook using Keras.
+<br> https://www.kaggle.com/travishong/image-segmentation-for-lung-ct
