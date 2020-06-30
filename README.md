@@ -3,7 +3,8 @@ This repository contains brief notes for learning purpose.
 
 ## Contents
 - Machine Learning
-  - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
+  - Clustering
+    - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
   
 - Deep Learning
   - Neural Networks
