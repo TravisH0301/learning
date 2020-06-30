@@ -1,4 +1,4 @@
-# Image segmentation by K-means Clustering 
+# Image segmentation by K-Means Clustering 
 
 Image segmentation is a process of grouping pixels into number of super pixels (group of pixels that share similar characteristics). 
 This separates dictinct regions with similar attributes that helps to locate objects and boundaries in images. It is widely used in 
