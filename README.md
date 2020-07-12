@@ -5,6 +5,9 @@ This repository contains brief notes for learning purpose.
 - Machine Learning
   - Clustering
     - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
+    
+  - Time Series Analysis
+    - [Time Series Analysis](https://github.com/TravisH0301/learning/blob/master/time_series_analysis.md): Basics of time series analysis and forecasting with statistical modelling and deep learning.
   
 - Deep Learning
   - Neural Networks
