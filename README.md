@@ -4,7 +4,7 @@ This repository contains brief notes for learning purpose.
 ## Contents
 - Statistics
   - Distribution
-    - [Measure of Skewness and Kurtosis](): Understanding of skewness and kurtosis
+    - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/skewness_kurtosis.md): Understanding of skewness and kurtosis
   
 - Machine Learning
   - Clustering
