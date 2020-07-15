@@ -2,7 +2,10 @@
 Skewness and Kurtosis are used to describe the shapes of continuous distribution.
 
 ## Skewness
-![](https://github.com/TravisH0301/learning/blob/master/images/skewness.png)
+<p align="center">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/skewness.png">
+</p>
+
 - Measure of symmetry around the mean of distribtuion
 - Positive skew (skewed to left=long tail on right) where mode & median larger than mean
 - Negative skew (skewed to right=long tail on left) where mode & median smaller than mean 
@@ -19,7 +22,10 @@ Skewness and Kurtosis are used to describe the shapes of continuous distribution
     <br>Skewness value in between [-1/2, 1/2]: approximately symmetric
 
 ## Kurtosis
-![](https://github.com/TravisH0301/learning/blob/master/images/kurtosis.jpg)
+<p align="center">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/kurtosis.jpg">
+</p>
+
 - Measure of tailedness of distribution (=flatness/peak of mode).
 - Degree of concentration of observations around mode
 - Measure of kurtosis:
