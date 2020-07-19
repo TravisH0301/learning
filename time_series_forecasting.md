@@ -61,4 +61,13 @@ If random residual distribution (Heteroscedasticity), difficult to measure uncer
 
 ## Statistical modelling  for time series forecasting
 
-## Deep learning for time series forecasting
+## Facebook Prophet
+Due to limitations of the statistical models, (slow iterative process for optimising hyper parameters), Facebook Prophet is implemented. Prophet buils an additive model that accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. Additionally, it is robust with missing values and outliers. 
+Generally, for Prophet, the variables don't have to be stationary unlike statistical models. 
+
+### Problem with Prophet
+Prophet deregisters the Pandas converters prohibiting drawing a plot directly from Pandas data format. 
+#### Solution 1:
+Re-registering Pandas converters with: pd.plotting.register_matplotlib_converters()
+#### Solution 2:
+Using Seaborn for plotting.
