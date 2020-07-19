@@ -1,6 +1,8 @@
 # Time Series Forecasting
 Time series is a data where the data is recorded at regular or irregular timestamps. 
 
+https://otexts.com/fpp2/autocorrelation.html
+
 ## Charateristics of time series data
 There are several components of the time series data to look at to understand the nature of the data. 
 It's always good to have a look at a general time series plot (for patterns), histogram (for skewness & stationarity), autocorrelation and partial autocorrelation.
@@ -14,7 +16,9 @@ Seasonality is observed when the time series shows a cyclic pattern at certain t
 This can be a weekly, monthly or yearly seasonality. A period of the seasonality can be observed from the sinusoidal function from the autocorrelation. 
 
 https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/
+
 https://people.duke.edu/~rnau/411diff.htm
+
 https://otexts.com/fpp2/stationarity.html
 
 ### Cyclic
