@@ -1,26 +1,62 @@
 # Time Series Forecasting
+Time series is a data where the data is recorded at regular or irregular timestamps. 
 
 ## Charateristics of time series data
+There are several components of the time series data to look at to understand the nature of the data. 
+It's always good to have a look at a general time series plot (for patterns), histogram (for skewness & stationarity), autocorrelation and partial autocorrelation.
+As well as decomposition of the time series (if seasonality exists, period is required)
+
+### Trend
+Trend is a long-term change (increase/decrease) in data. 
 
 ### Seasonality
+Seasonality is observed when the time series shows a cyclic pattern at certain time intervals that at a fixed and known intervals. 
+This can be a weekly, monthly or yearly seasonality. A period of the seasonality can be observed from the sinusoidal function from the autocorrelation. 
+
+https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/
+https://people.duke.edu/~rnau/411diff.htm
+https://otexts.com/fpp2/stationarity.html
+
+### Cyclic
+A cycle occurs when the data exhibit rises and falls that are not of a fixed frequency. These fluctuations are usually due to economic conditions, and are often related to the “business cycle”. 
 
 ### Stationarity
+Stationarity refers to a constant mean, constant variance and independence to time. This includes a trend and seasonality. 
+For statistical (Stochastic) modelling, stationarity of the time seriese is required. 
+Stationarity can be verified by the Augmented Dickey-Fuller unit root test (p-value < 0.05 rejects the null hypothesis of non-stationarity).
+
+#### Transformation
+Transformation can be applied to convert a non-stationary data to a stationary data. 
+- Log transformation: helps to make variance constant by limiting variance size with log function
+- 1st Order difference transformation: limits mean to be constant by removing changes in the level of time series (reduces trend/seasonality)
+| y'(t) = y(t) - y(t-1)
+- 2nd Order difference transformation: applied when 1st order doesn't stablise the mean. Removes the change in the change of the original data. 
+| y"(t) = y'(t) - y'(t-1) = (y(t) - y(t-1)) - (y(t-1) - y(t-2))
+- Seasonal difference transformation: removes the difference between the current and the previous observation from the same season (at season interval)
+| y'(t) = y(t) - y(t-m), where m is season period
+- Smoothing / Rolling: takes moving average to reduce seasonality & variance 
 
 ### Autocorrelation
+Autocorrelation measures the correlation with its value at different time intervals. Sinusoidal function on autocorrelation indicates seasonality. 
+
+## Feature selection (for Multivariate forecasting)
+Features can be selected by looking at correlations and causality to select features that have high correlation and causality to the target variable. And testing multicollinearity can help to remove features that cause collinearity. 
+
+## Statistical modelling 
+AR, MA, ARIMA, SARIMA
+
+## Facebook Prophet (Additive modelling)
+Due to limitations of the statistical models, (slow iterative process for optimising hyper parameters), Facebook Prophet is implemented. Prophet buils an additive model that accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. Additionally, it is robust with missing values and outliers. 
+Generally, for Prophet, the variables don't have to be stationary unlike statistical models. 
+
+### Problem with Prophet
+Prophet deregisters the Pandas converters prohibiting drawing a plot directly from Pandas data format. 
+#### Solution 1:
+Re-registering Pandas converters with: pd.plotting.register_matplotlib_converters()
+#### Solution 2:
+Using Seaborn for plotting.
 
 ## Considerations for time series regression
-### Stationarity 
-- Variables must be stationary with constant mean and variance. Stationarity is independent of time. The distribution of a stationary variable resembles a Gaussian distribution.
-- Augmented Dickey-Fuller unit root test can be used to measure stationarity.
-- Solution to non-stationarity:
-  - Trasformation can be applied that includes:
-    - Difference transformation: difference between value at t and value at t-i. It reduces seasonality and trends
-    - Rolling means: subtract rolling mean (from previous x timestamps) from value at t. Works well when mean is time dependent.
-    - Power transformation: 
-      - Square-root transformation: offsets quadratic trend 
-      - Log transformation: offsets exponential trend
-      - Box-Cox tranformation: automatically configures type of power transformation
-
 ### Multicollinearity (Collinearity)
 - Multicollinearity occurs when multiple independent variables are highly correlated. 
 - It may affect the accuracy of the model yet it mainly affects reliability in determining the effects of individual features and makes it difficult to interpret the model's behaviour.
@@ -41,12 +77,12 @@
   - Combination of high correlated variables: can involve summation, subtraction, multiplication and etc
   - Increasing sample size
 
-### Heteroscedasticity of Residuals
+### Heteroscedasticity of Residuals (Verifies the statistical model)
 - Residuals are assumed to have a constant variance, but if variance is inconsistent, then heteroscedasticy exists.
 - Residual distribution can be observed.
 - Goldfled-Quandt test can be used. 
 
-### Autocorrelation of Residuals           
+### Autocorrelation of Residuals (Verifies the statistical model)
 - Residuals are assumed to be independent of time. Autocorrelation of residuals should not indicate a pattern.
 - Autocorrelation can be visually observed.
 - Durbin-Watson statistic can be used.
@@ -59,15 +95,3 @@ for uncertainties.
 - If forecasting residual resembles a known distribution ex)Gaussian, then predictions are within known uncertainties.
 If random residual distribution (Heteroscedasticity), difficult to measure uncertainty, hence, ill-behaved prediction. 
 
-## Statistical modelling  for time series forecasting
-
-## Facebook Prophet
-Due to limitations of the statistical models, (slow iterative process for optimising hyper parameters), Facebook Prophet is implemented. Prophet buils an additive model that accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. Additionally, it is robust with missing values and outliers. 
-Generally, for Prophet, the variables don't have to be stationary unlike statistical models. 
-
-### Problem with Prophet
-Prophet deregisters the Pandas converters prohibiting drawing a plot directly from Pandas data format. 
-#### Solution 1:
-Re-registering Pandas converters with: pd.plotting.register_matplotlib_converters()
-#### Solution 2:
-Using Seaborn for plotting.
