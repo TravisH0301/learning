@@ -1,4 +1,4 @@
-# Time Series Analysis
+# Time Series Forecasting
 
 ## Charateristics of time series data
 
