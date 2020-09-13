@@ -50,8 +50,20 @@ Features can be selected by looking at correlations and causality to select feat
 AR, MA, ARIMA, SARIMA
 
 ## Facebook Prophet (Additive modelling)
-Due to limitations of the statistical models, (slow iterative process for optimising hyper parameters), Facebook Prophet is implemented. Prophet buils an additive model that accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. Additionally, it is robust with missing values and outliers. 
-Generally, for Prophet, the variables don't have to be stationary unlike statistical models. 
+Prophey provides a fast and accurate time series forecasting based on piecewise trend, seasonality and holiday (+ additional regressor variables). It accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. It is also robust with missing values and outliers. 
+
+*Unlike conventional time series regression model, Prophet doesn't require stationarity.* Instead of looking at historical values, it looks at decomposed components (ex. trend, seasonality) to build prediction. As Prophet assumes stationary seasonality, if there is a unforeseen event like COVID-19 affecting the values, Prophet cannot take an account of such event. (Lagged moving average of error values may be added to the model after an initial forecast to make the model to learn from its historical values.)
+
+y(t) = g(t) + s(t) + h(t) + e(t)
+
+g(t): piecewise linear or logistic growth curve for modelling non-periodic change in time series (trend)<br>
+s(t): periodic change (ex. weekly/yearly seasonality)<br>
+h(t): effect of holidays with irregular schedules (optional)<br>
+e(t): error term accounts for idiosyncratic changed not accompanied by the model<br>
+*Time is a regressor for the target variable forecast*
+
+### Additional regressor
+Additional regressors can be added as a additive or multiplicative factor. Note that the regressor must have known values for both the past and the future time. If future values are not available, forecast (such as Prophet) can be performed to obtain the future values. In this case, regressor forecast must be an easy forecast unless it will pass its error to the target variable forecast. 
 
 ### Problem with Prophet
 Prophet deregisters the Pandas converters prohibiting drawing a plot directly from Pandas data format. 
