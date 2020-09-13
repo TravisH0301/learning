@@ -113,6 +113,6 @@ Using Seaborn for plotting.
 - Forecasting is always wrong. The main idea is to measure uncertainty and make sure business is well prepared 
 for uncertainties. 
 - Models measuring uncertainties: ARCH & GARCH
-- If forecasting residual resembles a known distribution ex)Gaussian, then predictions are within known uncertainties.
+- **If forecasting residual resembles a known distribution ex)Gaussian, then predictions are within known uncertainties.**
 If random residual distribution (Heteroscedasticity), difficult to measure uncertainty, hence, ill-behaved prediction. 
 
