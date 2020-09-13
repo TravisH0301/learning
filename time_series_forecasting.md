@@ -53,7 +53,7 @@ AR, MA, ARIMA, SARIMA
 https://facebook.github.io/prophet/docs/quick_start.html#python-api<br>
 Prophey provides a fast and accurate time series forecasting based on piecewise trend, seasonality and holiday (+ additional regressor variables). It accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. It is also robust with missing values and outliers. 
 
-*Unlike conventional time series regression model, Prophet doesn't require stationarity.* Instead of looking at historical values, it looks at decomposed components (ex. trend, seasonality) to build prediction. As Prophet assumes stationary seasonality, if there is a unforeseen event like COVID-19 affecting the values, Prophet cannot take an account of such event. (Lagged moving average of error values may be added to the model after an initial forecast to make the model to learn from its historical values.)
+***Unlike conventional time series regression model, Prophet doesn't require stationarity.*** Instead of looking at historical values, it looks at decomposed components (ex. trend, seasonality) to build prediction. As Prophet assumes stationary seasonality, if there is a unforeseen event like COVID-19 affecting the values, Prophet cannot take an account of such event. (Lagged moving average of error values may be added to the model after an initial forecast to make the model to learn from its historical values.)
 
 y(t) = g(t) + s(t) + h(t) + e(t)
 
