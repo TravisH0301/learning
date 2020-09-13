@@ -50,6 +50,7 @@ Features can be selected by looking at correlations and causality to select feat
 AR, MA, ARIMA, SARIMA
 
 ## Facebook Prophet (Additive modelling)
+https://facebook.github.io/prophet/docs/quick_start.html#python-api<br>
 Prophey provides a fast and accurate time series forecasting based on piecewise trend, seasonality and holiday (+ additional regressor variables). It accounts for non-linear trend with daily, weekly and yearly seasonality as well as holiday effects. It is also robust with missing values and outliers. 
 
 *Unlike conventional time series regression model, Prophet doesn't require stationarity.* Instead of looking at historical values, it looks at decomposed components (ex. trend, seasonality) to build prediction. As Prophet assumes stationary seasonality, if there is a unforeseen event like COVID-19 affecting the values, Prophet cannot take an account of such event. (Lagged moving average of error values may be added to the model after an initial forecast to make the model to learn from its historical values.)
@@ -64,6 +65,10 @@ e(t): error term accounts for idiosyncratic changed not accompanied by the model
 
 ### Additional regressor
 Additional regressors can be added as a additive or multiplicative factor. Note that the regressor must have known values for both the past and the future time. If future values are not available, forecast (such as Prophet) can be performed to obtain the future values. In this case, regressor forecast must be an easy forecast unless it will pass its error to the target variable forecast. 
+
+### Multiplicative seasonality
+If the seasonality keeps on increasing size or reducing size (of oscilliation), the seasonality can be added as a multiplicative factor instead of an additive factor.<br>
+https://facebook.github.io/prophet/docs/multiplicative_seasonality.html
 
 ### Problem with Prophet
 Prophet deregisters the Pandas converters prohibiting drawing a plot directly from Pandas data format. 
