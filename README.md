@@ -6,7 +6,7 @@ This repository contains brief notes for learning purpose.
   - Distribution
     - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/skewness_kurtosis.md): Understanding of skewness and kurtosis
   - Feature Selection
-    - [Statistics for Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/feature_selection_methods): Filter-based feature selection methods for numercial and categorical variables
+    - [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/feature_selection_methods): Filter-based feature selection methods for numercial and categorical variables
   
 - Machine Learning
   - Clustering
