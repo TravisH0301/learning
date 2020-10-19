@@ -41,7 +41,8 @@ Transformation can be applied to convert a non-stationary data to a stationary d
 - Smoothing / Rolling: takes moving average to reduce seasonality & variance 
 
 ### Autocorrelation
-Autocorrelation measures the correlation with its value at different time intervals. Sinusoidal function on autocorrelation indicates seasonality. 
+Autocorrelation measures the correlation with its value at different time intervals. Sinusoidal function on autocorrelation indicates seasonality. <br>
+Autocorrelation (ACF) measures both indirect and direct correlation and Particial Autocorrelation (PCAF) only measures direct correlation.
 
 ## Feature selection (for Multivariate forecasting)
 Features can be selected by looking at correlations and causality to select features that have high correlation and causality to the target variable. And testing multicollinearity can help to remove features that cause collinearity. 
