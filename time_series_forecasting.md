@@ -104,6 +104,15 @@ Using Seaborn for plotting.
 - Residual distribution can be observed.
 - Goldfled-Quandt test can be used. 
 
+### White Noise 
+- White noise time series is a time series where it meet the three criteria below:
+  - Zero mean
+  - Constant stadnard deviation
+  - Weak autocorrelation
+- When a time series is white noise, it is basically unpredictable (no pattern to study).
+- When residuals of the time series model is a white noise then it means all patterns of the model are extracted by the model (good model). 
+- White noise can be used to measure how well the model fits the time series data similar to heteroscedasticity of residuals. 
+
 ### Autocorrelation of Residuals (Verifies the statistical model)
 - Residuals are assumed to be independent of time. Autocorrelation of residuals should not indicate a pattern.
 - Autocorrelation can be visually observed.
