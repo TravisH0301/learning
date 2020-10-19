@@ -99,9 +99,9 @@ Using Seaborn for plotting.
   - Combination of high correlated variables: can involve summation, subtraction, multiplication and etc
   - Increasing sample size
 
-### Heteroscedasticity of Residuals (Verifies the statistical model)
+### Heteroscedasticity of Residuals (Verifies the consistency of a statistical model)
 - Residuals are assumed to have a constant variance, but if variance is inconsistent, then heteroscedasticy exists.
-- Residual distribution can be observed.
+- Residual distribution can be observed (using histogram to see if it resembles Gaussian distribution).
 - Goldfled-Quandt test can be used. 
 
 ### White Noise 
@@ -124,5 +124,5 @@ Using Seaborn for plotting.
 for uncertainties. 
 - Models measuring uncertainties: ARCH & GARCH
 - **If forecasting residual resembles a known distribution ex)Gaussian, then predictions are within known uncertainties.**
-If random residual distribution (Heteroscedasticity), difficult to measure uncertainty, hence, ill-behaved prediction. 
+If random residual distribution (Heteroscedasticity), difficult to measure uncertainty, hence, ill-behaved prediction. If it resembles a Gaussian distribution, it implies that the model works consistently throughout the timeline.
 
