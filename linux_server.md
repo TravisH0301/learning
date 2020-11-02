@@ -6,8 +6,11 @@ Linux server has many distributors such as Ubuntu, Red Hat, SUSE and even Amazon
 ### Connection to Linux Server on Cloud
 Linux server on cloud can be connected and controlled using SSH (secure shell). SSH clients such as PuTTY can be used to access and share files with linux server on cloud.
 
-#### Amazon Linux Server Connection via PuTTY
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+#### Remote Linux Server Connection via PuTTY
+1. In `Session`, type in `Host Name` (IP address) & `Port`
+2. In `Connection` > `Data`, type `Auto-login username` (if username is required)
+3. In `Connection` > `SSH` > `Auth`, load key.ppk for authentication
+4. In `Session`, save the setting by using `Saved Sessions`
 
 #### File Transfer via PuTTY
 PuTTY uses a secure copy utility is called PuTTy Secure Copy Protocol (PSCP) to transfer files.<br>
