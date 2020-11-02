@@ -1,5 +1,19 @@
 # Linux Server
 
+## Basic Command-line Commands
+|Command|Function|
+|--|--|
+|pwd|print working directory|
+|cd (path)|change directory|
+|ls (path)|list directories|
+|mkdir (path)|make directory|
+|touch (path)|make text file|
+|mv (path) (path)|move directory|
+|rm (path)|remove directory|
+|cat (path)|read text as output|
+|vi (path)|text editor (press 's' to insert, :w to save, :wq save&quit, :q quit)|
+|grep (regex)|regex finder (ex. pip3 freeze \| grep pandas)|
+
 ## Distributors
 Linux server has many distributors such as Ubuntu, Red Hat, SUSE and even Amazon (through AWS EC2)
 
