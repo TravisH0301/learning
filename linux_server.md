@@ -11,7 +11,7 @@
 |mv (path) (path)|move directory|
 |rm (path)|remove directory|
 |cat (path)|read text as output|
-|vi (path)|text editor (press 's' to insert, :w to save, :wq save&quit, :q quit)|
+|vi (path)|text editor (press 'i' to insert, :w to save, :wq save&quit, :q quit, :color desert to change font color)|
 |grep (regex)|regex finder (ex. pip3 freeze \| grep pandas)|
 
 ## Distributors
