@@ -23,5 +23,8 @@ This repository contains brief notes for learning purpose.
     - [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/convolutional_neural_network.md): Explantion of convolutional neural network
     - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/convolutional_encoder_decoder.md): Variation of convolutional neural network
     - [VGG model](https://github.com/TravisH0301/learning/blob/master/vgg_model.md): Variation of convolutional neural network
-    
+ 
+ - Miscellaneous
+   - Linux
+     - [Linux Server](https://github.com/TravisH0301/learning/blob/master/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
     
