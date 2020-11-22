@@ -15,12 +15,20 @@
 |grep (regex)|regex finder (ex. pip3 freeze \| grep pandas)|
 
 ### Vim Commands
-- Press 'i' to intert typing
+- i to insert typing
+- dd to delete & yank(copy) line 
+- yy to yank(copy) line
+- p to paste yanked line
+- gg to go first letter of file
+- G to go to last letter of file
+- line number + gg to move to line number
 - :w to save
 - :q to quit
 - :wq to save & quit
 - :color desert to change font color
 - :set nu & :set nonu to toggle line numbers
+- ctrl + b to page up
+- ctrl + f to page down
 
 ## Distributors
 Linux server has many distributors such as Ubuntu, Red Hat, SUSE and even Amazon (through AWS EC2)
