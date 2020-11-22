@@ -14,13 +14,13 @@
 |vi (path)|text editor|
 |grep (regex)|regex finder (ex. pip3 freeze \| grep pandas)|
 
-### Vim Commands
+### Vim Keyboard Shortcuts
 - i to insert typing
 - dd to delete & yank(copy) line 
 - yy to yank(copy) line
 - p to paste yanked line
-- gg to go first letter of file
-- G to go to last letter of file
+- gg to go first line of file
+- G to go to last line of file
 - line number + gg to move to line number
 - :w to save
 - :q to quit
