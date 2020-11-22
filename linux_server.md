@@ -11,8 +11,16 @@
 |mv (path) (path)|move directory|
 |rm (path)|remove directory|
 |cat (path)|read text as output|
-|vi (path)|text editor (press 'i' to insert, :w to save, :wq save&quit, :q quit, :color desert to change font color)|
+|vi (path)|text editor|
 |grep (regex)|regex finder (ex. pip3 freeze \| grep pandas)|
+
+### Vim Commands
+- Press 'i' to intert typing
+- :w to save
+- :q to quit
+- :wq to save & quit
+- :color desert to change font color
+- :set nu & :set nonu to toggle line numbers
 
 ## Distributors
 Linux server has many distributors such as Ubuntu, Red Hat, SUSE and even Amazon (through AWS EC2)
