@@ -42,7 +42,8 @@ Transformation can be applied to convert a non-stationary data to a stationary d
 
 ### Autocorrelation
 Autocorrelation measures the correlation with its value at different time intervals. Sinusoidal function on autocorrelation indicates seasonality. <br>
-Autocorrelation (ACF) measures both indirect and direct correlation and Particial Autocorrelation (PCAF) only measures direct correlation.
+Autocorrelation (ACF) measures both indirect and direct correlation and Particial Autocorrelation (PCAF) only measures direct correlation.<br>
+The shaded region in the plot_acf() of statsmodels module represents confidence area (outside of the shaded region is statistically significant to reject no correlation hypothesis).
 
 ## Feature selection (for Multivariate forecasting)
 Features can be selected by looking at correlations and causality to select features that have high correlation and causality to the target variable. And testing multicollinearity can help to remove features that cause collinearity. 
