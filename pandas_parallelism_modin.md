@@ -23,7 +23,7 @@ Modin on Dask engine can be imported as:<br>
 `os.environ["MODIN_ENGINE"] = "dask"`<br>
 `import modin.pandas as pd`
 
-Warning module can be used to hide warnings.
+Warning module can be used to hide warnings.<br>
 `import warnings`<br>
 `warnings.filterwarnings("ignore")`
 
