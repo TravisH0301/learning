@@ -26,3 +26,6 @@ Modin on Dask engine can be imported as:<br>
 Warning module can be used to hide warnings.
 `import warnings`<br>
 `warnings.filterwarnings("ignore")`
+
+## Source
+[Modin Documentation](https://modin.readthedocs.io/en/latest/index.html)
