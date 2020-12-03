@@ -2,6 +2,10 @@
 ## Modin
 Modin provides parallelism for Pandas operations. And it provides easy integration with no configuration required. Additionally, it follows Pandas syntax.
 
+Modin uses matrix systems for its dataframe architecture for flexibility and scalability.
+
+<img src="https://modin.readthedocs.io/en/latest/_images/block_partitions_diagram.png" width="400">
+
 ## Dependancy
 Modin uses either Ray or Dask engine to operate. In this instruction, Dask engine will be used.<br>
 Dask engine requires msgpack < 1.0.
