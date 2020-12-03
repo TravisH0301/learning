@@ -27,4 +27,5 @@ This repository contains brief notes for learning purpose.
  - Miscellaneous
    - Linux
      - [Linux Server](https://github.com/TravisH0301/learning/blob/master/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
-    
+   - Pandas Parallelism via Modin
+     - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
