@@ -10,7 +10,7 @@ When there is a skewness in numbers of values from the groups, the mean of means
 
 ex) Class A has 10 students with grade 60 and class B has 1 student with grade 100.
 - The mean of means will result in (60 + 100) / 2 = 80 <br>
-- The mean of all will result in (10*60 + 1*100) / 11 = 63 <br>
+- The mean of all will result in (10 * 60 + 1 * 100) / 11 = 63 <br>
 Likewise, the mean of all will underpresent the student with grade 100. But the mean of means will make the student with grade 100 stand out more.
 
 ## Median of Medians
