@@ -33,3 +33,5 @@ This repository contains brief notes for learning purpose.
      - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
    - Interactive Visualisation via Plotly.Express
      - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/viz_plotly_express.md): Reference to comprehensive guide to Plotly.Express
+   - Git
+     - [Git](https://github.com/TravisH0301/learning/blob/master/git.md): Basic instructions to version control using Git with local & remote repositories
