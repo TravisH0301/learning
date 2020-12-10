@@ -5,7 +5,7 @@ This repository contains brief notes for learning purpose.
 - Statistics
   - Distribution
     - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/skewness_kurtosis.md): Understanding of skewness and kurtosis
-  - Feature Selection
+  - Feature Selection*
     - [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/feature_selection_methods.md): Filter-based feature selection methods for numercial and categorical variables
   - Average of Average
     - [Average of Average](https://github.com/TravisH0301/learning/blob/master/avg_of_avg.md): Interpretation of different average of average methods
