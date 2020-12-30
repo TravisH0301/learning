@@ -15,7 +15,7 @@ This repository contains brief notes for learning purpose.
     - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
     
   - Time Series Analysis
-    - [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/time_series_forecasting.md): Time series forecasting using statistical modelling and deep learning.
+    - [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/time_series_forecasting.md): Time series forecasting using statistical modelling
   
 - Deep Learning
   - Neural Networks
