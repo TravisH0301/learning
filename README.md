@@ -26,12 +26,16 @@ This repository contains brief notes for learning purpose.
     - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/convolutional_encoder_decoder.md): Variation of convolutional neural network
     - [VGG model](https://github.com/TravisH0301/learning/blob/master/vgg_model.md): Variation of convolutional neural network
  
+ - Visualisation
+   - Interactive Visualisation via Plotly.Express
+     - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/viz_plotly_express.md): Reference to comprehensive guide to Plotly.Express
+   - Visualisation Dos & Don'ts
+     - [Visualisation Dos & Don'ts](https://github.com/TravisH0301/learning/blob/master/visualisation_dos_don'ts.md): Reference to dos and don'ts for visualisations
+ 
  - Miscellaneous
    - Linux
      - [Linux Server](https://github.com/TravisH0301/learning/blob/master/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
    - Pandas Parallelism via Modin
      - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
-   - Interactive Visualisation via Plotly.Express
-     - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/viz_plotly_express.md): Reference to comprehensive guide to Plotly.Express
    - Git
      - [Git](https://github.com/TravisH0301/learning/blob/master/git.md): Basic instructions to version control using Git with local & remote repositories
