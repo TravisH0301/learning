@@ -32,6 +32,10 @@ This repository contains brief notes for learning purpose.
    - Visualisation Dos & Don'ts
      - [Visualisation Dos & Don'ts](https://github.com/TravisH0301/learning/blob/master/visualisation_dos_don'ts.md): Reference to dos and don'ts for visualisations
  
+ - Database 
+   - Database Engine & API
+     - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
+ 
  - Miscellaneous
    - Linux
      - [Linux Server](https://github.com/TravisH0301/learning/blob/master/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
