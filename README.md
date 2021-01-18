@@ -45,3 +45,5 @@ This repository contains brief notes for learning purpose.
      - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
    - Git
      - [Git](https://github.com/TravisH0301/learning/blob/master/git.md): Basic instructions to version control using Git with local & remote repositories
+   - Anaconda Virtual Environment
+     - [Anaconda Virtual Environment](https://github.com/TravisH0301/learning/blob/master/conda_virtual_env.md): Instruction on how to setup Anaconda virtual environment
