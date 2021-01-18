@@ -1,5 +1,5 @@
 # Anaconda virtual Environment
-Virtual environment is an isloated environment that enables an independent project to have its own version of Python and modules. <br>
+Virtual environment is an isloated environment that enables an independent project to have its own version of Python, module files and paths. <br>
 Anaconda provides an interface to create and control virtual environments. For Pythons installed without Anaconda, other modules such as `virtualenv` can be used.
 
 ## Update Conda
