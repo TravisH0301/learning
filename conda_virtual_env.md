@@ -24,6 +24,10 @@ Installed virutal environments can be listed. <br>
 The virtual environment session can be deactivated. <br>
 `$ source deactivate`
 
+## Copy Virtual Environment
+A copy of a virtual environment can be created. <br>
+`$ conda create -n [copy_env_name] --clone [env_name_to_copy]`
+
 ## Remove Virtual Environment
 Install virtual environments can be deleted. <br>
 `$ conda remove --name [env-name] --all`
