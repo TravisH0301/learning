@@ -114,7 +114,7 @@ Correlation doesn't imply causation. Looking at causality between variables can 
 account for *latent confounding effects* and does not capture instantaneous and non-linear causal relationships. Additionally, it is important to understand the 
 problem and the concept to be able to correctly identify variables that are truly causal to the target variable. 
 
-*Latent confounding effects*: Hidden confounding variable affecting the observation of causation. ex. Causation may be due to a hiddent confounding factor.  
+*Latent confounding effects*: Hidden confounding variable affecting the observation of causation. ex. Causation may be due to a hidden confounding factor.  
 *Confounding variable*: Variable that is correlated (or causal to) with an indenpendent variable and causal to dependent variable <br>
 
 ### Heteroscedasticity of Residuals (Verifies the consistency of a statistical model)
