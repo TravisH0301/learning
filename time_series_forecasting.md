@@ -27,7 +27,13 @@ A cycle occurs when the data exhibit rises and falls that are not of a fixed fre
 ### Stationarity
 Stationarity refers to a constant mean, constant variance and independence to time. This includes a trend and seasonality. 
 For statistical (Stochastic) modelling, stationarity of the time seriese is required. 
+
+An underlying idea in statistical learning is repeating an experiment by drawing from the sample space. 
+In the time-series context, a single run of stochastic process rather than repeated runs of the process. Therefore, stationarity is required so that 
+observing a long run of stochastic process is similar to observing many independent runs of a stochastic process. 
+
 Stationarity can be verified by the Augmented Dickey-Fuller unit root test (p-value < 0.05 rejects the null hypothesis of non-stationarity).
+
 
 #### Transformation
 Transformation can be applied to convert a non-stationary data to a stationary data. 
@@ -47,6 +53,9 @@ The shaded region in the plot_acf() of statsmodels module represents confidence 
 
 ## Feature selection (for Multivariate forecasting)
 Features can be selected by looking at correlations and causality to select features that have high correlation and causality to the target variable. And testing multicollinearity can help to remove features that cause collinearity. 
+
+For causality, the Granger Causality test can be used to determine whether one time series is useful in forecasting another time series. 
+It is a sattistical hypothesis test where value lower than confidence level is regarded as statistically confident to reject the null hypothesis of having no causality between two time series.
 
 ## Statistical modelling 
 AR, MA, ARIMA, SARIMA
@@ -100,6 +109,14 @@ Using Seaborn for plotting.
   - Combination of high correlated variables: can involve summation, subtraction, multiplication and etc
   - Increasing sample size
 
+### Spurious Correlation
+Correlation doesn't imply causation. Looking at causality between variables can help to provide additional information, yet, Granger causality doesn't 
+account for *latent confounding effects* and does not capture instantaneous and non-linear causal relationships. Additionally, it is important to understand the 
+problem and the concept to be able to correctly identify variables that are truly causal to the target variable. 
+
+*Latent confounding effects*: Hidden confounding variable affecting the observation of causation. ex. Causation may be due to a hiddent confounding factor.  
+*Confounding variable*: Variable that is correlated (or causal to) with an indenpendent variable and causal to dependent variable <br>
+
 ### Heteroscedasticity of Residuals (Verifies the consistency of a statistical model)
 - Residuals are assumed to have a constant variance, but if variance is inconsistent, then heteroscedasticy exists.
 - Residual distribution can be observed (using histogram to see if it resembles Gaussian distribution).
@@ -125,5 +142,5 @@ Using Seaborn for plotting.
 for uncertainties. 
 - Models measuring uncertainties: ARCH & GARCH
 - **If forecasting residual resembles a known distribution ex)Gaussian, then predictions are within known uncertainties.**
-If random residual distribution (Heteroscedasticity), difficult to measure uncertainty, hence, ill-behaved prediction. If it resembles a Gaussian distribution, it implies that the model works consistently throughout the timeline.
-
+If a random residual distribution (Heteroscedasticity) is observed, uncertainty is difficult to be measured, hence, it indicates an ill-behaved prediction. 
+If it resembles a Gaussian distribution, it implies that the model works consistently throughout the timeline.
