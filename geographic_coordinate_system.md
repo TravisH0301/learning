@@ -24,6 +24,14 @@ used projected coordinate system is:
 - Universal Transverse Mercator (UTM); divides the earth into 60 zones, each 6 degrees of longitude in width. For its datum, WGS84 is generally used. In using UTM, it is 
 important to refer to its UTM zone. 
 
+## Geometry vs Geography
+- Geography assumes that data is on the earth’s surface, as specified by latitudes and longitude (Geographic coordinate system)
+- Geometry assumes data is on a Cartesian plane, as specified by x-coordinate and y-coordinate (Projected coordinate system)
+
+In SQL DB, spatial data can be stored as either geometry and geography data types. Geography results in higher accuracy, yet, geometry brings better performance. 
+
+For processing spatial data in SQL Server, refer to the [documentation](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-sql-server?view=sql-server-ver15).
+
 ## Important Parameters
 As geographic position can be represented in many differeny ways, it is important to know the followings when using GIS data:
 - Geographic coordinate system (datum)
