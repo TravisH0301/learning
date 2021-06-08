@@ -48,4 +48,4 @@ This repository contains brief notes for learning purpose.
    - Anaconda Virtual Environment
      - [Anaconda Virtual Environment](https://github.com/TravisH0301/learning/blob/master/conda_virtual_env.md): Instruction on how to setup Anaconda virtual environment
    - Geographic Information System
-     - [Geographic Cooridnate System](https://github.com/TravisH0301/learning/blob/master/geographic_coordinate_system): Explanation of commonly used geographic cooridnate system
+     - [Geographic Cooridnate System](https://github.com/TravisH0301/learning/blob/master/geographic_coordinate_system.md): Explanation of commonly used geographic cooridnate system
