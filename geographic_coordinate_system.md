@@ -41,3 +41,21 @@ As geographic position can be represented in many differeny ways, it is importan
 - Projection parameters
 
 ## Coordinate Conversion between WGS84 and UTM
+To be updated
+
+## Well-Known Text (WKT)
+Well-known text (WKT) is a text markup language for representing vector geometry/geography objects. It can represent the following geomteric/geographic objects:
+- Point, MultiPoint
+- LineString, MultiLineString
+- Polygon, MultiPolygon
+- etc.
+
+Coordinates are wraped in the following manner to represent an object:
+- Point: POINT (30 10)
+- LineString: LINESTRING (30 10, 10 30, 40 40)
+- Polygon: POLYGON ((30 10, 40 40, 20 40, 10 20, 30 10))
+- MultiPoint:	MULTIPOINT ((10 40), (40 30), (20 20), (30 10))
+- MultiLineString: MULTILINESTRING ((10 10, 20 20, 10 40), (40 40, 30 30, 40 20, 30 10))
+- MultiPolygon: MULTIPOLYGON (((30 20, 45 40, 10 40, 30 20)), ((15 5, 40 10, 10 20, 5 10, 15 5)))
+
+Note that both geometry and geography formats can be used for WKT. 
