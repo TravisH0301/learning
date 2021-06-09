@@ -58,62 +58,62 @@ Coordinates are wraped in the following manner to represent an object:
 Note that both geometry and geography formats can be used for WKT. 
 
 ## Python Script for Conversion from UTM to WGS84
-import math
 
-# define function to convert from UTM to WGS84
-def utm_to_wgs84(easting, northing, utm_zone=55, is_north=False):
-    # UTM cooridnate validation
-    if (easting < 160000.0) or (easting > 840000.0):
-        print('Outside permissible range of easting values.')
-    elif (northing < 0.0):
-        print('Negative values are not allowed for northing.')
-    elif (northing > 10000000.0):
-        print('Northing may not exceed 10,000,000.')
+    import math
+    # define function to convert from UTM to WGS84
+    def utm_to_wgs84(easting, northing, utm_zone=55, is_north=False):
+        # UTM cooridnate validation
+        if (easting < 160000.0) or (easting > 840000.0):
+            print('Outside permissible range of easting values.')
+        elif (northing < 0.0):
+            print('Negative values are not allowed for northing.')
+        elif (northing > 10000000.0):
+            print('Northing may not exceed 10,000,000.')
 
-    # symbols as used in USGS PP 1395: Map Projections - A Working Manual
-    DatumEqRad = [
-    6378137.0, 6378137.0, 6378137.0, 6378135.0, 6378160.0, 6378245.0, 6378206.4,
-    6378388.0, 6378388.0, 6378249.1, 6378206.4, 6377563.4, 6377397.2, 6377276.3
-    ]
-    DatumFlat = [
-    298.2572236, 298.2572236, 298.2572215, 298.2597208, 298.2497323,
-    298.2997381, 294.9786982, 296.9993621, 296.9993621, 293.4660167,
-    294.9786982, 299.3247788, 299.1527052, 300.8021499
-    ]
+        # symbols as used in USGS PP 1395: Map Projections - A Working Manual
+        DatumEqRad = [
+        6378137.0, 6378137.0, 6378137.0, 6378135.0, 6378160.0, 6378245.0, 6378206.4,
+        6378388.0, 6378388.0, 6378249.1, 6378206.4, 6377563.4, 6377397.2, 6377276.3
+        ]
+        DatumFlat = [
+        298.2572236, 298.2572236, 298.2572215, 298.2597208, 298.2497323,
+        298.2997381, 294.9786982, 296.9993621, 296.9993621, 293.4660167,
+        294.9786982, 299.3247788, 299.1527052, 300.8021499
+        ]
 
-    Item = 0                              # default
-    a = DatumEqRad[Item]                  # equatorial radius (meters)
-    f = 1 / DatumFlat[Item]               # polar flattening
-    drad = math.pi / 180                  # convert degrees to radians
-    k0 = 0.9996                           # scale on central meridian
-    b = a * (1 - f)                       # polar axis
-    e = math.sqrt(1 - (b / a) * (b / a))  # eccentricity
-    esq = (1 - (b / a) * (b / a))         # e² for use in expansions
-    e0sq = e * e / (1 - e * e)            # e0² — always even powers
+        Item = 0                              # default
+        a = DatumEqRad[Item]                  # equatorial radius (meters)
+        f = 1 / DatumFlat[Item]               # polar flattening
+        drad = math.pi / 180                  # convert degrees to radians
+        k0 = 0.9996                           # scale on central meridian
+        b = a * (1 - f)                       # polar axis
+        e = math.sqrt(1 - (b / a) * (b / a))  # eccentricity
+        esq = (1 - (b / a) * (b / a))         # e² for use in expansions
+        e0sq = e * e / (1 - e * e)            # e0² — always even powers
 
-    # lat long calculation
-    zcm = 3 + 6 * (utm_zone - 1) - 180  # central meridian of zone
-    e1 = (1 - math.sqrt(1 - e * e)) / (1 + math.sqrt(1 - e * e))
-    M0 = 0  # in case origin other than zero lat
+        # lat long calculation
+        zcm = 3 + 6 * (utm_zone - 1) - 180  # central meridian of zone
+        e1 = (1 - math.sqrt(1 - e * e)) / (1 + math.sqrt(1 - e * e))
+        M0 = 0  # in case origin other than zero lat
 
-    # arc length along standard meridian
-    if is_north:
-        M = M0 + northing / k0
-    else:
-        M = M0 + (northing - 10000000) / k0
-    mu = M / (a * (1 - esq * (1 / 4 + esq * (3 / 64 + 5 * esq / 256))))
-    phi1 = mu + e1 * (3 / 2 - 27 * e1 * e1 / 32) * math.sin(2 * mu) + e1 * e1 * (21 / 16 - 55 * e1 * e1 / 32) * math.sin(4 * mu)
-    phi1 = phi1 + e1 * e1 * e1 * (math.sin(6 * mu) * 151 / 96 + e1 * math.sin(8 * mu) * 1097 / 512)
-    C1 = e0sq * math.pow(math.cos(phi1), 2)
-    T1 = math.pow(math.tan(phi1), 2)
-    N1 = a / math.sqrt(1 - math.pow(e * math.sin(phi1), 2))
-    R1 = N1 * (1 - e * e) / (1 - math.pow(e * math.sin(phi1), 2))
-    D = (easting - 500000) / (N1 * k0)
-    phi = (D * D) * (1 / 2 - D * D * (5 + 3 * T1 + 10 * C1 - 4 * C1 * C1 - 9 * e0sq) / 24)
-    phi = phi + math.pow(D, 6) * (61 + 90 * T1 + 298 * C1 + 45 * T1 * T1 - 252 * e0sq - 3 * C1 * C1) / 720
-    phi = phi1 - (N1 * math.tan(phi1) / R1) * phi
-    lon = D * (1 + D * D * ((-1 - 2 * T1 - C1) / 6 + D * D * (5 - 2 * C1 + 28 * T1 - 3 * C1 * C1 + 8 * e0sq + 24 * T1 * T1) / 120)) / math.cos(phi1)
+        # arc length along standard meridian
+        if is_north:
+            M = M0 + northing / k0
+        else:
+            M = M0 + (northing - 10000000) / k0
+        mu = M / (a * (1 - esq * (1 / 4 + esq * (3 / 64 + 5 * esq / 256))))
+        phi1 = mu + e1 * (3 / 2 - 27 * e1 * e1 / 32) * math.sin(2 * mu) + e1 * e1 * (21 / 16 - 55 * e1 * e1 / 32) * math.sin(4 * mu)
+        phi1 = phi1 + e1 * e1 * e1 * (math.sin(6 * mu) * 151 / 96 + e1 * math.sin(8 * mu) * 1097 / 512)
+        C1 = e0sq * math.pow(math.cos(phi1), 2)
+        T1 = math.pow(math.tan(phi1), 2)
+        N1 = a / math.sqrt(1 - math.pow(e * math.sin(phi1), 2))
+        R1 = N1 * (1 - e * e) / (1 - math.pow(e * math.sin(phi1), 2))
+        D = (easting - 500000) / (N1 * k0)
+        phi = (D * D) * (1 / 2 - D * D * (5 + 3 * T1 + 10 * C1 - 4 * C1 * C1 - 9 * e0sq) / 24)
+        phi = phi + math.pow(D, 6) * (61 + 90 * T1 + 298 * C1 + 45 * T1 * T1 - 252 * e0sq - 3 * C1 * C1) / 720
+        phi = phi1 - (N1 * math.tan(phi1) / R1) * phi
+        lon = D * (1 + D * D * ((-1 - 2 * T1 - C1) / 6 + D * D * (5 - 2 * C1 + 28 * T1 - 3 * C1 * C1 + 8 * e0sq + 24 * T1 * T1) / 120)) / math.cos(phi1)
 
-    lat = phi / drad
-    long = zcm + lon / drad
-    return(lat, long)
+        lat = phi / drad
+        long = zcm + lon / drad
+        return(lat, long)
