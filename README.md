@@ -37,6 +37,10 @@ This repository contains brief notes for learning purpose.
      - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
    - Database vs Data Warehouse vs Data Lake
      - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/database_datawarehouse_datalake.md): Definition of database, data warehouse and data lake. Description of differences between them and their purposes. 
+
+ - Parallel Processing
+   - Multiprocessing and Ray on Python
+     - [Multiprocessing and Ray on Python](): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
  
  - Miscellaneous
    - Linux
