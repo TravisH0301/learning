@@ -40,7 +40,7 @@ This repository contains brief notes for learning purpose.
 
  - Parallel and Distributed Processing
    - Multiprocessing and Ray on Python
-     - [Multiprocessing and Ray on Python](): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
+     - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
    - Pandas Parallelism via Modin
      - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
  
