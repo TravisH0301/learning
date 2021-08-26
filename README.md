@@ -38,7 +38,7 @@ This repository contains brief notes for learning purpose.
    - Database vs Data Warehouse vs Data Lake
      - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/database_datawarehouse_datalake.md): Definition of database, data warehouse and data lake. Description of differences between them and their purposes. 
 
- - Parallel Processing
+ - Parallel and Distributed Processing
    - Multiprocessing and Ray on Python
      - [Multiprocessing and Ray on Python](): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
    - Pandas Parallelism via Modin
