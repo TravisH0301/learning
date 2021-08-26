@@ -41,12 +41,12 @@ This repository contains brief notes for learning purpose.
  - Parallel Processing
    - Multiprocessing and Ray on Python
      - [Multiprocessing and Ray on Python](): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
+   - Pandas Parallelism via Modin
+     - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
  
  - Miscellaneous
    - Linux
      - [Linux Server](https://github.com/TravisH0301/learning/blob/master/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
-   - Pandas Parallelism via Modin
-     - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
    - Git
      - [Git](https://github.com/TravisH0301/learning/blob/master/git.md): Basic instructions to version control using Git with local & remote repositories
    - Anaconda Virtual Environment
