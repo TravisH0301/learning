@@ -4,7 +4,7 @@ On Python parallel processing can be achieved using either Multiprocessing and R
 ## Multiprocessing
 Multiprocessing library has 2 types of parallel processing; Process and Pool. 
 
-Note that Multiprocessing execution should be done after `if __name__ == '__main__' on a Python script. Multiprocessing won't work on an interactive platform, ex. Jupyter Notebook. 
+Note that Multiprocessing execution should be done after `if __name__ == '__main__'` on a Python script. Multiprocessing won't work on an interactive platform, ex. Jupyter Notebook. 
 
 ### Multiprocessing - Process
 Process is used for function-based parallelism. 
