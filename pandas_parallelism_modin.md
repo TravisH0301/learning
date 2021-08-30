@@ -30,7 +30,7 @@ Warning module can be used to hide warnings.<br>
 ## Trouble shooting
 New version of Modin may clash with dependencies such as Pandas. <br>
 If so, it is recommended to downgrade Modin and install dependencies with the respective versions. <br>
-ex. Modin\[Dask]==0.10.0 & Pandas==1.2.4
+ex. modin\[dask]==0.10.0 & pandas==1.2.4
 
 ## Source
 [Modin Documentation](https://modin.readthedocs.io/en/latest/index.html)
