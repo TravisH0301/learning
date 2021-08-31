@@ -4,7 +4,10 @@ On Python parallel processing can be achieved using either Multiprocessing and R
 ## Multiprocessing
 Multiprocessing library has 2 types of parallel processing; Process and Pool. 
 
-Note that Multiprocessing execution should be done after `if __name__ == '__main__'` on a Python script. Multiprocessing won't work on an interactive platform, ex. Jupyter Notebook. 
+### Important Notes
+- Multiprocessing execution should be done after `if __name__ == '__main__'` on a Python script. Multiprocessing won't work on an interactive platform, ex. Jupyter Notebook. 
+- Multiprocessing function doesn't work well with global variables, always pass a variable directly to the function as an argument.
+- When giving a very large iterable object to a parallel process function, break down into smaller chunks to avoid memory error. 
 
 ### Multiprocessing - Process
 Process is used for function-based parallelism. 
@@ -26,7 +29,7 @@ Results can be retrieved using Manager, Queue or Pipes.
 
 ### Multiprocessing - Pool
 Pool allows a single function to be executed in parallel with multiple inputs. Hence, it's great for data-based parallelism. <br>
-Pool can execute tasks synchronously or asynchronously. Note that asynchronous execution may not occur in the given order.
+Pool can execute tasks synchronously or asynchronously. Note that asynchronous execution may not occur in the given order, yet, the execution is faster without blockage between processes.
 ~~~
 # Multiprocessing Pool
 import multiprocessing as mp
@@ -48,6 +51,25 @@ The above example uses `.apply()`, which is a synchronous execution.<br>
 - `.map_async()`
 - `.starmap_async()`
 - `.apply_async()`
+~~~
+def log_result(result):
+  global results
+  results.append(result)
+    
+def log_error(error):
+  global errors
+  errors.append(error)
+
+if __name__ == '__main__':
+  results = []
+  errors = []
+  pool = mp.Pool()
+  for i in iteratable:
+      pool.apply_async(function_name, args = (i, ), callback = log_result, error_callback = log_error)
+  pool.close()
+  pool.join()
+~~~
+`callback` & `error_callback` arguments are used in asynchronous methods to store result logs and error logs. If error occurs, then error log is stored instead of the result log. The logs get saved in the order of process completion.
 
 ## Ray
 Ray provides more efficient parallel processing with large objects and numercial data, as well as, allowing to build microservices and actors that have states and can communicate.
