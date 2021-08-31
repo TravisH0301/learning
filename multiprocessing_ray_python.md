@@ -65,7 +65,7 @@ if __name__ == '__main__':
   errors = []
   pool = mp.Pool()
   for i in iteratable:
-      pool.apply_async(function_name, args = (i, ), callback = log_result, error_callback = log_error)
+    pool.apply_async(function_name, args = (i, ), callback = log_result, error_callback = log_error)
   pool.close()
   pool.join()
 ~~~
@@ -89,13 +89,13 @@ ray.init()
 
 @ray.remote  # declares a remote function (to be executed remotely and asynchronously)
 def f(x):
-    time.sleep(1)
-    return x
+  time.sleep(1)
+  return x
 
 # execute the remote function with 4 tasks
 result_ids = []
 for i in range(4):
-    result_ids.append(f.remote(i))  # .remote() is used to execute the remote function asynchronously
+  result_ids.append(f.remote(i))  # .remote() is used to execute the remote function asynchronously
 
 # retrieve results
 results = ray.get(result_ids)  
