@@ -6,7 +6,7 @@ An abstrat that organises elements of data and they relate to each other. End st
 - Build data model using Entity Relationship (ER) Model or Unified Modelling Language (Typically Entity Relationship Diagram is used)
   - Conceptual data modelling: establishes entities, attributes and relationships. (no cardinality)
   - Logical data modelling: defines column information (type, length, etc) and cadinality of relationships. 
-  - Physical data modelling: described database-specific implementation of the data model. Primary & foreign keys, view, indexes and authorisation, etc. are defined.
+  - Physical data modelling: described database-specific implementation of the data model (ex. converted to relational database). Primary & foreign keys, view, indexes and authorisation, etc. are defined.
 
 *Entity: Basic object of entity relationship diagram. (ex. tables in database)<br>
 *Attribute: facts of entities. (ex. columns in tables)<br>
@@ -43,8 +43,17 @@ Non-relational database stores data in a non-tabular form. It is often used for 
 
 ### Advantage of Non-relational Database
 - Massive dataset organisation: horizonal scaling is supported to allow data growth
-- Flexible database expansion: newly formed data doesn't have to fit the data types of previously existing information
+- Flexible database expansion: newly formed data doesn't have to fit the data types of previously existing information (flexible schema)
 - Multiple data structures: different data types can be collated together
+- High availability
+- High throughput with low latency
+- Linear scalability
+
+### Disadvantage of Non-relational Database
+- Since it has flexible schema and there is no *relational* tables, adhoc queries such as join or aggregate cannot be done. 
+    - This is because for example, in join, common colums with the same data type are required between tables related to each other. But in non-relational database, there is no relations between tables. But, it maybe done in some circumstances like joining the keys for two tables that are in the same field, or table can be newly created to meet the requirement. 
+    - Also join/aggregation requires scanning of whole data and it's allowed as the data is spread across multiple nodes. It is not done without optimisations. Hence, it's usually done in the data processing app, such as, Apache Spark.
+- No ACID transactions, but some NoSQL DB supports ACID transactions.
 
 ### Common Types of NoSQL Databases
 - Apache Cassandra: *Partition row store*; data is distributed by partitions across nodes or servers & data is organised with rows & columns 
@@ -53,6 +62,15 @@ Non-relational database stores data in a non-tabular form. It is often used for 
 - Apache HBase: *Wide column store*; supports table, column and row, but unlike relational database, it allows columns to have different names & formats from row to row in the same table (flexible schema)
 - Neo4J: *Graph database*; data is represented as nodes and edges, and the relationship between entities is the focus
 
+### Apache Cassandra
+Apache Cassandra provides scalability, high availability and fault-tolerance for large and mission-critical data. It uses its own query language, CQL (Cassandra Query Language). Note that there is no duplication in Cassandra, hence unique identification is important.
+
+- Keyspace: collection of tables
+- Table: group of partitions
+- Row: single item
+- Partition: fundamental unit of access, collection of rows, how data is distributed
+- Primary key: made up of partition key (unique identifier in partition) and clustering columns
+- Column: clustering column (to support unique identification in table with partition key) & data column
 
 
 
