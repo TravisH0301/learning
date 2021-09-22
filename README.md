@@ -12,20 +12,17 @@ This repository contains brief notes for learning purpose.
   
 - Machine Learning
   - Clustering
-    - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
-    
+    - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering 
   - Time Series Analysis
     - [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/time_series_forecasting.md): Time series forecasting using statistical modelling
   
 - Deep Learning
   - Neural Networks
     - [Neural Network Optimisation](https://github.com/TravisH0301/learning/blob/master/neural_network_optimisation.md): Optimisation methods for neural networks
-  
   - Covoluations Neural Networks
     - [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/convolutional_neural_network.md): Explantion of convolutional neural network
     - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/convolutional_encoder_decoder.md): Variation of convolutional neural network
     - [VGG model](https://github.com/TravisH0301/learning/blob/master/vgg_model.md): Variation of convolutional neural network
- 
  - Visualisation
    - Interactive Visualisation via Plotly.Express
      - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/viz_plotly_express.md): Reference to comprehensive guide to Plotly.Express
@@ -37,6 +34,9 @@ This repository contains brief notes for learning purpose.
      - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
    - Database vs Data Warehouse vs Data Lake
      - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/database_datawarehouse_datalake.md): Definition of database, data warehouse and data lake. Description of differences between them and their purposes. 
+   - Data Modelling
+     - [Data Modelling](https://github.com/TravisH0301/learning/blob/master/data_modelling.md): How to do data modelling and aspects of relational database & non-relational (NoSQL) database
+
 
  - Parallel and Distributed Processing
    - Multiprocessing and Ray on Python
