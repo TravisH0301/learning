@@ -14,7 +14,8 @@ An abstrat that organises elements of data and they relate to each other. End st
 
 ## Relational Model
 This model organises data into rows and columns with a unique key identifying each row (ex. primary key). Each table represents one entity type (ex. Customer).<br>
-ER model converts into relational model through physical data modelling.
+ER model converts into relational model through physical data modelling. <br>
+Database/schema is a collection of tables, and SQL (Structured Query Language) is used for querying or maintaining the database.
 
 ### Difference between Entity Relationship Model and Relational Model
 - ER model contains cardinality as the relationship between entities and relational model has less contraint in the relationship between tables.
@@ -22,3 +23,10 @@ ER model converts into relational model through physical data modelling.
 - ER model: Entity | Attribute (no Domain & Key refers to unique identifier) | Relationship btw entities 
 - Relational model: Relation/Table | Column/Attribute (Domain represents acceptable values & Degree refers to # of attributes) | Row/Record/Tuple
 
+### Advantage of relational database
+- Enables joins, aggregations and quick adhoc analysis with flexible queries
+- ACID transaction: 
+  - Atomicity (whole transaction is processed together)
+  - Consistency (consistent rules and constraints)
+  - Isolation (transactions are processed independently and isolation can to applied at low level to enable multiple concurrent transactions)
+  - Durability (completed transactions are saved to the database even in case of system failure)
