@@ -17,6 +17,7 @@ This model organises data into rows and columns with a unique key identifying ea
 
 ### Difference between Entity Relationship Model and Relational Model
 - ER model contains cardinality as the relationship between entities and relational model has less contraint in the relationship between tables.
-- ER model is high-level and relational model is implementation model.
+- ER model is high-level model of entity relationship (with ER diagram) and relational model is implementation model.
 - ER model: Entity | Attribute (no Domain & Key refers to unique identifier) | Relationship btw entities 
 - Relational model: Relation/Table | Column/Attribute (Domain represents acceptable values & Degree refers to # of attributes) | Row/Record/Tuple
+- Physical ER model is a relational model 
