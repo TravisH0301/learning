@@ -14,7 +14,7 @@ This repository contains brief notes for learning purpose.
 ## Data Science
 ### Statistics
 - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
-- [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/data_science/feature_selection_methods.md): Filter-based feature selection methods for numercial and categorical variables
+- [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/data_science/feature_selection_methods.md): Reference to feature selection methods for numercial and categorical data
 - [Average of Average](https://github.com/TravisH0301/learning/blob/master/data_science/avg_of_avg.md): Interpretation of different average of average methods
 - [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/data_science/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering 
 
