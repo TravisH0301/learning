@@ -13,19 +13,19 @@ This repository contains brief notes for learning purpose.
 
 ## Data Science
 ### Statistics
-- [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/skewness_kurtosis.md): Understanding of skewness and kurtosis
-- [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/feature_selection_methods.md): Filter-based feature selection methods for numercial and categorical variables
-- [Average of Average](https://github.com/TravisH0301/learning/blob/master/avg_of_avg.md): Interpretation of different average of average methods
-- [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering 
+- [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
+- [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/data_science/feature_selection_methods.md): Filter-based feature selection methods for numercial and categorical variables
+- [Average of Average](https://github.com/TravisH0301/learning/blob/master/data_science/avg_of_avg.md): Interpretation of different average of average methods
+- [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/data_science/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering 
 
 ### Machine Learning
-- [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/time_series_forecasting.md): Time series forecasting using statistical modelling
+- [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/data_science/time_series_forecasting.md): Time series forecasting using statistical modelling
 
 ### Deep Learning
-- [Neural Network Optimisation](https://github.com/TravisH0301/learning/blob/master/neural_network_optimisation.md): Optimisation methods for neural networks
-- [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/convolutional_neural_network.md): Explantion of convolutional neural network
-- [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/convolutional_encoder_decoder.md): Variation of convolutional neural network
-- [VGG model](https://github.com/TravisH0301/learning/blob/master/vgg_model.md): Variation of convolutional neural network
+- [Neural Network Optimisation](https://github.com/TravisH0301/learning/blob/master/data_science/neural_network_optimisation.md): Optimisation methods for neural networks
+- [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_neural_network.md): Explantion of convolutional neural network
+- [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_encoder_decoder.md): Variation of convolutional neural network
+- [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
  
 ## Miscellaneous
 ### Visualisation 
