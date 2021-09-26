@@ -9,12 +9,13 @@ Normalisation is done to reduce data redundancy and increase data integrity
 
 #### Process of Normalisation
 - First Normal Form (1NF):
-  - Atomic values: each cell contains unique and single values
+  - Atomic values: each cell contains unique and single values (ex. no list of values in a cell)
   - To be able to add data without altering tables
   - Separate different relations to different tables (ex. customer table & sales table) 
   - Keep relationship between tables using foreign keys
+  - Each row must be unique
 - Second Normal Form (2NF):
-  - All columns must rely on the primary key
+  - All columns must rely on the primary key (ex. unique primary key for each row)
 - Third Normal Form (3NF):
   - No transitive dependencies (transitive dependency is when a non-key attribute determines columns)
   ex.
