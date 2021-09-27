@@ -1,7 +1,9 @@
-# Learning
-This repository contains brief notes for learning purpose. 
+# Contents
+- [Data Engineering](#Data-Engineering)
 
-## Data Engineering
+
+
+# Data Engineering
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
 - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of database, data warehouse and data lake. Description of differences between them and their purposes. 
