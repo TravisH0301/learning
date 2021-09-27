@@ -1,9 +1,7 @@
 # Contents
-[Data Engineering](#Data-Engineering)
-
-[Data Science](#Data-Science)
-
-[Miscellaneous](#Miscellaneous)
+- [Data Engineering](#Data-Engineering)
+- [Data Science](#Data-Science)
+- [Miscellaneous](#Miscellaneous)
 
 
 # Data Engineering
