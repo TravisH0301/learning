@@ -37,9 +37,14 @@ Normalisation is done to reduce data redundancy and increase data integrity
   |--|--|
   |111|Caulfield|
   
-
-  
-
-  
 ### Denormalisation: 
-Sometimes, denormalisation must be done in read heavy workloads to increase performance
+Sometimes, denormalisation must be done in read (read) heavy workloads to increase performance. This is done at the expense of losing write (insert, update, delete) performance. This is because normalisation results in expansion of the database with more number of tables.
+
+Denormalisation is done through modelling the dataset to ensure read performance is enhanced by denormalising tables
+
+
+
+
+
+
+
