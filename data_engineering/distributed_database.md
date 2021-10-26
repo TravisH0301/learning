@@ -34,3 +34,16 @@ Since there the distributed database always need to tolerate network issues,
 one can only have either Consistency & Partition tolerance (CP) or Availability &
 Partition tolerance (AP).
 
+## Distributed Database Modelling (Apache Cassandra)
+Unlike relational database, distributed database (or NoSQL database) does not allow JOINs due to its distributed structure. 
+Hence, a denormalised table has to be created based on the query's purpose.<br>
+For example, one needs to consider the followings for the NoSQL database, Apache Cassandra:
+- Apache Cassandra does not allow JOINs
+  - In addition, GROUP BY & subqueries are not supported in Cassandra Query Language (CQL).
+- Denormalised tables must be used
+  - In relational database, denormalisation slows down write performance due to data redundancy. However, Apache Cassadra is optimised for denormalisation to allow fast writes.
+- Due to denormalisation requirement, queries need to be decided before creating a table
+- One table per query is a great strategy
+  - This will result in data duplication and thus higher storage cost. But, Cassandra outweighs this issue with high performance and high availability. 
+
+
