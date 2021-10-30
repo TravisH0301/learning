@@ -3,8 +3,8 @@ Repository containing brief notes made during learning.
 
 ## Contents
 - [Data Engineering](#Data-Engineering)
-- [Data Science](#Data-Science)
 - [Data Structures & Algorithms](#Data-Structures--Algorithms)
+- [Data Science](#Data-Science)
 - [Miscellaneous](#Miscellaneous)
 
 ## Data Engineering
@@ -19,6 +19,12 @@ Repository containing brief notes made during learning.
 ### Parallel and Distributed Processing
 - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
+
+## Data Structures & Algorithms
+### Data Structures
+
+### Algorithms
+
 
 ## Data Science
 ### Statistics
@@ -35,13 +41,7 @@ Repository containing brief notes made during learning.
 - [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_neural_network.md): Explantion of convolutional neural network
 - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_encoder_decoder.md): Variation of convolutional neural network
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
- 
-## Data Structures & Algorithms
-### Data Structures
-
-### Algorithms
- 
- 
+  
 ## Miscellaneous
 ### Visualisation 
 - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/miscellaneous/viz_plotly_express.md): Reference to comprehensive guide to interactive visualisation with Plotly.Express on Python 
