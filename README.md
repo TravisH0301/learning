@@ -4,9 +4,8 @@ Repository containing brief notes made during learning.
 ## Contents
 - [Data Engineering](#Data-Engineering)
 - [Data Science](#Data-Science)
-- [Data Structures & Algorithms](#Data-Structures-&-Algorithms)
+- [Data Structures & Algorithms](#Data-Structures--Algorithms)
 - [Miscellaneous](#Miscellaneous)
-
 
 ## Data Engineering
 ### Database 
