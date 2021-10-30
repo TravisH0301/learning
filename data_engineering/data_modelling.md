@@ -12,6 +12,31 @@ An abstrat that organises elements of data and they relate to each other. End st
 *Attribute: facts of entities. (ex. columns in tables)<br>
 *Cardinality: the possible occurence numbers of attributes between tables. (ex. one-to-one => 1 primary key in table A & 1 foreign keys in table B)
 
+### Entity Relationship Diagram
+Entity relationship diagram (ER diagram) is a high level and graphical representation that depicts relationships between entities.<br>
+There are many versions to represent ER diagram and in this note, Crow's Foot natation will be used. 
+
+#### Cardinality
+Cardinality can be represented using Crow's Foot notation as below:
+
+![](https://github.com/TravisH0301/learning/blob/master/images/crow_foot_notation.png)<br>
+Note that the 'one' & 'one (and only)' have a difference. 'one' relationship can be replaced by other value, but 'one (and only)' cannot be replaced.<br>
+For example, a student has one dorm and one student id. The student can have a different dorm next year, but the student id will be only assigned to this student. 
+
+#### Foreign Key
+Foreign key (FK) is required when entities are connected by a relationship. Usually a foreign key will be placed at the entity with higher cardinality. <br>
+For 'many-to-one' relationship, FK will be placed on the 'many' entity. For 'one-to-zero or one', FK will be on the 'one' entity. And if it's 'one-to-one', FK can be at either of them.<br>
+
+#### Many-to-Many Relationship
+In database, many-to-many relationship can create data redundancy, which could cause data integrity issue. Hence, an intermediate (= join, junction) table should be used. 
+The below images show how many-to-many tables changes with the intermediate table. 
+
+<img src="https://github.com/TravisH0301/learning/blob/master/images/many_to_many_tables.jpg" width="600"><br>
+Note that a student may or may not be enrolled into a class, yet, a class needs at least one student to exist. Hence, zero or one-to-one or many relationship is used.<br>
+<img src="https://github.com/TravisH0301/learning/blob/master/images/intermediate_table.jpg" width="600">
+
+The intermediate table, 'Enrollment' removes data redundancy in the entities, 'Student' and 'Class'.
+
 ## Relational Model 
 This model organises data into rows and columns with a unique key identifying each row (ex. primary key). Each table represents one entity type (ex. Customer).<br>
 ER model converts into relational model through physical data modelling. <br>
