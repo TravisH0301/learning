@@ -4,8 +4,8 @@ Repository containing brief notes made during learning.
 ## Contents
 - [Data Engineering](#Data-Engineering)
 - [Data Science](#Data-Science)
+- [Data Structures & Algorithms](#Data-Structures-&-Algorithms)
 - [Miscellaneous](#Miscellaneous)
-
 
 ## Data Engineering
 ### Database 
@@ -35,6 +35,12 @@ Repository containing brief notes made during learning.
 - [Convolution Neural Network](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_neural_network.md): Explantion of convolutional neural network
 - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_encoder_decoder.md): Variation of convolutional neural network
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
+ 
+## Data Structures & Algorithms
+### Data Structures
+
+### Algorithms
+ 
  
 ## Miscellaneous
 ### Visualisation 
