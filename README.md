@@ -2,10 +2,15 @@
 Repository containing brief notes made during learning.
 
 ## Contents
-- [Data Engineering](#Data-Engineering)
 - [Data Structures & Algorithms](#Data-Structures--Algorithms)
+- [Data Engineering](#Data-Engineering)
 - [Data Science](#Data-Science)
 - [Miscellaneous](#Miscellaneous)
+
+## Data Structures & Algorithms
+### Data Structures
+
+### Algorithms
 
 ## Data Engineering
 ### Database 
@@ -19,12 +24,6 @@ Repository containing brief notes made during learning.
 ### Parallel and Distributed Processing
 - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
-
-## Data Structures & Algorithms
-### Data Structures
-
-### Algorithms
-
 
 ## Data Science
 ### Statistics
