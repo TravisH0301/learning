@@ -90,3 +90,21 @@ id|	account_id|	month|	dense_rank|	standard_qty|	sum_std_qty|	count_std_qty|	avg
 4309|	1001|	2016-01-01T00:00:00.000Z|	4|	566|	2140|	7|	305.71|	85|	566
 4|	1001|	2016-01-01T00:00:00.000Z|	4|	144|	2140|	7|	305.71|	85|	566
     
+### Alias
+Alias can be set up for a window function using WINDOW clause if it's used multiple times.<br>
+Note that the clause needs to be between WHERE and ORDER BY.
+    /*
+    Window function alias is defined using WINDOW clause.
+    */
+    SELECT id,
+           account_id,
+           DATE_TRUNC('year',occurred_at) AS year,
+           DENSE_RANK() OVER main_window AS dense_rank,
+           total_amt_usd,
+           SUM(total_amt_usd) OVER main_window AS sum_total_amt_usd,
+           COUNT(total_amt_usd) OVER main_window AS count_total_amt_usd,
+           AVG(total_amt_usd) OVER main_window AS avg_total_amt_usd,
+           MIN(total_amt_usd) OVER main_window AS min_total_amt_usd,
+           MAX(total_amt_usd) OVER main_window AS max_total_amt_usd
+    FROM orders
+    WINDOW main_window AS (PARTITION BY account_id ORDER BY DATE_TRUNC('year',occurred_at));
