@@ -20,6 +20,7 @@ Repository containing brief notes made during learning.
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
+- [Window Functions in SQL](): Introduction to window functions in SQL with examples
   
 ### Parallel and Distributed Processing
 - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
@@ -42,9 +43,6 @@ Repository containing brief notes made during learning.
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
   
 ## Miscellaneous
-### SQL
-- [Window Functions in SQL](): Introduction to window functions in SQL with examples
-
 ### Visualisation 
 - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/miscellaneous/viz_plotly_express.md): Reference to comprehensive guide to interactive visualisation with Plotly.Express on Python 
 - [Visualisation Dos & Don'ts](https://github.com/TravisH0301/learning/blob/master/miscellaneous/visualisation_dos_don'ts.md): Reference to dos and don'ts for visualisations
