@@ -10,6 +10,8 @@ The window function can be used using OVER (PARTITION BY <column> ORDER BY <colu
 - [Window Function Alias](#Window-Function-Alias)
 	
 ### Running Total
+Running total can be calculated using the sum function with the given column order.
+	
     /*
     Running total of standard_qty is calculated over occurred_at with ascending order.
     */
@@ -25,6 +27,8 @@ The window function can be used using OVER (PARTITION BY <column> ORDER BY <colu
 |2013-12-04T04:53:25.000Z|528|1018
 
 ### Partitioned Running Total
+The sum calculation can be performed for each value of the partition column.
+	
     /*
     Annual Running total of standard_qty is calculated over occurred_at partitioned by years with ascending order.
     */
@@ -44,6 +48,8 @@ occurred_at|	year|	standard_qty|	annual_running_total
 2014-01-01T13:11:47.000Z|	2014-01-01T00:00:00.000Z|	37|	552
 
 ### Ranking Rows
+A row can be created for the row order. ROW_NUMBER(), RANK() and DENSE_RANK() can be used. 
+	
     /*
     Rows are ranked over total for each account_id.
     Note that RANK() will skip a number if duplicated ranks are found.
@@ -70,6 +76,8 @@ id|	account_id|	total|	total_rank
 28|	1051|	589|	3
 
 ### Aggregations
+Like the usual aggregation, aggregation functions can be applied with the window function. 	
+	
     /*
     Aggregations are made for standard_qty per month for each account_id.
     Note that for the rows with identical ranks, the aggregations are given at the lastest row.
