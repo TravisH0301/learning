@@ -1,6 +1,8 @@
 # Windows Functions in SQL
 A window function performs a calculation on rows. Unlike the aggregate function (GROUP BY), the rows are not grouped into a single output row. Rows retain their separate identities.<br>
 The window function can be used using OVER (PARTITION BY <column> ORDER BY <column> ACS|DESC).<br>
+Note that ORDER BY clause within the window function will be applied to the entire table, which will clash with the outer ORDER BY clause of the table. 
+	
 
 ## Contents
 - [Running Total](#Running-Total)
