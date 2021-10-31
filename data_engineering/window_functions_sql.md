@@ -1,6 +1,10 @@
 # Windows Functions in SQL
+A window function performs a calculation on rows. Unlike the aggregate function (GROUP BY), the rows are not grouped into a single output row. Rows retain their separate identities.<br>
+The window function can be used using OVER (PARTITION BY <column> ORDER BY <column> ACS|DESC).<br>
 
-## Examples
+## Contents
+- [Running Total](#Running-Total)
+	
 ### Running Total
     /*
     Running total of standard_qty is calculated over occurred_at with ascending order.
@@ -93,6 +97,7 @@ id|	account_id|	month|	dense_rank|	standard_qty|	sum_std_qty|	count_std_qty|	avg
 ### Alias
 Alias can be set up for a window function using WINDOW clause if it's used multiple times.<br>
 Note that the clause needs to be between WHERE and ORDER BY.
+
     /*
     Window function alias is defined using WINDOW clause.
     */
