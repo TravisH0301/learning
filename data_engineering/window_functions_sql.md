@@ -8,6 +8,8 @@ The window function can be used using OVER (PARTITION BY <column> ORDER BY <colu
 - [Ranking Rows](#Ranking-Rows)
 - [Aggregations](#Aggregations)
 - [Window Function Alias](#Window-Function-Alias)
+- [Lag and Lead](#Lag-and-Lead)
+- [Percentiles](#Percentiles)
 	
 ### Running Total
 Running total can be calculated using the sum function with the given column order.
@@ -125,3 +127,45 @@ Note that the clause needs to be between WHERE and ORDER BY.
            MAX(total_amt_usd) OVER main_window AS max_total_amt_usd
     FROM orders
     WINDOW main_window AS (PARTITION BY account_id ORDER BY DATE_TRUNC('year',occurred_at));
+
+### Lag and Lead
+Lagging and leading row values can be determined over the window function.
+Note the null value is used for the first row of the lag column.
+	
+    SELECT occurred_at,
+	   total_amt_usd,
+	   LAG(total_amt_usd) OVER main_window AS lag,
+	   LEAD(total_amt_usd) OVER main_window AS lead,
+	   total_amt_usd - LAG(total_amt_usd) OVER main_window AS lag_difference,
+	   LEAD(total_amt_usd) OVER main_window - total_amt_usd AS lead_difference
+    FROM (
+        SELECT occurred_at,
+        SUM(standard_amt_usd) AS total_amt_usd
+        FROM orders 
+        GROUP BY 1
+    ) sub
+    WINDOW main_window AS (ORDER BY occurred_at);
+	
+occurred_at|	total_amt_usd|	lag|	lead|	lag_difference|	lead_difference|
+--|--|--|--|--|--
+2013-12-04T04:22:44.000Z|	0.00|	|	2445.10|	|	2445.10| 
+2013-12-04T04:45:54.000Z|	2445.10|	0.00|	2634.72|	2445.10|	189.62
+2013-12-04T04:53:25.000Z|	2634.72|	2445.10|	0.00|	189.62|	-2634.72
+	
+### Percentiles
+NTILE function can be used to determine the percentile of a column value of the row compared to the rest of the rows. 
+A number is given to the function to specify the level of the percentiles. (ex. NTILE(100) => divides column data range into 100 percentiles)
+	
+    /*
+    Determine quartiles of the standard_qty for each account.
+    */
+    SELECT account_id,
+	   occurred_at,
+	   standard_qty,
+	   NTILE(4) OVER (PARTITION BY account_id ORDER BY standard_qty) AS quartile
+    FROM Orders
+	
+account_id|	occurred_at|	standard_qty|	quartile
+--|--|--|--
+1001|	2015-12-04T04:21:55.000Z|	85|	1
+1001|	2016-05-31T21:22:48.000Z|	91|	1
