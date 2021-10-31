@@ -42,6 +42,9 @@ Repository containing brief notes made during learning.
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
   
 ## Miscellaneous
+### SQL
+- [Window Functions in SQL](): Introduction to window functions in SQL with examples
+
 ### Visualisation 
 - [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/miscellaneous/viz_plotly_express.md): Reference to comprehensive guide to interactive visualisation with Plotly.Express on Python 
 - [Visualisation Dos & Don'ts](https://github.com/TravisH0301/learning/blob/master/miscellaneous/visualisation_dos_don'ts.md): Reference to dos and don'ts for visualisations
