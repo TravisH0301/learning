@@ -9,7 +9,7 @@ Repository containing brief notes made during learning.
 
 ## Data Structures & Algorithms
 ### Data Structures
-
+- [Linked Lists](https://github.com/TravisH0301/learning/blob/master/data_structures_algorithms/linked_lists.md): Introduction to linked lists and Python implementation
 ### Algorithms
 
 ## Data Engineering
