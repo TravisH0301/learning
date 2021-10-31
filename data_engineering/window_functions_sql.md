@@ -131,7 +131,8 @@ Note that the clause needs to be between WHERE and ORDER BY.
     WINDOW main_window AS (PARTITION BY account_id ORDER BY DATE_TRUNC('year',occurred_at));
 
 ### Lag and Lead
-Lagging and leading row values can be determined over the window function.
+Lagging and leading row values can be determined over the window function.<br>
+LAG( <column>[, offset] ), LEAD( <column>[, offset] ) - offset is the number of rows to lag or lead<br>
 Note the null value is used for the first row of the lag column.
 	
     SELECT occurred_at,
@@ -155,7 +156,7 @@ occurred_at|	total_amt_usd|	lag|	lead|	lag_difference|	lead_difference|
 2013-12-04T04:53:25.000Z|	2634.72|	2445.10|	0.00|	189.62|	-2634.72
 	
 ### Percentiles
-NTILE function can be used to determine the percentile of a column value of the row compared to the rest of the rows. 
+NTILE() function can be used to determine the percentile of a column value of the row compared to the rest of the rows. 
 A number is given to the function to specify the level of the percentiles. (ex. NTILE(100) => divides column data range into 100 percentiles)
 	
     /*
