@@ -4,6 +4,10 @@ The window function can be used using OVER (PARTITION BY <column> ORDER BY <colu
 
 ## Contents
 - [Running Total](#Running-Total)
+- [Partitioned Running Total](#Partitioned-Running-Total)
+- [Ranking Rows](#Ranking-Rows)
+- [Aggregations](#Aggregations)
+- [Window Function Alias](#Window-Function-Alias)
 	
 ### Running Total
     /*
@@ -94,7 +98,7 @@ id|	account_id|	month|	dense_rank|	standard_qty|	sum_std_qty|	count_std_qty|	avg
 4309|	1001|	2016-01-01T00:00:00.000Z|	4|	566|	2140|	7|	305.71|	85|	566
 4|	1001|	2016-01-01T00:00:00.000Z|	4|	144|	2140|	7|	305.71|	85|	566
     
-### Alias
+### Window Function Alias
 Alias can be set up for a window function using WINDOW clause if it's used multiple times.<br>
 Note that the clause needs to be between WHERE and ORDER BY.
 
