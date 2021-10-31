@@ -20,6 +20,8 @@ Repository containing brief notes made during learning.
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
+
+### SQL
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
   
 ### Parallel and Distributed Processing
