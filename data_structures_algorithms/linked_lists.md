@@ -10,7 +10,7 @@ But when the location is at its head, it's fast - O(1).
 no new memory location is needed when the capacity is reached. 
 
 ## Python Implementation
-Two classes are defined for a node and a linked list. 
+Two classes are defined for a node and a linked list. Always remember that the node has pointer for the next node (and previous node if doubly linked link).
 
     class Node:  
         """
