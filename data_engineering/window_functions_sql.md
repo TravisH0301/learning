@@ -2,6 +2,9 @@
 
 ## Examples
 ### Running Total
+    /*
+    Running total of standard_qty is calculated over occurred_at with the given descending order.
+    */
     select occurred_at,
            standard_qty,
            sum(standard_qty) over (order by occurred_at desc) as "running_total"
