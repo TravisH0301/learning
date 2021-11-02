@@ -6,14 +6,26 @@ Usually consisted of structured data with a defined schema (logical configuratio
 Data base is designed to be transactional (transaction: usage of database).
 
 ### Database System: Online Transaction Processiong (OLTP)
-Database architecture that emphasises on fast query processing and characterised by large volume of short online transactions such as insert, update & delete.
+Database architecture that emphasises on fast operational query processing and characterised by large volume of short online transactions such as insert, update & delete.<br>
+It provides no redundancy and high integrity, but it is slow for complex queries with JOINs.
 
 ### Database System: Online Analytical Processing (OLAP)
-Database architecture for complex queries and characterised by relatively low volume of transactions. Data warehouse is OLAP system. 
+Database architecture for complex analytical queries with JOINs and characterised by relatively low volume of transactions. Data warehouse is OLAP system.<br>
+
 
 ## Data Warehouse
 Built upon existing database (or several databases) and used for business intelligence. Data warehouse consumes data from databases to create 
 a optimised structure to speed up queries for data analysis.
+
+### Dimensional Modelling
+Dimensional modelling is used in data warehouse to provide easily understandable database with fast analytical query performance.<br>
+It consists of Fact tables and Dimension tables.
+
+Fact tables has characteristics of:
+- Holds transactional data (ex. sales events) with mostly numeric data
+
+Dimension tables has characteristics of:
+- Holds more detailed contextual information of the transactional data (ex. sales person information)
 
 ### ETL based Data Warehouse
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
