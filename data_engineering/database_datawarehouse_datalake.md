@@ -73,7 +73,7 @@ The most widely used methods that define architecture of the data warehouse are:
 - Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
 ### OLAP Cubes
-OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows fact sales data in three dimensions of movie, month and branch. 
+OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows the total fact sales data in three dimensions of movie, month and branch. 
 
 Month|Branch|Movie|Sales
 --|--|--|--
