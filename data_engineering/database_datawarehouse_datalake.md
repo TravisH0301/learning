@@ -53,8 +53,9 @@ The most widely used methods that define architecture of the data warehouse are:
 #### Kimball Architecture:
 - Single ETL process takes place to create shared dimensional model
 - Dimension tables are created at atomic level rather than aggregated level
-- Dimension tables are shared and organised by different business processes with conformed dimensions (Kimball's Bus)<br>
-(ex. Sales team using dim_date, dim_product, dim_customer whereas Product team using dim_date, dim_product)
+- Dimension tables are shared and organised by different business processes with conformed dimensions* (Kimball's Bus)<br>
+(ex. Sales team using dim_date, dim_product, dim_customer whereas Product team using dim_date, dim_product)<br>
+*Conformed dimensions: identical dimensions to every different fact tables, used in different business processes (common dimension tables are shared)
 
 #### Independent Data Marts
 - Independent ETL processes take place to create specific dimensional models for different business processes
@@ -73,19 +74,83 @@ The most widely used methods that define architecture of the data warehouse are:
 - Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
 ### OLAP Cubes
-OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows the total fact sales data in three dimensions of movie, month and branch. 
+OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows the total fact sales data in three dimensions of month, city and movie.
 
-Month|Branch|Movie|Sales
+Month|City|Movie|Sales
 --|--|--|--
 Jan|NY|Batman|3000
 Jan|NY|Bons|4000
 Jan|NY|Marvels|6000
 
+#### OLAP Cube Technology
+OLAP cubes can be served in 2 different ways:
+- Approach 1: Pre-aggregate the OLAP cubes and save them on a special purpose non-relational database (MOLAP). This service is provided by major vendors.
+- Approach 2: Compute OLAP cubes on the fly on the existing relational databases where dimension model resides (ROLAP).
+
 #### OLAP Cube Operations
-- Roll-up: apply aggregation on a dimension, reducing columns in the dimension (ex. sum up sales of each city by country)
-- Drill-down: decompose on a dimension, creating columns in the dimension (ex. decompose the sales of each city into smaller suburbs)
+- Roll-up: apply aggregation on a dimension, reducing the dimension size (ex. sum up sales of each city by country)
+- Drill-down: decompose on a dimension, increasing the dimension size (ex. decompose the sales of each city into smaller suburbs)
 - Slice: reducing the number of dimension from N to N-1, restricting one dimenison to a single value (ex. Month dimension fixed to 'Apr') 
 - Dice: reducing the size of cube by restricting values of the dimensions, while retaining the same dimension size (ex. Month dimension restricted to only 'Jan, Feb, Mar')
+
+#### SQL Implementation of OLAP Cube
+Creating OLAP cube that has an aggreagated fact sales data on dimensions of month, branch and movie.
+
+    %%sql
+    select month, city, movie, sum(sales) as sales
+    FROM factsales f
+         join dimdate d on (f.date_key = d.date_key)
+         join dimmovie m on (f.movie_key = m.movie_key)
+         join dimstore s on (f.store_key = s.store_key)
+    group by (month, city, movie);
+
+Slicing on the month dimension. (Reducing dimension by fixing the month dimension)
+
+    %%sql
+    select month, city, movie, sum(sales) as sales
+    FROM factsales f
+         join dimdate d on (f.date_key = d.date_key)
+         join dimmovie m on (f.movie_key = m.movie_key)
+         join dimstore s on (f.store_key = s.store_key)
+    group by (month, city, movie)
+    having month = '5';
+    
+Dicing on the month and branch dimensions. (Creating sub-cube by restricting values of the dimensions)
+
+    %%sql
+    select month, city, movie, sum(sales) as sales
+    FROM factsales f
+         join dimdate d on (f.date_key = d.date_key)
+         join dimmovie m on (f.movie_key = m.movie_key)
+         join dimstore s on (f.store_key = s.store_key)
+    group by (month, city, movie)
+    having month in (1,5)
+           and city in ('NY', 'SF');
+           
+Rolling up on the city dimension to the country dimension. (Aggregation on city dimension)
+
+    %%sql
+    select month, country, movie, sum(sales) as sales
+    FROM factsales f
+         join dimdate d on (f.date_key = d.date_key)
+         join dimmovie m on (f.movie_key = m.movie_key)
+         join dimstore s on (f.store_key = s.store_key)
+    group by (month, country, movie)
+    
+Drilling down on the city dimension to the suburb dimension. (Decomposition on city dimension)
+
+    %%sql
+    select month, suburb, movie, sum(sales) as sales
+    FROM factsales f
+         join dimdate d on (f.date_key = d.date_key)
+         join dimmovie m on (f.movie_key = m.movie_key)
+         join dimstore s on (f.store_key = s.store_key)
+    group by (month, suburb, movie)
+
+### Columnar Storage
+Columnar (or column-oriented) storage stores data by serialising column data, rather than serialising the row data. Hence, when it comes to column-wise database operations, such as aggregation, it provides faster performance than row-oriented storage. Also, unless entire data table is to be retrieved or the operation processes only one single record at one time, columnar storage provides higher efficiency. 
+
+Columnar storage is widely used in data warehouses and NoSQL databases. 
 
 ## Data Lake 
 Centralised repository for both structured and unstructured data storage. It can contain raw and unprocess data. 
