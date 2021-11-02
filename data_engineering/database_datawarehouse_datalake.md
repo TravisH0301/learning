@@ -73,11 +73,19 @@ The most widely used methods that define architecture of the data warehouse are:
 - Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
 ### OLAP Cubes
-OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below image shows fact sales data in three dimensions of movie, month and branch. 
+OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows fact sales data in three dimensions of movie, month and branch. 
 
-<img src="https://github.com/TravisH0301/learning/blob/master/images/olap.png" width="400">
+Month|Branch|Movie|Sales
+--|--|--|--
+Jan|NY|Batman|3000
+Jan|NY|Bons|4000
+Jan|NY|Marvels|6000
 
-#### 
+#### OLAP Cube Operations
+- Roll-up: apply aggregation on a dimension, reducing columns in the dimension (ex. sum up sales of each city by country)
+- Drill-down: decompose on a dimension, creating columns in the dimension (ex. decompose the sales of each city into smaller suburbs)
+- Slice: reducing the number of dimension from N to N-1, restricting one dimenison to a single value (ex. Month dimension fixed to 'Apr') 
+- Dice: reducing the size of cube by restricting values of the dimensions, while retaining the same dimension size (ex. Month dimension restricted to only 'Jan, Feb, Mar')
 
 ## Data Lake 
 Centralised repository for both structured and unstructured data storage. It can contain raw and unprocess data. 
