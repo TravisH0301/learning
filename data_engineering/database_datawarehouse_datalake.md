@@ -27,6 +27,9 @@ Fact tables has characteristics of:
 Dimension tables has characteristics of:
 - Holds more detailed contextual information of the transactional data (ex. sales person information)
 
+When the database with 3NF tables are converted into data warehouse, the tables are denormalised into dimension tables. So the query performance becomes 
+better with simplied & denormalised tables. (ex. instead of querying data from address and city tables, query can be done using a single dim_location table)
+
 ### ETL based Data Warehouse
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
 finally loaded into the warehouse. This way, the data warehouse contains preprocessed data for analytics purpose. 
