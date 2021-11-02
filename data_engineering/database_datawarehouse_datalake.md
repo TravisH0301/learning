@@ -30,6 +30,23 @@ Dimension tables has characteristics of:
 When the database with 3NF tables are converted into data warehouse, the tables are denormalised into dimension tables. So the query performance becomes 
 better with simplied & denormalised tables. (ex. instead of querying data from address and city tables, query can be done using a single dim_location table)
 
+### ETL vs ELT
+#### ETL based Data Warehouse
+During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
+finally loaded into the warehouse. This way, the data warehouse contains preprocessed data for analytics purpose. 
+
+#### ELT based Data Warehouse
+For ELT (Extract, Load, Transform) process, there is separate tool for ETL transformation. Instead, the data is extracted and loaded into the warehouse.
+The transformation is handled inside the data warehouse itself. 
+
+#### Advantages of ELT over ETL
+- Quicker loading: as transformation occurs after loading, the data is loaded into the storage quicker
+- Flexibility: only required data undergoes transformation and different transformations can be applied each time
+
+#### Disadvantages of ELT
+- Slower analysis: compared to pre-structured ETL, ELT may be slow and unstable in anaylsis when data is all loaded into the storage
+- Compliance: any unfiltered sensitive information may be collected in the storage 
+
 ### Data Warehouse Architecture
 The most widely used methods that define architecture of the data warehouse are:
 
@@ -55,21 +72,12 @@ The most widely used methods that define architecture of the data warehouse are:
 - Inital ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
 - Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
-### ETL based Data Warehouse
-During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
-finally loaded into the warehouse. This way, the data warehouse contains preprocessed data for analytics purpose. 
+### OLAP Cubes
+OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below image shows fact sales data in three dimensions of movie, month and branch. 
 
-### ELT based Data Warehouse
-For ELT (Extract, Load, Transform) process, there is separate tool for ETL transformation. Instead, the data is extracted and loaded into the warehouse.
-The transformation is handled inside the data warehouse itself. 
+<img src="https://github.com/TravisH0301/learning/blob/master/images/olap.png" width="400">
 
-#### Advantages of ELT over ETL
-- Quicker loading: as transformation occurs after loading, the data is loaded into the storage quicker
-- Flexibility: only required data undergoes transformation and different transformations can be applied each time
-
-#### Disadvantages of ELT
-- Slower analysis: compared to pre-structured ETL, ELT may be slow and unstable in anaylsis when data is all loaded into the storage
-- Compliance: any unfiltered sensitive information may be collected in the storage 
+#### 
 
 ## Data Lake 
 Centralised repository for both structured and unstructured data storage. It can contain raw and unprocess data. 
