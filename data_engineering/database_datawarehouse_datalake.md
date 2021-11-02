@@ -30,6 +30,31 @@ Dimension tables has characteristics of:
 When the database with 3NF tables are converted into data warehouse, the tables are denormalised into dimension tables. So the query performance becomes 
 better with simplied & denormalised tables. (ex. instead of querying data from address and city tables, query can be done using a single dim_location table)
 
+### Data Warehouse Architecture
+The most widely used methods that define architecture of the data warehouse are:
+
+#### Kimball Architecture:
+- Single ETL process takes place to create shared dimensional model
+- Dimension tables are created at atomic level rather than aggregated level
+- Dimension tables are shared and organised by different business processes with conformed dimensions (Kimball's Bus)<br>
+(ex. Sales team using dim_date, dim_product, dim_customer whereas Product team using dim_date, dim_product)
+
+#### Independent Data Marts
+- Independent ETL processes take place to create specific dimensional models for different business processes
+  - These separate and smaller dimensional models are called "Data Marts"
+- Generally not encouraged due to inconsistent views of data and extra storage & workload required
+
+#### Inmon's Corporate Information Factory (CIF)
+- Initial ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
+- Individual subsequent ETL processes take place to create specific "Data Marts" for different business processes
+  - Enterprise data warehouse acts as a single source of truth for the data marts (unlike data marts with different sources in "Independent Data Marts architecture")
+- The dimensional models in data marts are mostly aggregated unlike "Kimball" architecture
+
+#### Hybrid Kimball Bus & Inmon CIF
+- Integrates Kimball architecture and Inmon's CIF architecture
+- Inital ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
+- Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
+
 ### ETL based Data Warehouse
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
 finally loaded into the warehouse. This way, the data warehouse contains preprocessed data for analytics purpose. 
