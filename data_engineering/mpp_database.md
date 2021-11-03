@@ -18,6 +18,10 @@ MPP architecture consists of multiple computers (nodes) in the distributed netwo
 - Nodes perform the same task 
 
 ## Amazon Redshift
-Amazon Redshift is one of the databases that uses MPP. It uses a cluster of nodes to process queries in parallel. To do this, the table is divided into partitioned tables and
+Amazon Redshift is one of the databases that uses MPP. It uses a cluster of nodes to process queries in parallel. 
+
+![](https://github.com/TravisH0301/learning/blob/master/images/redshift_architecture.png)
+
+To do this, the table is divided into partitioned tables and
 each node slice (node CPU) performs the query on its own partitioned table. This process allows the database to execute queries efficiently in parallel. <br>
 The number of partitioned tables depends on the number of node slices. And the cluster has a lead node which commnicates with the client applications. 
