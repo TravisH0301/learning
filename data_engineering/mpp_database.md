@@ -27,7 +27,7 @@ each node slice (node CPU) performs the query on its own partitioned table. This
 The number of partitioned tables depends on the number of node slices. And the cluster has a lead node which commnicates with the client applications. 
 
 ## Methods of Table Partitioning
-Tables can be partitioned using two methods.
+Tables can be partitioned using two methods. In AWS Redshift, the distribution style can be defined when creating a table. 
 
 ### Distribution Style
 #### Round-Robin (Even)
