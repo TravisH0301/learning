@@ -21,7 +21,7 @@ Repository containing brief notes made during learning.
 - [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
-- [MPP Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/mpp_database.md): Introduction to Massively Parallel Processing (MPP) and its architectures of grid computing and clustering
+- [MPP Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/mpp_database.md): Introduction to Massively Parallel Processing (MPP) and its architectures of grid computing and clustering | Methods of table partitioning: Distribution style & Sorting key
 
 ### SQL
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
