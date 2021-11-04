@@ -1,5 +1,6 @@
 # SQL-to-SQL ETL Design
 When moving data from one database to another database, Extract, Transform & Load (ETL) process is used.<br>
+The below is an example of a typical ETL process between databases.
 
 ## ETL Process
 #### 1.Source DB ==> 2.Flat file storage ==> 3.Raw DB ==> 4.Staging DB ==> 5.DWH ==> 6.OLAP Cube ==> 7.BI/Anayltics
