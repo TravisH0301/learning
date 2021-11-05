@@ -55,7 +55,7 @@ Repository containing brief notes made during learning.
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
 
 ### Version Control
-- [Git](https://github.com/TravisH0301/learning/blob/master/miscellaneous/git.md): Instructions to version control using Git with local & remote repositories
+- [Git](https://github.com/TravisH0301/learning/blob/master/miscellaneous/git.md): Instructions to version control using Git
 
 ### Anaconda
 - [Anaconda Virtual Environment](https://github.com/TravisH0301/learning/blob/master/miscellaneous/conda_virtual_env.md): Instruction on how to setup Anaconda virtual environment
