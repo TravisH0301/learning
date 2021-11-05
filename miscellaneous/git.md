@@ -26,6 +26,8 @@ Repository is where all committed files and their tracked changes are stored.
 Git can be downloaded from its official website. 
 [Git Download](https://git-scm.com/downloads)
 
+Git bash will be used for any examples below. 
+
 ## Configuration
 This configuration enables identification of any changes made by the user. <br>
 $ git config --global user.name "Your name" <br>
