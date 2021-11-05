@@ -29,7 +29,11 @@ Git can be downloaded from its official website.
 ## Configuration
 This configuration enables identification of any changes made by the user. <br>
 $ git config --global user.name "Your name" <br>
-$ git config --global user.email "Your email"
+$ git config --global user.email "Your email"<br>
+*There are 3 levels in configuration:
+- System: on all users
+- Global: on current user for all repositories
+- Currnet: on current repository
 
 ## Initiation
 To create a new repository, Git must be initiated in the working directory. <br>
