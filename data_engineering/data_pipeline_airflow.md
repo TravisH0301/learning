@@ -43,7 +43,8 @@ The schedule interval can be defined using the following formats:
 - @yearly: Run the DAG every year
 - None: Only run the DAG when the user initiates it
 
-Note that if the scheduler misses executing a DAG, then it will execute the total number of missed interval executions. 
+Note that if the scheduler misses executing a DAG, then it will execute the total number of missed interval executions. <br>
+End date can be configured optionally, unless the DAG continues to run until it gets turned off manually.
 
 #### Creating Operator
 An operator is a task in a DAG. There are many types of operators. The below example uses a Python operator which takes in a Python function as a task.
