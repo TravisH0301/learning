@@ -47,27 +47,43 @@ Note that if the scheduler misses executing a DAG, then it will execute the tota
 End date can be configured optionally, unless the DAG continues to run until it gets turned off manually.
 
 #### Creating Operator
-An operator is a task in a DAG. There are many types of operators. The below example uses a Python operator which takes in a Python function as a task.
+An operator is a task in a DAG. There are many types of operators. The below example uses a PythonOperator which takes in a Python function as a task.
 
+    import logging
     from airflow import DAG
     from airflow.operators.python_operator import PythonOperator
 
     def hello_world():
         """
-        This Python function is to be passed to the Python Operator.
+        This function logs a string.
         """
-        print(“Hello World”)
-
+        logging.info(“Hello World”) # logging function allows Python to record data in the log - this will be shown in the Airflow DAG log
+        
+    def bye_world():
+        """
+        This function logs a string.
+        """
+        logging.info("Bye World")
+        
     first_dag = DAG(
         'first dag', # DAG name
         description='This is a first DAG', # description
         start_date=datetime(2021, 1, 1), # start date
         schedule_interval='@daily') # interval
         
-    task = PythonOperator(
-        task_id=’hello_world’, # task id
+    task1 = PythonOperator(
+        task_id='hello_world', # task id
         python_callable=hello_world, # python function to be called (executed)
         dag=first_dag) # DAG to include the operator (task)
+        
+    task2 = PythonOperator(
+        task_id='bye_world',
+        python_callable=bye_world, 
+        dag=first_dag) 
+        
+    task1 >> task2 # this provides an edge information between task1 and task2, where task1 operates before task2
+    # the below code also set an order of the tasks
+    # task1.set_downstream(task2)
 
 
 
