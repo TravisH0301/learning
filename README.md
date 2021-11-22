@@ -18,10 +18,13 @@ Repository containing brief notes made during learning.
 - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of database (OLTP & OLAP), data warehouse (dimension modelling, architecture & OLAP Cube) and data lake.
 - [Data Modelling](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_modelling.md): How to do data modelling (Entity Relationship Diagram) and aspects of relational database & non-relational (NoSQL) database
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
-- [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
 - [MPP Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/mpp_database.md): Introduction to Massively Parallel Processing (MPP) and its architectures of grid computing and clustering | Methods of table partitioning: Distribution style & Sorting key
+
+### Data Pipeline
+- [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
+- [Data Pipeline and Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_pipeline_airflow.md): Introduction of Directed Acyclic Graphs (DAGs) in data pipeline and building DAGs with Apache Airflow
 
 ### SQL
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
