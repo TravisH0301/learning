@@ -25,7 +25,7 @@ Repository containing brief notes made during learning.
 ### Data Pipeline
 - [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
 - [Data Pipeline and Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_pipeline_airflow.md): Introduction of Directed Acyclic Graphs (DAGs) in data pipeline and building DAGs with Apache Airflow
-- [Data Lineage & Quality in Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_lineage_data_quality_airflow.md): Managing data lineage and data quality in Airflow
+- [Data Lineage & Quality in Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_lineage_data_quality_airflow.md): Managing data lineage and data quality in Apache Airflow
 
 ### SQL
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
