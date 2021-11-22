@@ -127,15 +127,18 @@ More templates can be found at [Airflow Documentation](https://airflow.apache.or
     from airflow import DAG
     from airflow.operators.python_operator import PythonOperator
 
-    def hello_date(*args, **kwargs):
-        print(f“Hello {kwargs[‘execution_date’]}”) # task execution date is displayed
+    def display_date(*args, **kwargs):
+        execution_date = kwargs['execution_date'] # method 1 of getting keyword argument context
+        run_id = kwarg.get('run_id') # method 2 of getting keyword argument context
+        print(f"Execution date: {execution_date}") # task execution date is displayed
+        print(f"Run id: {run_id}") # task run id is displayed
 
-    divvy_dag = DAG(...)
+    my_dag = DAG(...)
     task = PythonOperator(
-        task_id=’hello_date’,
-        python_callable=hello_date,
+        task_id='display date',
+        python_callable=display_date,
         provide_context=True, # this configuration allows passing context info as kwargs
-        dag=divvy_dag)
+        dag=my_dag)
 
 
 
