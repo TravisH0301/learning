@@ -85,8 +85,57 @@ An operator is a task in a DAG. There are many types of operators. The below exa
     # the below code also set an order of the tasks
     # task1.set_downstream(task2)
 
+#### Hooks
+Airflow provides hooks to connect with external systems and databases. <br>
+Examples of the hook are HttpHook, PostgresHook (works with Redshift), MySqlHook, SlackHook, and etc.
 
+Credentials are stored within Airflow's connection, hence, they are not stored in the code. <br>
+Connections can be created for the hooks on Airflow UI: Admin > Connections > Create >  input Connection credential information <br>
+In addition, key-value variable can be created on Airflow UI: Admin > Variables > Create > input Key and Value
 
+    from airflow import DAG
+    from airflow.hooks.postgres_hook import PostgresHook
+    from airflow.operators.python_operator import PythonOperator
+
+    def load():
+        """
+        Connects to S3 using stored connection credential and variables.
+        """
+        hook = S3Hook(aws_conn_id='aws_credentials') # connection
+        bucket = Variable.get('s3_bucket') # variable
+        prefix = Variable.get('s3_prefix') # variable
+        logging.info(f"Listing Keys from {bucket}/{prefix}")
+        keys = hook.list_keys(bucket, prefix=prefix)
+        for key in keys:
+            logging.info(f"- s3://{bucket}/{key}")
+
+    dag = DAG(
+        'lesson1.exercise4',
+        start_date=datetime.datetime.now())
+
+    list_task = PythonOperator(
+        task_id="list_keys",
+        python_callable=list_keys,
+        dag=dag
+    )
+
+#### Task Context 
+Airflow task can pass it's context information as a keyword argument to the function. This allows users to check more detailed task information 
+such as execution date and time of the task. <br>
+More templates can be found at [Airflow Documentation](https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html)
+
+    from airflow import DAG
+    from airflow.operators.python_operator import PythonOperator
+
+    def hello_date(*args, **kwargs):
+        print(f“Hello {kwargs[‘execution_date’]}”) # task execution date is displayed
+
+    divvy_dag = DAG(...)
+    task = PythonOperator(
+        task_id=’hello_date’,
+        python_callable=hello_date,
+        provide_context=True, # this configuration allows passing context info as kwargs
+        dag=divvy_dag)
 
 
 
