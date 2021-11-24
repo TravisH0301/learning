@@ -47,7 +47,7 @@ When creating a table, the column to be used for key distribution has to be defi
 - Con: Load distribution can be skewed if data is skewed
 
 ### Sorting Key
-A column or columns of a table can be defined as sorting key. When data is loaded, the rows are sorted prior to the distribution. <br>
+A column or columns of a table can be defined as sorting key. When data is loaded, the rows are ordered by the sorting key prior to the distribution. <br>
 The sorting key works like an index in the traditional database. It allows the nodes to scan the data faster. 
 - Efficient query can be done if the column used the most frequent for sorting is defined as a sorting key
 - Queries can become inefficient if the query is irrelevant to the sorting key column
