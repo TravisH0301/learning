@@ -3,6 +3,12 @@ These shemas are widely used as data warehouse schemas, using conceptual fact an
 Fact table contains unique rows of information, whereas, dimension table contains multiple transaction information. Fact table and dimension table forms one-to-one 
 or one-to-many cardinality.
 
+## Data Ingestion Order
+When data is populated into the dimensional model, the dimension tables should be ingested prior to the fact tables. This is to provide the related key value (surrogate key or
+primary-foreign key) from the dimension table to the fact table. 
+
+In case of the <strong>'Late Arriving Dimensions'</strong>, dummy values are to be ingested into the dimensions and to be linked to the fact. And when the dimension data arrives, the dummy values can be updated.
+
 ## Star Schema
 The star schema consists of one or more fact tables referencing to any number of dimension tables.<br>
 Its name comes from how tables are modelled. Usually, a fact table is surrounded by multiple dimension tables forming a star.<br>
