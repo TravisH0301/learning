@@ -1,5 +1,13 @@
 # Distributed Database
-Database is distributed horizontally with copies of data to provide high availability.<br>
+Database is distributed horizontally with copies of data to provide high availability.
+
+## Table of Contents
+- [NoSQL Database](#nosql-database)
+- [Eventual Consistency](#eventual-consistency)
+- [The CAP Theorem](#the-cap-theorem)
+- [Distributed Database Modelling (Apache Cassandra)](#distributed-database-modelling-apache-cassandra)
+
+## NoSQL Database
 Typically NoSQL databases are distributed database system, allowing:
 - Massive dataset organisation: horizonal scaling is supported to allow data growth
 - Flexible database expansion: newly formed data doesn't have to fit the data types of previously existing information (flexible schema)
@@ -13,11 +21,6 @@ On the other hand, there are limitations:
   - This is because for example, in join, common colums with the same data type are required between tables related to each other. But in non-relational database, there is no relations between tables. But, it maybe done in some circumstances like joining the keys for two tables that are in the same field, or table can be newly created to meet the requirement.
   - Also join/aggregation requires scanning of whole data and it's allowed as the data is spread across multiple nodes. It is not done without optimisations. Hence, it's usually done in the data processing app, such as, Apache Spark.
 - No ACID transactions, but some NoSQL DB supports ACID transactions.
-
-## Table of Contents
-- [Eventual Consistency](#eventual-consistency)
-- [The CAP Theorem](#the-cap-theorem)
-- [Distributed Database Modelling (Apache Cassandra)](#distributed-database-modelling-apache-cassandra)
 
 ## Eventual Consistency
 A consistency model in distributed computing to achieve high availability that 
