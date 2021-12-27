@@ -2,6 +2,18 @@
 An MPP database is a storage structure designed to process multiple operations simultaneously using several processing units in a distributed computer network.
 This allows MPP databases to provide much fast query performance on large datasets.
 
+## Table of Contents
+- [MPP Architecture](#mpp-architecture)
+  - [Grid Computing](#grid-computing)
+  - [Clustering](#clustering)
+- [Amazon Redshift](#amazon-redshift)
+- [Methods of Table Partitioning](#methods-of-table-partitioning)
+  - [Distribution Style](#distribution-style)
+    - [Round-Robin (Even)](#round-robin-even)
+    - [Broadcasting (All)](#broadcasting-all)
+    - [Key](#key)
+  - [Sorting Key](#sorting-key)
+
 ## MPP Architecture
 MPP architecture consists of multiple computers (nodes) in the distributed networks working together. And there are two types of MPP architecture.
 
