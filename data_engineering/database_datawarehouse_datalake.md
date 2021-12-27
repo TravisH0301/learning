@@ -2,7 +2,7 @@
 Three terms all describe a data store, yet they have different stuctures and purposes. 
 
 ## Table of Contents
-(#Database)
+[Database](#Database)
 
 ## Database
 Usually consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
