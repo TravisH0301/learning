@@ -5,7 +5,7 @@ Note that ORDER BY clause within the window function will be applied to the enti
 The aggregation with an empty OVER() will apply the aggregation function over the whole table. 
 	
 
-## Contents
+## Table of Contents
 - [Running Total](#Running-Total)
 - [Partitioned Running Total](#Partitioned-Running-Total)
 - [Ranking Rows](#Ranking-Rows)
