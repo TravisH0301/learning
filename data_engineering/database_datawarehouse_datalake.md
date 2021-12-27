@@ -3,7 +3,7 @@ Three terms all describe a data store, yet they have different stuctures and pur
 
 ## Table of Contents
 - [Database](#Database)
-  - [Database System: Online Transaction Processiong (OLTP)](#Database-System:-Online-Transaction-Processiong-(OLTP))
+  - [Database System: Online Transaction Processiong (OLTP)](#Database-System\:-Online-Transaction-Processiong-(OLTP))
   - [Database System: Online Analytical Processing (OLAP)](#Database-System:-Online-Analytical-Processing-(OLAP))
 - [Data Warehouse](#Data-Warehouse)
   - [Dimensional Modelling](#Dimensional-Modelling) 
