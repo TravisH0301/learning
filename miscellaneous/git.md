@@ -3,6 +3,37 @@ Git is an open source version control tool that enables one to easily track chan
 Git supports non-linear development allowing multiple sections of the project to be amended at the same time.
 Git works on commandline and it can be used with local or remote repositories. Github is one of popular Git repository server service. 
 
+## Table of Contents
+- [Structure](#structure)
+  - [Working Tree](#working-tree)
+  - [Staging Area](#staging-area)
+  - [Repository](#repository)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Current User Setup](#current-user-setup)
+  - [Default Editor Setup](#default-editor-setup)
+  - [End of Line Setup](#end-of-line-setup)
+- [Initialising](#initialising)
+- [Staging Files](#staging-files)
+  - [Check Staging Files](#check-staging-files)
+  - [Removing File from Staging Area & Working Directory](#removing-file-from-staging-area--working-directory)
+- [Checking Git Status](#checking-git-status)
+- [Making Commits](#making-commits)
+  - [Commit Practice](#commit-practice)
+  - [Commit History](#commit-history)
+- [Checking Difference](#checking-difference)
+  - [Visually Checking Changes](#visually-checking-changes)
+- [Restore Staged File or Committed File](#restore-staged-file-or-committed-file)
+- [Restore File from Commit Logs](#restore-file-from-commit-logs)
+- [Restore Working Tree (Switching Branch)](#restore-working-tree-switching-branch)
+- [Creating Branch](#creating-branch)
+- [Merging Branches](#merging-branches)
+  - [Merge Conflict](#merge-conflict)
+- [Deleting Branch](#deleting-branch)
+- [Stashing Files](#stashing-files)
+- [Ignore Files](#ignore-files)
+- [Pushing to Github Repository](#pushing-to-github-repository)
+
 ## Structure
 Git consists of 3 areas. <br>
 <img src="https://github.com/TravisH0301/learning/blob/master/images/git_structure.png" width="400">
