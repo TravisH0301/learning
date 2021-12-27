@@ -4,6 +4,12 @@ Depending on an objective and a nature of data, one may choose one over others. 
 Note that an average of averages does not necessarily equal to an average of a whole data, yet, it can provide a good estimation if the data is skewed, and
 can help to present the data in different interpretations. 
 
+## Table of Contents
+- [Mean of Means](#mean-of-means)
+- [Median of Medians](#median-of-medians)
+- [Mean of Medians](#mean-of-medians)
+- [Median of Means](#median-of-means)
+
 ## Mean of Means
 A mean of means only equals to a mean of all when they number of values in aggregate groups are equal. <br>
 When there is a skewness in numbers of values from the groups, the mean of means will differ to the mean of all.
