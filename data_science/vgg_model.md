@@ -15,6 +15,11 @@ field as a convolutional layer with 7x7 filters. And more layers result in more 
 Hence, it is more effective than a single convolutional layer with larger filter size. Additionally, the deeper the network goes, the spatial size of the feature maps 
 reduces due to pooling, yet, the depth of feature maps increases due to having higher number of filters in deeper layers. 
 
+## Table of Contents
+- [Learning abstract information & features](#learning-abstract-information--features)
+- [Limitation](#limitation)
+- [Implementation](#implementation)
+
 ## Learning abstract information & features
 The model learns abstract information and features of input images through its deep structure. In the shallow level of the model, it learns simple edges and lines about
 the image and in the deeper level of the model, it learns about more specific concepts such as person's eye or nose. And the feature maps become sparser in deeper levels
