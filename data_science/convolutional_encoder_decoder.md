@@ -1,5 +1,4 @@
 # Convolutional Encoder Decoder
-
 This model is a convolutional neural network model consisted of encoder and decoder.
 During encoding, dimensions of input features are reduced. And this low resolution features are mapped back to 
 its full initial dimensions via decoding. This enables the model to be space efficient, hence, result in faster 
@@ -19,6 +18,9 @@ manually masked CT image and the right is the segmented CT image using the Convo
 <p align="center">
 <img src="https://github.com/TravisH0301/learning/blob/master/images/lung_ct.png" width="400">
 </p>
+
+## Table of Contents
+- [Implementation](#implementation)
 
 ## Implementation
 Supervised image segmentation using convolutional encoder decoder via Keras is demonstrated in the following notebook.
