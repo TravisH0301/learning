@@ -1,5 +1,19 @@
 # Neural Network Optimisation
 
+## Table of Contents
+- [Optimisation for high variance](#optimisation-for-high-variance)
+    - [High bias](#high-bias)
+    - [High variance](#high-variance)
+  - [L1 L2 Regularisation](#l1-l2-regularisation)
+  - [Dropout regularisation](#dropout-regularisation)
+    - [Invert dropout](#invert-dropout)
+  - [Data augmentation](#data-augmentation)
+  - [Early stopping](#early-stopping)
+- [Optimisation for input features](#optimisation-for-input-features)
+  - [Input normalisation](#input-normalisation)
+- [Vanishing/Exploding gradients](#vanishingexploding-gradients)
+  - [Weight initialisation](#weight-initialisation)
+
 ## Optimisation for high variance
 #### High bias
 High bias is indicated by high training error and this is due to model not learning the features of the data well. This can be improved by adding up more layers 
