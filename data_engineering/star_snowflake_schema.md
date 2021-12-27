@@ -3,6 +3,15 @@ These shemas are widely used as data warehouse schemas, using conceptual fact an
 Fact table contains unique rows of information, whereas, dimension table contains multiple transaction information. Fact table and dimension table forms one-to-one 
 or one-to-many cardinality.
 
+## Table of Contents
+- [Data Ingestion Order](#data-ingestion-order)
+- [Star Schema](#star-schema)
+  - [Advantage](#advantage)
+  - [Disadvantage](#disadvantage)
+- [Snowflake Schema](#snowflake-schema)
+  - [Advantage](#advantage-1)
+  - [Disadvantage](#disadvantage-1)
+
 ## Data Ingestion Order
 When data is populated into the dimensional model, the dimension tables should be ingested prior to the fact tables. This is to provide the related key value (surrogate key or
 primary-foreign key) from the dimension table to the fact table. 
