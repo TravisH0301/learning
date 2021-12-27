@@ -3,8 +3,8 @@ Three terms all describe a data store, yet they have different stuctures and pur
 
 ## Table of Contents
 - [Database](#Database)
-  - [Database System: Online Transaction Processiong (OLTP)](#Database-System-Online-Transaction-Processiong-(OLTP))
-  - [Database System: Online Analytical Processing (OLAP)](#Database-System:-Online-Analytical-Processing-(OLAP))
+  - [Database System: Online Transaction Processiong (OLTP)](#Database-System--Online-Transaction-Processiong-(OLTP))
+  - [Database System: Online Analytical Processing (OLAP)](#Database-System--Online-Analytical-Processing-(OLAP))
 - [Data Warehouse](#Data-Warehouse)
   - [Dimensional Modelling](#Dimensional-Modelling) 
   - [ETL vs ELT](#ETL-vs-ELT)
@@ -17,7 +17,7 @@ Three terms all describe a data store, yet they have different stuctures and pur
 Usually consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
 Data base is designed to be transactional (transaction: usage of database).
 
-### Database System Online Transaction Processiong (OLTP)
+### Database System Online: Transaction Processiong (OLTP)
 Database architecture that emphasises on fast operational query processing and characterised by large volume of short online transactions such as insert, update & delete.<br>
 It provides no redundancy and high integrity, but it is slow for complex queries with JOINs.
 
