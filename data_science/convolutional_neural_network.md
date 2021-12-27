@@ -1,8 +1,13 @@
 # Convolutional Neural Network (CNN or ConvNet)
-
 Convolutional neural network is a regularised version of multilayer perceptron (MLP a.k.a Feedforward NN). MLP is consisted of layers of perceptrons
 where neurons of layers are fully connected to features/neurons in the neighboring layers. This makes the model prone to overfitting. For image processing, 
 number of features to be learned by the model increased sharply as each pixel of an image is regarded as a feature. Hence, CNN is commonly used for images. 
+
+## Table of Contents
+- [Convolving](#convolving)
+- [Stride & Padding](#stride--padding)
+- [Architecture](#architecture)
+- [Additional Regularisation](#additional-regularisation)
 
 ## Convolving
 Typically, CNN is consisted of an input and output layers and series of convolutional layers. Convolutional layers have filters/kernals as a 2D matrix that 
