@@ -1,4 +1,13 @@
 # Pandas Parallelism via Modin
+
+## Table of Contents
+- [Modin](#modin)
+- [Dependancy](#dependancy)
+- [Installation](#installation)
+- [Import](#import)
+- [Trouble shooting](#trouble-shooting)
+- [Source](#source)
+
 ## Modin
 Modin provides parallelism for Pandas operations. And it provides easy integration with no configuration required. Additionally, it follows Pandas syntax.
 
