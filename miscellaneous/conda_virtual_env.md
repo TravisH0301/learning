@@ -2,6 +2,15 @@
 Virtual environment is an isloated environment that enables an independent project to have its own version of Python, module files and paths. <br>
 Anaconda provides an interface to create and control virtual environments. For Pythons installed without Anaconda, other modules such as `virtualenv` can be used.
 
+## Table of Contents
+- [Update Conda](#update-conda)
+- [Create Virtual Environment](#create-virtual-environment)
+- [Activate Virtual Environment](#activate-virtual-environment)
+- [List Virtual Environment](#list-virtual-environment)
+- [Deactivate Virtual Environment](#deactivate-virtual-environment)
+- [Copy Virtual Environment](#copy-virtual-environment)
+- [Remove Virtual Environment](#remove-virtual-environment)
+
 ## Update Conda
 Prior to creating a virtual machine, conda can be updated to ensure up to date modules are installed. <br>
 `$ conda --version` <br>
