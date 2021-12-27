@@ -1,5 +1,8 @@
 # Database vs Data Warehouse vs Data Lake
-Three terms all describe a data storage, yet they have different stuctures and purposes. 
+Three terms all describe a data store, yet they have different stuctures and purposes. 
+
+## Table of Contents
+(#Database)
 
 ## Database
 Usually consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
@@ -32,8 +35,9 @@ better with simplied & denormalised tables. (ex. instead of querying data from a
 
 ### ETL vs ELT
 #### ETL based Data Warehouse
-During ETL (Extract, Transform, Load) process, the data is extracted from data sources and transformed into required formats for applications and then
-finally loaded into the warehouse. This way, the data warehouse contains preprocessed data for analytics purpose. 
+During ETL (Extract, Transform, Load) process, the data is extracted from data sources into a staging area, where the data is transformed into required formats
+for applications. Then, the transformed data is finally loaded into the dimensional model. 
+This way, the data warehouse contains preprocessed data for analytics purpose. 
 
 #### ELT based Data Warehouse
 For ELT (Extract, Load, Transform) process, there is separate tool for ETL transformation. Instead, the data is extracted and loaded into the warehouse.
