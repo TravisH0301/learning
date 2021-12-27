@@ -3,6 +3,14 @@ Geographic coordinate system associates with positions on the earth. The positio
 - Geographic coordinate system; using 3-D shperical surface in latitude, longitude and elevation
 - Projected coordinate system; using flat, 2-D surface in x, y and elevation
 
+## Table of Contents
+- [Geographic Cooridnate System](#geographic-cooridnate-system)
+- [Projected Coordinate System](#projected-coordinate-system)
+- [Geometry vs Geography](#geometry-vs-geography)
+- [Important Parameters](#important-parameters)
+- [Well-Known Text (WKT)](#well-known-text-wkt)
+- [Python Script for Conversion from UTM to WGS84](#python-script-for-conversion-from-utm-to-wgs84)
+
 ## Geographic Cooridnate System
 Geographic cooridnate system uses geodetic datum as a reference ellipsoid with a given origin and orientation to map the coordinate system. The datum may be global or local. 
 One of the most widely used global datum is:
