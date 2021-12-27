@@ -2,20 +2,7 @@
 An abstrat that organises elements of data and they relate to each other. End state is a database.
 
 ## Table of Contents
-- [Process](#process)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-    - [Cardinality](#cardinality)
-    - [Foreign Key](#foreign-key)
-    - [Many-to-Many Relationship](#many-to-many-relationship)
-- [Relational Model](#relational-model)
-  - [Difference between Entity Relationship Model and Relational Model](#difference-between-entity-relationship-model-and-relational-model)
-  - [Advantage of Relational Database](#advantage-of-relational-database)
-  - [Disadvatange of Relational Database](#disadvatange-of-relational-database)
-- [Non-relational Database (NoSQL)](#non-relational-database-nosql)
-  - [Advantage of Non-relational Database](#advantage-of-non-relational-database)
-  - [Disadvantage of Non-relational Database](#disadvantage-of-non-relational-database)
-  - [Common Types of NoSQL Databases](#common-types-of-nosql-databases)
-  - [Apache Cassandra](#apache-cassandra)
+
 
 ## Process
 - Gather requirements
