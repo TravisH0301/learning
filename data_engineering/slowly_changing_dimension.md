@@ -4,6 +4,14 @@ Slowly Changing Dimension (SCD) is a dimension that manages both current and his
 
 There are several types of SCDs to manage the changing source data over time. Among them, Type 1 and 2 SCDs are most widely used.
 
+## Table of Contents
+- [Type 0 SCD (No Change)](#type-0-scd-no-change)
+- [Type 1 SCD (Latest Record Only)](#type-1-scd-latest-record-only)
+- [Type 2 SCD (Maintains History)](#type-2-scd-maintains-history)
+- [Type 3 SCD](#type-3-scd)
+- [Type 4 SCD](#type-4-scd)
+- [Type 6 SCD (1+2+3)](#type-6-scd-123)
+
 ## Type 0 SCD (No Change)
 Type 0 SCD is when we don't make any changes to the dimension. This is usually the case when the changed data is no longer relevant or important. Hence, the dimension is static.
 
