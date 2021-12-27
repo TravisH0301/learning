@@ -3,6 +3,30 @@ Time series is a data where the data is recorded at regular or irregular timesta
 
 https://otexts.com/fpp2/autocorrelation.html
 
+## Table of Contents
+- [Charateristics of time series data](#charateristics-of-time-series-data)
+  - [Trend](#trend)
+  - [Seasonality](#seasonality)
+  - [Cyclic](#cyclic)
+  - [Stationarity](#stationarity)
+    - [Transformation](#transformation)
+  - [Autocorrelation](#autocorrelation)
+- [Feature selection (for Multivariate forecasting)](#feature-selection-for-multivariate-forecasting)
+- [Statistical modelling](#statistical-modelling)
+- [Facebook Prophet (Additive modelling)](#facebook-prophet-additive-modelling)
+  - [Additional regressor](#additional-regressor)
+  - [Multiplicative seasonality](#multiplicative-seasonality)
+  - [Problem with Prophet](#problem-with-prophet)
+    - [Solution 1:](#solution-1)
+    - [Solution 2:](#solution-2)
+- [Considerations for time series regression](#considerations-for-time-series-regression)
+  - [Multicollinearity (Collinearity)](#multicollinearity-collinearity)
+  - [Spurious Correlation](#spurious-correlation)
+  - [Heteroscedasticity of Residuals (Verifies the consistency of a statistical model)](#heteroscedasticity-of-residuals-verifies-the-consistency-of-a-statistical-model)
+  - [White Noise](#white-noise)
+  - [Autocorrelation of Residuals (Verifies the statistical model)](#autocorrelation-of-residuals-verifies-the-statistical-model)
+- [Uncertainty of forecasting](#uncertainty-of-forecasting)
+
 ## Charateristics of time series data
 There are several components of the time series data to look at to understand the nature of the data. 
 It's always good to have a look at a general time series plot (for patterns), histogram (for skewness & stationarity), autocorrelation and partial autocorrelation.
