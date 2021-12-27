@@ -1,6 +1,18 @@
 # Multiprocessing and Ray on Python
 On Python parallel processing can be achieved using either Multiprocessing and Ray. Both libraries utilise the CPU cores to execute tasks synchronously or asynchronously.
 
+## Table of Contents
+- [Multiprocessing](#multiprocessing)
+  - [Important Notes](#important-notes)
+  - [Multiprocessing - Process](#multiprocessing---process)
+  - [Multiprocessing - Pool](#multiprocessing---pool)
+    - [Synchronous execution](#synchronous-execution)
+    - [Asynchronous execution](#asynchronous-execution)
+- [Ray](#ray)
+  - [Installation](#installation)
+  - [Example](#example)
+- [Reference](#reference)
+
 ## Multiprocessing
 Multiprocessing library has 2 types of parallel processing; Process and Pool. 
 
