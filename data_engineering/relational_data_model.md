@@ -1,4 +1,12 @@
 # Relational Data Model
+
+## Table of Contents
+- [Types of Relational Databases](#types-of-relational-databases)
+- [Structuring Database](#structuring-database)
+  - [Normalisation](#normalisation)
+    - [Process of Normalisation](#process-of-normalisation)
+  - [Denormalisation:](#denormalisation)
+
 ## Types of Relational Databases
 - Online Analytical Processing (OLAP): database optimised for complex analytics and adhoc queries, including aggregations. It is optimised for reads.
 - Online Transactional Processing (OLTP): database optimised for workloads with less complex queries in large volume. The types of quries for OLTP are read, insert, update, and delete.
