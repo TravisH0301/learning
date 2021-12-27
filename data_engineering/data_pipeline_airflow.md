@@ -1,6 +1,16 @@
 # Data Pipeline
 Data pipeline is a sequence of data processing. This may be consisted of an ETL, ELT or other processes.
 
+## Table of Contents
+- [Directed Acyclic Graphs (DAGs)](#directed-acyclic-graphs-dags)
+- [Airflow](#airflow)
+  - [Architecture](#architecture)
+  - [Building Data Pipeline](#building-data-pipeline)
+    - [Creating a DAG](#creating-a-dag)
+    - [Creating Operator](#creating-operator)
+    - [Hooks](#hooks)
+    - [Task Context](#task-context)
+
 ## Directed Acyclic Graphs (DAGs)
 DAGs are the conceptual framework of data pipelines to better organise data engineering tasks. It is a graphical representation of the nodes and edges, where nodes represent
 data processing task and edges represent the sequence. In DAGs, edges are only single directional and there is no cycles. 
