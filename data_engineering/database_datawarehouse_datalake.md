@@ -2,7 +2,16 @@
 Three terms all describe a data store, yet they have different stuctures and purposes. 
 
 ## Table of Contents
-[Database](#Database)
+- [Database](#Database)
+  - [Database System: Online Transaction Processiong (OLTP)](#Database-System:-Online-Transaction-Processiong-(OLTP))
+  - [Database System: Online Analytical Processing (OLAP)](#Database-System:-Online-Analytical-Processing-(OLAP))
+- [Data Warehouse](#Data-Warehouse)
+  - [Dimensional Modelling](#Dimensional-Modelling) 
+  - [ETL vs ELT](#ETL-vs-ELT)
+  - [Data Warehouse Architecture](#Data-Warehouse-Architecture)
+  - [OLAP Cubes](#OLAP-Cubes)
+  - [Columnar Storage](#Columnar-Storage)
+- [Data Lake](#Data-Lake)
 
 ## Database
 Usually consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
