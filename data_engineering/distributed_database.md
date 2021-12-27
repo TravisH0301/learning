@@ -14,6 +14,11 @@ On the other hand, there are limitations:
   - Also join/aggregation requires scanning of whole data and it's allowed as the data is spread across multiple nodes. It is not done without optimisations. Hence, it's usually done in the data processing app, such as, Apache Spark.
 - No ACID transactions, but some NoSQL DB supports ACID transactions.
 
+## Table of Contents
+- [Eventual Consistency](#eventual-consistency)
+- [The CAP Theorem](#the-cap-theorem)
+- [Distributed Database Modelling (Apache Cassandra)](#distributed-database-modelling-apache-cassandra)
+
 ## Eventual Consistency
 A consistency model in distributed computing to achieve high availability that 
 informally guarantees the same data item in different nodes (machines), if, no new
