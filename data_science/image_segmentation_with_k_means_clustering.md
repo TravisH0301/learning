@@ -1,5 +1,10 @@
 # Image segmentation by K-Means Clustering 
 
+## Table of Contents
+- [K-means Clustering](#k-means-clustering)
+  - [Optimal K value - Elbow method](#optimal-k-value---elbow-method)
+- [Image segmentation with K-means Clustering](#image-segmentation-with-k-means-clustering)
+
 Image segmentation is a process of grouping pixels into number of super pixels (group of pixels that share similar characteristics). 
 This separates dictinct regions with similar attributes that helps to locate objects and boundaries in images. It is widely used in 
 machine learning where the models can learn the images with more distinct objects. For example, below is the image of a lung CT scan 
