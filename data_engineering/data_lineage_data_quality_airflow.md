@@ -1,5 +1,14 @@
 # Data Lineage & Data Quality
 
+## Table of Contents
+- [Data Lineage](#data-lineage)
+  - [Data Lineage in Airflow](#data-lineage-in-airflow)
+    - [Max Active Run in Airflow](#max-active-run-in-airflow)
+    - [Data Partitioning](#data-partitioning)
+- [Data Quality](#data-quality)
+  - [Data Quality in Airflow](#data-quality-in-airflow)
+    - [Service-Level Agreement (SLA)](#service-level-agreement-sla)
+
 ## Data Lineage
 Data lineage is a description of discrete steps associated with a dataset. It includes creation, movement and calculation of the dataset. It is a important part of the 
 data governence. 
