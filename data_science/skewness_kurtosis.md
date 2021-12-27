@@ -1,6 +1,10 @@
 # Measure of Skewness and Kurtosis
 Skewness and Kurtosis are used to describe the shapes of continuous distribution.
 
+## Table of Contents
+- [Skewness](#skewness)
+- [Kurtosis](#kurtosis)
+
 ## Skewness
 <p align="center">
 <img src="https://github.com/TravisH0301/learning/blob/master/images/skewness.png">
