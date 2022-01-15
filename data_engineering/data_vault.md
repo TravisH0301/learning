@@ -7,3 +7,8 @@ provide a robust solution to data source or business requirement changes.
 ## Data Warehouse Architecture
 The data warehouse architecture using the data vault approach consists of three parts; Staging Area, Data Warehouse and Data Marts. 
 
+
+https://en.wikipedia.org/wiki/Data_vault_modeling
+https://adatis.co.uk/a-gentle-introduction-to-data-vault/
+* https://www.researchgate.net/publication/312486486_Comparative_study_of_data_warehouses_modeling_approaches_Inmon_Kimball_and_Data_Vault
+* https://medium.com/@jryan999/data-vault-an-overview-27bed8a1bf9f
