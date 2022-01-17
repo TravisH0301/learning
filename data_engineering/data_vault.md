@@ -16,15 +16,9 @@ implement business changes by adding new data sources or dimensions. The busines
 ## Data Vault Components
 The data vaults is mainly consisted of three components. 
 
+![data_vault_architecture](https://github.com/TravisH0301/learning/blob/master/images/data_vault_example.png)
+
 ### Hub
-
-|employee|
-|--|
-|employee_pk (PK)|
-|employee_id (BK)|
-|load_datetime|
-|record_source|
-
 Hubs are tables containing business entity identifiers. Each row is uniquely identified by the business key (BK) which has either real business meaning or is a surrogate key
 from the source system. When sourcing the hub data from multiple sources, one has to be careful not to collide business keys. It is suggested to use a meaningful business
 key that is unique or use a compound key made up of more than one column. <br>
