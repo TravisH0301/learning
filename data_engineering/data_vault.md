@@ -30,7 +30,7 @@ And hub can optionally have a surrogate key (sequence or hash) as a primary key 
 As of the data vault 2.0, the hash key is used over the sequence key due to the following reasons:
 - sequence key can get very large and requires lookups on a row by row basis
 - hash key provides parallel loading by removing referential integrity (hub, link and satellite can be loaded in parallel)
-- hash key is deterministic and created using hash functin on the business key
+- hash key is deterministic and created using hash function on the business key
 
 However, one should be wary of the possible hash collision depending on the hash function being used. 
 The hub holds the load date time to represent the first date and time the business key was discovered. And the source of the business key is recorded.
