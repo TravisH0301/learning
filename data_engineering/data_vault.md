@@ -51,6 +51,10 @@ And this would be compared against the hash of the inbound data to decide whethe
 Note that load end datetime is not permitted under the data vault 2.0 standards to prevent physical update of the table. 
 
 ======
+
+other tables
 comparison to 3NF & dimension model
+^ what characteristics of 3nf and dim model does data vault holds?
+^ adv & drawbacks
 
 
