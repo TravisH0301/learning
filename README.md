@@ -24,6 +24,7 @@ Repository containing brief notes made during learning.
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [MPP Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/mpp_database.md): Introduction to Massively Parallel Processing (MPP) and its architectures of grid computing and clustering | Methods of table partitioning: Distribution style & Sorting key
 - [Slowly Changing Dimension (SCD)](https://github.com/TravisH0301/learning/blob/master/data_engineering/slowly_changing_dimension.md): Types of slowly changing dimensions (SCDs) to adapt to changes in the data source
+- [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): data vault architecture and its components
 
 ### Data Pipeline
 - [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
