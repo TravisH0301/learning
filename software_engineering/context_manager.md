@@ -1,5 +1,5 @@
 # Context Manager
-Managing resources  is an important aspect while coding in Python. Without properly 
+Managing resources is an important aspect while coding in Python. Without properly 
 releasing the external resources such as files and connections, one might 
 run into a memory leak issue. 
 
@@ -27,7 +27,7 @@ are repeated like multiple database connections. Whereas, `with` statement can p
         file.write('Hello')
 
 ## Building Context Manager 
-`with` statement uses context managers to perform an opening and exiting actions.
+`with` statement uses context managers to perform opening and exiting actions.
 Many libraries and built-in functions support context management, such as open(). 
 And one can create customised context managers too. 
 
