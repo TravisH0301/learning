@@ -13,7 +13,7 @@ using context managers.
 ## Examples
 Both examples below open a textfile and once the work is done, the text file is closed to ensure unused memory is released through garbage collection. <br>
 When comparing these two statements, `try-finally` statement can get the job done on the go. However, the code can become verbose when similar operations 
-are repeated like multiple database connections. Whereas, `with` statement can provide less verbose and sustainable solution once the context manager is set up.
+are repeated like multiple database connections. Whereas, `with` statement can provide less verbose and sustainable solutions once the context manager is set up.
 
 ### `try-finally`
     file = open('info.txt', 'w')
