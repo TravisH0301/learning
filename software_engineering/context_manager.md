@@ -91,6 +91,6 @@ is triggered.
 Looking at the generator, the code before `yield` will be executed when the `with` statement is executed.
 And the code after `yield` will only be executed when the `with` statement has successfully executed.
 
-When an exception is raised, the code within `except` statement will be triggered. And lastly, the code
-within `finally` statement will run regardless of whether the `with` statement ran successfully or not. 
+When an exception is raised, the code within the `except` statement will be triggered. And lastly, the code
+within the `finally` statement will run regardless of whether the `with` statement ran successfully or not. 
 
