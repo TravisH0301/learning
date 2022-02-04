@@ -2,15 +2,18 @@
 Repository containing brief notes made during learning.
 
 ## Contents
-- [Data Structures & Algorithms](#Data-Structures--Algorithms)
+- [Software Engineering](#Software-Engineering)
 - [Data Engineering](#Data-Engineering)
 - [Data Science](#Data-Science)
 - [Miscellaneous](#Miscellaneous)
 
-## Data Structures & Algorithms
+## Software Engineering
 ### Data Structures
-- [Linked Lists](https://github.com/TravisH0301/learning/blob/master/data_structures_algorithms/linked_lists.md): Introduction to linked lists and Python implementation
+- [Linked Lists](https://github.com/TravisH0301/learning/blob/master/software_engineering/linked_lists.md): Introduction to linked lists and Python implementation
 ### Algorithms
+
+### Python
+- [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
 
 ## Data Engineering
 ### Database 
