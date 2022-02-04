@@ -1,5 +1,5 @@
 # Context Manager
-Managing resources  is an important aspect while coding on Python. Without properly 
+Managing resources  is an important aspect while coding in Python. Without properly 
 releasing the external resources such as files and connections, one might 
 run into a memory leak issue. 
 
@@ -49,15 +49,21 @@ process.
     
     with DatabaseConnection() as db_conn:
         cur = db_conn.cursor()
-        cur.execute('SELECT column FROM table')
+        cur.execute('CREATE TABLE table_2 AS SELECT id, name FROM table_1')
         con.commit()
 
-In this code example, `__enter__` returns the connection to the target variable, `db_conn`.
-And when the `with` statement executes successfully, `__exit__` will be called and the exception
-parameters, `type`, `value` and `traceback` will become `None`.
-However, when there is an exception, `__exit__` will still be called, and exception parameters will
-be passed to the method. And this will be followed by an exception message in the output. 
-Note that when `True` is returned in `__exit__` method, the exception will be suppressed.
+In this code example, a class is defined with `__enter__` and `__exit__` methods. 
+When the class is instantiated by the `with` statement, the `__enter__` method is called and
+returns the database connection object to the target variable `db_conn`. <br>
+
+Once the code within the `with` statement executes successfully, the `__exit__` method 
+is triggered to close the connection. And the exception parameters, `type`, `value` and 
+`traceback` will become `None`.
+
+On the other side, when there is an exception raised, the `__exit__` method will still be called,
+and the exception parameters will be passed to the method. And this will be followed by an 
+exception message in the output. Note that when `True` is returned in the `__exit__` method, 
+the exception will be suppressed.
 
 ### Function based Context Manager
 Context managers can also be built with a generator function and a `contextlib.contextmanager` decorator.
@@ -79,10 +85,12 @@ Context managers can also be built with a generator function and a `contextlib.c
         print(my_name)
 
 In this example, the decorator `contextmanager` is called with the generator function `hello_name` as
-an argument. This wrapped generator is passed to the target variable `my_name`. 
+an argument. This wrapped generator is passed to the target variable `my_name` when the `with` statement 
+is triggered. 
 
 Looking at the generator, the code before `yield` will be executed when the `with` statement is executed.
-And the code after `yield` will be executed when the `with` statement has successfully executed. 
+And the code after `yield` will only be executed when the `with` statement has successfully executed.
+
 When an exception is raised, the code within `except` statement will be triggered. And lastly, the code
 within `finally` statement will run regardless of whether the `with` statement ran successfully or not. 
 
