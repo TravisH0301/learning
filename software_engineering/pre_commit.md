@@ -35,7 +35,8 @@ Before activating `pre-commit`, configuration needs to be defined with
 the sources of the `pre-commit` hooks/plugins.<br>
 
 They are defined in the configuration file, `.pre-commit-config.yaml` in the target repository,
-and follows the format below.
+and follows the format below. Although, the format is written for Python, `pre-commit` works
+for any programming language.
 
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
