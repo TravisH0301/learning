@@ -136,6 +136,9 @@ download, install and run the hooks specified in the `.pre-commit-config.yaml`.
     $ pre-commit run --all-files
     $ pre-commit run <hook_id> # for specific hooks
 
+Now, the codes get formatted and checked for PEP 8 compliances automatically without having to 
+worry about them!
+
 ## Warning
 If the repository is located in the network drive using UNC (Universal Naming Convension), 
 Git may not recognise the path and `pre-commit` may not be installed properly. 
