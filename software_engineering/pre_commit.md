@@ -142,7 +142,7 @@ When configured hooks are not installed, they are installed first.<br>
 Hooks are triggered to check the codes.<br>
 ![pre_commit_check](https://github.com/TravisH0301/learning/blob/master/images/pre_commit_check.jpg)
 
-Once the code has passed all the hooks, then the code get commited (or ready to be committed if hooks called manually).
+Once the code has passed all the hooks, then the code gets commited (or is ready to be committed if hooks called manually).
 
 ## Warning
 If the repository is located in the network drive using UNC (Universal Naming Convension), 
