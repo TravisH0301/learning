@@ -38,27 +38,27 @@ They are defined in the configuration file, `.pre-commit-config.yaml` in the tar
 and follows the format below. Although, the format is written for Python, `pre-commit` works
 for any programming language.
 
-repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
-    hooks:
-    -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 22.1.0
-    hooks:
-    - id: black
-      args: [--config=pyproject.toml]
--   repo: https://github.com/PyCQA/flake8
-    rev: 4.0.1
-    hooks:
-    -   id: flake8
-        args: [--config=.flake8]
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.7.1
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py37-plus, --add-import, 'from __future__ import annotations']
-        exclude: ^testing/resources/python3_hooks_repo/
+    repos:
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v4.1.0
+        hooks:
+        -   id: trailing-whitespace
+    -   repo: https://github.com/psf/black
+        rev: 22.1.0
+        hooks:
+        - id: black
+          args: [--config=pyproject.toml]
+    -   repo: https://github.com/PyCQA/flake8
+        rev: 4.0.1
+        hooks:
+        -   id: flake8
+            args: [--config=.flake8]
+    -   repo: https://github.com/asottile/reorder_python_imports
+        rev: v2.7.1
+        hooks:
+        -   id: reorder-python-imports
+            args: [--py37-plus, --add-import, 'from __future__ import annotations']
+            exclude: ^testing/resources/python3_hooks_repo/
 
 |Syntax|Description|
 |------|-----------|
