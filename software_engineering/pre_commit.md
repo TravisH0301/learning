@@ -1,5 +1,5 @@
 # pre-commit
-`pre-commit` is a Git framework that uses Git hooks to go through checklists before the commit. 
+`pre-commit` is a framework that uses Git hooks to go through checklists before the commit. 
 This precheck can help to review if your code is meeting the coding standards or if the commiting file is too large.
 And the commit will only be made when all pre-defined conditions are met. 
 So that one can worry less on the formatting and focus more on building the code.
