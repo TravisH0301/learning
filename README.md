@@ -14,7 +14,7 @@ Repository containing brief notes made during learning.
 
 ### Python
 - [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
-- [pre-commit](https://github.com/TravisH0301/learning/blob/master/software_engineering/pre_commit.md): How to set up a pre commit Git hooks with pre-commit to review code automatically before the commit
+- [pre-commit](https://github.com/TravisH0301/learning/blob/master/software_engineering/pre_commit.md): How to set up Git hooks with pre-commit to review code automatically before the commit
 
 ## Data Engineering
 ### Database 
