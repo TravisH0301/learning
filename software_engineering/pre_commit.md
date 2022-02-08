@@ -136,7 +136,7 @@ download, install and run the hooks specified in the `.pre-commit-config.yaml`.
     $ pre-commit run --all-files
     $ pre-commit run <hook_id> # for specific hooks
 
-Now, the codes get formatted and checked for PEP 8 compliances automatically without having to 
+Now, the codes get formatted and checked against PEP 8 compliances automatically without having to 
 worry about them!
 
 ## Warning
