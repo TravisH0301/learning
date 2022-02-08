@@ -18,15 +18,15 @@ To implement `pre-commit`, the following steps are required.
 ### Installation
 The framework can be installed with the following lines.
 
-`pip`
+Using `pip`
 
     $ pip install pre-commit
 
-`homebrew`
+Using `homebrew`
 
     $ brew install pre-commit
 
-`conda`
+Using `conda`
 
     $ conda install -c conda-forge pre-commit
 
