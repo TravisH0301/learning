@@ -71,7 +71,7 @@ for any programming language.
 <br>
 
 In the example, the following hooks are configured:
-- trailing-whitespace: pre-commit hook to remove trailing whitespaces
+- trailing-whitespace: `pre-commit` hook to remove trailing whitespaces
 - `black`: Python style formatter 
   - code style: https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html
   - Key differences to PEP 8 includes: 
