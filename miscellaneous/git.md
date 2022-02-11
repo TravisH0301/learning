@@ -97,7 +97,7 @@ Files can be added to Staging Area to let Git to track the changes made. <br>
 \$ git add "File 1" "File 2" -> Specific files can be added together. <br>
 \$ git add . -> Adds all files in the working directory. <br>
 \$ git add \*.txt -> Adds all .txt files. <br>
-\$ git rest "file 1" "File 2" -> To unstage files
+\$ git reset "file 1" "File 2" -> To unstage files
 
 ### Check Staging Files
 Files on the staging area can be viewed using. <br>
