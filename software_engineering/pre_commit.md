@@ -142,7 +142,7 @@ When configured hooks are not installed, they are installed first.<br>
 Hooks are triggered to check the codes.<br>
 ![pre_commit_check](https://github.com/TravisH0301/learning/blob/master/images/pre_commit_check.jpg)
 
-Once the code has passed all the hooks, then the code gets commited (or is ready to be committed if hooks called manually).
+Once the code has passed all the hooks, then the code gets committed (or is ready to be committed if hooks called manually).
 
 ### Bypass pre-commit
 Hooks can be bypassed by adding the `--no-verify` option to commit command.
@@ -154,9 +154,9 @@ By default, `pre-commit` stores its hook environment and cache at `~/.cache/pre-
 The path can be altered by setting the following environment variables.
 
 - `PRE_COMMIT_HOME`: `pre-commit` uses this variable's path
-- `XDG_CACHE_HOME`: `pre-commit` uses this variables's path followed by `/pre-commit`
+- `XDG_CACHE_HOME`: `pre-commit` uses this variable's path followed by `/pre-commit`
 
 ## Warning
-If the repository is located in the network drive using UNC (Universal Naming Convension), 
+If the repository is located in the network drive using UNC (Universal Naming Convention), 
 Git may not recognise the path and `pre-commit` may not be installed properly. 
 
