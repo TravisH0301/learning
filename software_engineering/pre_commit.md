@@ -121,7 +121,7 @@ The string quote normalisation is upto personal preference.
     )/
     '''
 
-### Usage
+## Usage
 After the configuration is done, `pre-commit` needs to be installed into the git hooks of the 
 target repository. Ensure all relelvant configuration files are in the same target repository
 directory. 
@@ -143,6 +143,18 @@ Hooks are triggered to check the codes.<br>
 ![pre_commit_check](https://github.com/TravisH0301/learning/blob/master/images/pre_commit_check.jpg)
 
 Once the code has passed all the hooks, then the code gets commited (or is ready to be committed if hooks called manually).
+
+### Bypass pre-commit
+Hooks can be bypassed by adding the `--no-verify` option to commit command.
+
+    $ git commit --no-verify -m "comment"
+    
+## Environment and Cache
+By default, `pre-commit` stores its hook environment and cache at `~/.cache/pre-commit`.<br>
+The path can be altered by setting the following environment variables.
+
+- `PRE_COMMIT_HOME`: `pre-commit` uses this variable's path
+- `XDG_CACHE_HOME`: `pre-commit` uses this variables's path followed by `/pre-commit`
 
 ## Warning
 If the repository is located in the network drive using UNC (Universal Naming Convension), 
