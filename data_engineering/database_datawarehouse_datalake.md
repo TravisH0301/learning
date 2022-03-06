@@ -45,12 +45,14 @@ better with simplied & denormalised tables. (ex. instead of querying data from a
 ### ETL vs ELT
 #### ETL based Data Warehouse
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources into a staging area, where the data is transformed into required formats
-for applications. Then, the transformed data is finally loaded into the dimensional model. 
-This way, the data warehouse contains preprocessed data for analytics purpose. 
+using a separete engine (ex. ETL tool or Python). The transformed data is then loaded into the destinated dimensional model. This way, only the processed 
+data is accessible in the data warehouse.
 
 #### ELT based Data Warehouse
-For ELT (Extract, Load, Transform) process, there is separate tool for ETL transformation. Instead, the data is extracted and loaded into the warehouse.
-The transformation is handled inside the data warehouse itself. 
+For ELT (Extract, Load, Transform) process, there is no separate engine/tool required for the transformation. The data is extracted and loaded into the 
+destinated database and transformed within the database using its own power. 
+
+Note that, the term "ELT" was introduced from around 2020. So, some may still call ELT pipeline as ETL.
 
 #### Advantages of ELT over ETL
 - Quicker loading: as transformation occurs after loading, the data is loaded into the storage quicker
