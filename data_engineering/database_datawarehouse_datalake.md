@@ -13,8 +13,8 @@ Three terms all describe a data store, yet they have different stuctures and pur
   - [Columnar Storage](#Columnar-Storage)
 - [Data Lake](#Data-Lake)
 
-## Database
-Usually consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
+## (Relational) Database
+Consisted of structured data with a defined schema (logical configuration of database - how data are connected and structured). 
 Data base is designed to be transactional (transaction: usage of database).
 
 ### Database System Online: Transaction Processiong (OLTP)
@@ -26,11 +26,38 @@ Database architecture for complex analytical queries with JOINs and characterise
 
 
 ## Data Warehouse
-Built upon existing database (or several databases) and used for business intelligence. Data warehouse consumes data from databases to create 
-a optimised structure to speed up queries for data analysis.
+Data warehouse is a centralised data storage built upon multiple relational databases, and is used for Business Intelligence.
+Data warehouse can have different architectural designs depending on business requirements and purposes. 
+And the data can be stored in various data models (ex. 3NF, dimensional model & data vault) for its optimised usage.
+
+### Data Warehouse Architecture
+The most widely used methods that define architecture of the data warehouse are:
+
+#### Kimball Architecture:
+- Single ETL process takes place to create shared dimensional model
+- Dimension tables are created at atomic level rather than aggregated level
+- Dimension tables are shared and organised by different business processes with conformed dimensions* (Kimball's Bus)<br>
+(ex. Sales team using dim_date, dim_product, dim_customer whereas Product team using dim_date, dim_product)<br>
+*Conformed dimensions: identical dimensions to every different fact tables, used in different business processes (common dimension tables are shared)
+
+#### Independent Data Marts
+- Independent ETL processes take place to create specific dimensional models for different business processes
+  - These separate and smaller dimensional models are called "Data Marts"
+- Generally not encouraged due to inconsistent views of data and extra storage & workload required
+
+#### Inmon's Corporate Information Factory (CIF)
+- Initial ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
+- Individual subsequent ETL processes take place to create specific "Data Marts" for different business processes
+  - Enterprise data warehouse acts as a single source of truth for the data marts (unlike data marts with different sources in "Independent Data Marts architecture")
+- The dimensional models in data marts are mostly aggregated unlike "Kimball" architecture
+
+#### Hybrid Kimball Bus & Inmon CIF
+- Integrates Kimball architecture and Inmon's CIF architecture
+- Inital ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
+- Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
 ### Dimensional Modelling
-Dimensional modelling is used in data warehouse to provide easily understandable database with fast analytical query performance.<br>
+Dimensional modelling is widely used in data warehouse to provide easily understandable database with fast analytical query performance.<br>
 It consists of Fact tables and Dimension tables.
 
 Fact tables has characteristics of:
@@ -61,32 +88,6 @@ Note that, the term "ELT" was introduced from around 2020. So, some may still ca
 #### Disadvantages of ELT
 - Slower analysis: compared to pre-structured ETL, ELT may be slow and unstable in anaylsis when data is all loaded into the storage
 - Compliance: any unfiltered sensitive information may be collected in the storage 
-
-### Data Warehouse Architecture
-The most widely used methods that define architecture of the data warehouse are:
-
-#### Kimball Architecture:
-- Single ETL process takes place to create shared dimensional model
-- Dimension tables are created at atomic level rather than aggregated level
-- Dimension tables are shared and organised by different business processes with conformed dimensions* (Kimball's Bus)<br>
-(ex. Sales team using dim_date, dim_product, dim_customer whereas Product team using dim_date, dim_product)<br>
-*Conformed dimensions: identical dimensions to every different fact tables, used in different business processes (common dimension tables are shared)
-
-#### Independent Data Marts
-- Independent ETL processes take place to create specific dimensional models for different business processes
-  - These separate and smaller dimensional models are called "Data Marts"
-- Generally not encouraged due to inconsistent views of data and extra storage & workload required
-
-#### Inmon's Corporate Information Factory (CIF)
-- Initial ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
-- Individual subsequent ETL processes take place to create specific "Data Marts" for different business processes
-  - Enterprise data warehouse acts as a single source of truth for the data marts (unlike data marts with different sources in "Independent Data Marts architecture")
-- The dimensional models in data marts are mostly aggregated unlike "Kimball" architecture
-
-#### Hybrid Kimball Bus & Inmon CIF
-- Integrates Kimball architecture and Inmon's CIF architecture
-- Inital ETL process takes place to create a common "Enterprise Data Warehouse" with 3NF database
-- Subsequent ETL process takes place to create a common dimensional model with conformed dimensions (Kimball's Bus)
 
 ### OLAP Cubes
 OLAP cubes are an aggregation of a fact metric on a number of dimensions (multi-dimensional data array). It can rapidly analyse and present data with the number of dimensions. The below table shows the total fact sales data in three dimensions of month, city and movie.
