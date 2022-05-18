@@ -156,6 +156,9 @@ The path can be altered by setting the following environment variables.
 - `PRE_COMMIT_HOME`: `pre-commit` uses this variable's path
 - `XDG_CACHE_HOME`: `pre-commit` uses this variable's path followed by `/pre-commit`
 
+    $ set PRE_COMMIT_HOME=C:\users\me\project\pre-commit
+    $ set XDG_CACHE_HOME=C:\users\me\project\pre-commit
+
 ## Warning
 If the repository is located in the network drive using UNC (Universal Naming Convention), 
 Git may not recognise the path and `pre-commit` may not be installed properly. 
