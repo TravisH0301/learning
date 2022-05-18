@@ -94,9 +94,9 @@ avoid collison by creating a configuration file, `.flake8` file in the target re
 
     [flake8]
     ignore = E203, E266, E501, W503
-    # line length is intentionally set to 80 here because black uses Bugbear
+    # line length is intentionally set to 88 to be compatible with black's line length
     # See https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length for more details
-    max-line-length = 80
+    max-line-length = 88
     max-complexity = 18
     select = B,C,E,F,W,T4,B9
 
