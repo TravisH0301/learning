@@ -16,6 +16,9 @@ Repository containing brief notes made during learning.
 - [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
 - [pre-commit](https://github.com/TravisH0301/learning/blob/master/software_engineering/pre_commit.md): How to set up Git hooks with pre-commit to review code automatically before the commit
 
+### Version Control
+- [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
+
 ## Data Engineering
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
@@ -65,9 +68,6 @@ Repository containing brief notes made during learning.
 
 ### Linux
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
-
-### Version Control
-- [Git](https://github.com/TravisH0301/learning/blob/master/miscellaneous/git.md): Instructions to version control using Git
 
 ### Anaconda
 - [Anaconda Virtual Environment](https://github.com/TravisH0301/learning/blob/master/miscellaneous/conda_virtual_env.md): Instruction on how to setup Anaconda virtual environment
