@@ -10,6 +10,7 @@ The aggregation with an empty OVER() will apply the aggregation function over th
 - [Partitioned Running Total](#Partitioned-Running-Total)
 - [Ranking Rows](#Ranking-Rows)
 - [Aggregations](#Aggregations)
+- [Custom Window Frame](#Custom-Window-Frame)
 - [Window Function Alias](#Window-Function-Alias)
 - [Lag and Lead](#Lag-and-Lead)
 - [Percentiles](#Percentiles)
@@ -110,7 +111,39 @@ id|	account_id|	month|	dense_rank|	standard_qty|	sum_std_qty|	count_std_qty|	avg
 4308|	1001|	2015-12-01T00:00:00.000Z|	3|	526|	1430|	5|	286.00|	85|	526
 4309|	1001|	2016-01-01T00:00:00.000Z|	4|	566|	2140|	7|	305.71|	85|	566
 4|	1001|	2016-01-01T00:00:00.000Z|	4|	144|	2140|	7|	305.71|	85|	566
-    
+
+### Custom Window Frame
+When calculating aggregations over rows, the window frame size can be specified using ROWS clause. 
+The following conditions can be set with the ROWS clause:
+- UNBOUNDED PRECEDING: includes all rows before the current row
+- n PRECEDING: includes n rows before the current row
+- CURRENT ROW: includes the current row
+- n FOLLOWING: includes n rows after the current row
+- UNBOUNDED FOLLOWING: includes all rows after the current row
+	
+The window frame can be set between 2 conditions or only 1 condition. If 1 condition is used, the another limit will be the current row.<br>
+For example, "ROWS 5 PRECEDING" = "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW"
+	
+    /*
+    This example shows the average score for each person with the window frame
+    ranging from the previous 1 row and the current row.
+    */
+    SELECT
+        "YEAR",
+        NAME,
+        SCORE,
+        AVG(SCORE) OVER (PARTITION BY NAME ORDER BY "YEAR", NAME ROWS 1 PRECEDING) AS AVG_SCORE
+    FROM SCORE
+	
+|YEAR|NAME|SCORE|AVG_SCORE|
+|--|--|--|--|
+|2020|DAVID|70|70|
+|2021|DAVID|75|72|
+|2022|DAVID|80|77|
+|2020|JOHN|95|95|
+|2021|JOHN|88|91|
+|2022|JOHN|100|94|
+
 ### Window Function Alias
 Alias can be set up for a window function using WINDOW clause if it's used multiple times.<br>
 Note that the clause needs to be between WHERE and ORDER BY.
