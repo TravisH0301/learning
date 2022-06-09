@@ -231,7 +231,41 @@ HTTP allows annoymous access to the remote repository, however, often it is not 
 SSH provides authentication and allows more sure way of connecting to the remote repository.
 
 ### Updating Local Repository
-
+There are 2 ways to update the local repository.<br>
+- Fetch remote repository, view changes and merge<br>
+  Fetch will download the commits and files, but will store them as reference withouth impacting the local repository.<br>
+  
+  $git fetch <remote_repository_name> <remote_branch(optional)><br>
+  This command will fetch the all branches (unless specified) of the remote repository.
+  
+  $git branch -r<br>
+  This command will display all references for the remote branches that are fetched.
+  
+  $git checkout <fetched_remote_branch><br>
+  This will lead to a detached HEAD state (meaning the current branch is separate from the existing local branch) and changes made
+  in this fetched remote branch will not affect the existing local branch.<br>
+  If a local branch is to be created based on this fetched remote branch, the following command can be used.<br>
+  $git checkout -b <now_loca_fetched_remote_branch>
+  
+  $git log <local_branch>..<fetched_remote_branch> --oneline<br>
+  This command will display all the commits made in the upstream branch.
+  
+  When merge is to be made, point to the local branch to be merged, and merge with the fetched remote branch.<br>
+  $git checkout <local_branch><br>
+  $git merge <fetched_remote_branch><br>
+  Note that when these two branches have no common base, an error will occur: "refusing to merge unrelated histories"<br>
+  This can be resolved by using the following parameter.<br>
+  $git merge <fetched_remote_branch> --allow-unrelated-histories<br>
+  
+- Pull remote repository while merging all contents automatically<br>
+  Git pull is combination of git fetch and git merge. This is considered unsafe way that can put the current branch into a conflicted state.
+  So careful execution is required.
+  
+  $git pull <remote_repository><br>
+  This command is equivalent to the following commands:<br>
+  $git fetch <remote_repository> HEAD & $git merge HEAD<br>
+  HEAD referrs to the current branch.
+  
 ### Pushing to Remote Repository
 $git push <remote_name> <local_branch_name><br>
 This command will push the changes in the local branch to the remote repository. By default when remote_name and local_branch_name are not given the changes made in the current local branch will be pushed to the origin remote repository. This behaviour can be configured.
