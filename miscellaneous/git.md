@@ -32,7 +32,7 @@ Git works on commandline and it can be used with local or remote repositories. G
 - [Deleting Branch](#deleting-branch)
 - [Stashing Files](#stashing-files)
 - [Ignore Files](#ignore-files)
-- [Pushing to Github Repository](#pushing-to-github-repository)
+- [Remote Repository](#remote-repository)
 
 ## Structure
 Git consists of 3 areas. <br>
@@ -206,12 +206,36 @@ $ code .gitignore -> edit file using VS code <br>
     main.log
     *.log
 
-## Pushing to Github Repository 
-In order to push files and changes to Github repository, the local Git repository must be cloned from Github repository. <br>
-$ git clone <Github repo address> <br>
-After cloning Github repository, files and changes can be pushed after they are committed to the local repository. <br>
-$ git push origin master -> Pushes master brach (local) to origin of remote repository. <br>
-Note that it's always good practice to do Git pull beforehand to ensure the local files are in sync to the remote repo. <br>
-$ git pull origin <Branch name> -> Branch name to pull remote repo into.
+## Remote Repository
+There 2 ways that a remote repository can be accessed from local machine.
+- Cloning a remote repository to create a local repository<br>
+  $git clone <url> <directory(optional)><br>
+  This command will download the files from the remote repository and create a local repository. By default the remote repository will
+  become the origin remote repository that you can push to.<br>
+  
+  $git clone -brand <branch_name> <url> <directory(options)><br>
+  This command will download the specific branch of the remote repository. 
+- Connecting an existing local repository to a remote repository<br>
+  $git remote add <name> <url><br>
+  This command adds the remote repository with the specified name. Multiple remote repositories can be set and only one will become the main remote repository.<br>
+  
+  $git remote -v<br>
+  This command displays all available remote repositories with the URL.<br>
+  
+  $git remote rm <name><br>
+  $git remote rename <name> <new_name><br>
+  These commands can be used to amend remote repositories.
+  
+Git takes in both HTTP(Hyper Text Transfer Protocol) URL and SSH(Secure Shell) URL for connecting to remote repository.<br>
+HTTP allows annoymous access to the remote repository, however, often it is not permitted to push annoymously.<br>
+SSH provides authentication and allows more sure way of connecting to the remote repository.
 
+### Updating Local Repository
 
+### Pushing to Remote Repository
+$git push <remote_name> <local_branch_name><br>
+This command will push the changes in the local branch to the remote repository. By default when remote_name and local_branch_name are not given the changes made in the current local branch will be pushed to the origin remote repository. This behaviour can be configured.
+  
+$git push <remote_name> <local_branch_name>:<remote_branch_name><br>
+By default, Git will push the changes in the specified local branch to the same remote branch. If you want to push the changes to the other remote repository branch, this command can be used. Also, it's a good idea to push to a new remote repository branch and create a pull request to make changes to the main remote branch while getting the changes checked by peers.
+ 
