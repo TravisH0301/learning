@@ -159,6 +159,9 @@ The path can be altered by setting the following environment variables.
 - `PRE_COMMIT_HOME`: `pre-commit` uses this variable's path
 - `XDG_CACHE_HOME`: `pre-commit` uses this variable's path followed by `/pre-commit`
 
+## Uninstallation
+    $ pre-commit uninstall
+
 ## Warning
 If the repository is located in the network drive using UNC (Universal Naming Convention), 
 Git may not recognise the path and `pre-commit` may not be installed properly. 
