@@ -21,11 +21,13 @@ Repository containing brief notes made during learning.
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
 
 ## Backend Engineering
+### Internet
+- [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of internet
 
 ## Data Engineering
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
-- [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehouse (architecture, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake.
+- [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehouse (architecture, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
 - [Data Modelling](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_modelling.md): How to do data modelling (Entity Relationship Diagram) and aspects of relational database & non-relational (NoSQL) database
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
