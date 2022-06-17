@@ -25,7 +25,7 @@ Repository containing brief notes made during learning.
 [Back to table of contents](#Table-of-Contents)
 ### Internet
 - [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of what internet is, and how information is communicated through internet with different protocol layers
-- [HTTP](https://github.com/TravisH0301/learning/blob/master/backend_engineering/http.md): Explanation of how information is transferred between networked devices with HTTP requests and HTTP responses
+- [HTTP](https://github.com/TravisH0301/learning/blob/master/backend_engineering/http.md): Characteristics of HTTP, how communication is made between a client and a server using HTTP request and HTTP response, and HTTP/2
 
 ## 3. Data Engineering
 [Back to table of contents](#Table-of-Contents)
