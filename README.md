@@ -8,14 +8,11 @@ Repository containing brief notes made during learning.
 - [Data Science](#Data-Science)
 - [Miscellaneous](#Miscellaneous)
 
-<p style="text-align:left;">
-    ## Software Engineering
-    <span style="float:right;">
-        [Back to Table of Contents](#Contents)
-    </span>
-</p>
+<p style="text-align:right;">Software Engineering</p>
+<span style="float:right;">[Back to Table of Contents](#Contents)</span>
 
-// ## Software Engineering
+
+## Software Engineering
 ### Data Structures
 - [Linked Lists](https://github.com/TravisH0301/learning/blob/master/software_engineering/linked_lists.md): Introduction to linked lists and Python implementation
 ### Algorithms
