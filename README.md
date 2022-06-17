@@ -3,10 +3,10 @@ Repository containing brief notes made during learning.
 
 ## Table of Contents
 1. [Software Engineering](#1-Software-Engineering)
-2. [Backend Engineering](#Backend-Engineering)
-3. [Data Engineering](#Data-Engineering)
-4. [Data Science](#Data-Science)
-5. [Miscellaneous](#Miscellaneous)
+2. [Backend Engineering](#2-Backend-Engineering)
+3. [Data Engineering](#3-Data-Engineering)
+4. [Data Science](#4-Data-Science)
+5. [Miscellaneous](#5-Miscellaneous)
 
 ## 1. Software Engineering 
 [Back to table of contents](#Table-of-Contents)
@@ -21,11 +21,11 @@ Repository containing brief notes made during learning.
 ### Version Control
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
 
-## Backend Engineering
+## 2. Backend Engineering
 ### Internet
 - [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of internet
 
-## Data Engineering
+## 3. Data Engineering
 [Back to table of contents](#Table-of-Contents)
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
@@ -52,7 +52,7 @@ Repository containing brief notes made during learning.
 - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
 
-## Data Science
+## 4. Data Science
 [Back to table of contents](#Table-of-Contents)
 ### Statistics
 - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
@@ -69,7 +69,7 @@ Repository containing brief notes made during learning.
 - [Convolutional Encoder Decoder](https://github.com/TravisH0301/learning/blob/master/data_science/convolutional_encoder_decoder.md): Variation of convolutional neural network
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
   
-## Miscellaneous
+## 5. Miscellaneous
 [Back to table of contents](#Table-of-Contents)
 ### Computer Science
 - [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte.
