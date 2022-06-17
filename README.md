@@ -67,9 +67,8 @@ Repository containing brief notes made during learning.
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
   
 ## Miscellaneous
-### Visualisation 
-- [Visualisation via Plotly.Express](https://github.com/TravisH0301/learning/blob/master/miscellaneous/viz_plotly_express.md): Reference to comprehensive guide to interactive visualisation with Plotly.Express on Python 
-- [Visualisation Dos & Don'ts](https://github.com/TravisH0301/learning/blob/master/miscellaneous/visualisation_dos_don'ts.md): Reference to dos and don'ts for visualisations
+### Computer Science
+- [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte.
 
 ### Linux
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
