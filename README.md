@@ -1,15 +1,15 @@
 # Learning
 Repository containing brief notes made during learning.
 
-## Contents
-- [Software Engineering](#Software-Engineering)
-- [Backend Engineering](#Backend-Engineering)
-- [Data Engineering](#Data-Engineering)
-- [Data Science](#Data-Science)
-- [Miscellaneous](#Miscellaneous)
+## Table of Contents
+1. [Software Engineering](#1.-Software-Engineering)
+2. [Backend Engineering](#Backend-Engineering)
+3. [Data Engineering](#Data-Engineering)
+4. [Data Science](#Data-Science)
+5. [Miscellaneous](#Miscellaneous)
 
-## Software Engineering 
-[Back to table of contents](#Contents)
+## 1. Software Engineering 
+[Back to table of contents](#Table-of-Contents)
 ### Data Structures
 - [Linked Lists](https://github.com/TravisH0301/learning/blob/master/software_engineering/linked_lists.md): Introduction to linked lists and Python implementation
 ### Algorithms
@@ -26,6 +26,7 @@ Repository containing brief notes made during learning.
 - [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of internet
 
 ## Data Engineering
+[Back to table of contents](#Table-of-Contents)
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
 - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehouse (architecture, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
@@ -52,6 +53,7 @@ Repository containing brief notes made during learning.
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
 
 ## Data Science
+[Back to table of contents](#Table-of-Contents)
 ### Statistics
 - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
 - [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/data_science/feature_selection_methods.md): Reference to feature selection methods for numercial and categorical data
@@ -68,6 +70,7 @@ Repository containing brief notes made during learning.
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
   
 ## Miscellaneous
+[Back to table of contents](#Table-of-Contents)
 ### Computer Science
 - [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte.
 
