@@ -22,4 +22,4 @@ for each clock cycle (operation).
 ## Character encoding
 In order to store characters on computer, characters are encoded into bits/bytes. For example, UTF-8 can encode 1,112,064 character code points\*
 using 1 to 4 bytes. Difference character encoding will encode different characters into different binary formats.<br>
-*code point: a numerical value that maps to a character*
+\**code point: a numerical value that maps to a character*
