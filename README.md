@@ -73,7 +73,7 @@ Repository containing brief notes made during learning.
 ## 5. Miscellaneous
 [Back to table of contents](#Table-of-Contents)
 ### Computer Science
-- [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte.
+- [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte. And how they are used in modern computer architecture and character encoding.
 
 ### Linux
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
