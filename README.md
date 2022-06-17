@@ -24,7 +24,8 @@ Repository containing brief notes made during learning.
 ## 2. Backend Engineering
 [Back to table of contents](#Table-of-Contents)
 ### Internet
-- [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of internet
+- [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of what internet is, and how information is communicated through internet with different protocol layers
+- [HTTP]((https://github.com/TravisH0301/learning/blob/master/backend_engineering/http.md): Explanation of how information is transferred between networked devices with HTTP requests and HTTP responses
 
 ## 3. Data Engineering
 [Back to table of contents](#Table-of-Contents)
@@ -73,7 +74,7 @@ Repository containing brief notes made during learning.
 ## 5. Miscellaneous
 [Back to table of contents](#Table-of-Contents)
 ### Computer Science
-- [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte, and how they are used in modern computer architecture and character encoding.
+- [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte, and how they are used in modern computer architecture and character encoding
 
 ### Linux
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
