@@ -2,7 +2,7 @@
 Repository containing brief notes made during learning.
 
 ## Table of Contents
-1. [Software Engineering](#1.-Software-Engineering)
+1. [Software Engineering](#1-Software-Engineering)
 2. [Backend Engineering](#Backend-Engineering)
 3. [Data Engineering](#Data-Engineering)
 4. [Data Science](#Data-Science)
