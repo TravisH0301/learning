@@ -50,7 +50,7 @@ In 2015, Google created HTTP/2 to low latency transport of content. The followin
   - Frame: is binary piece of data containing HTTP parts like headers, data, setting & etc.
   - Stream: is a collection of frames. Each frame has stream id to identify which stream it belongs to, and shares the common headers among other frames within the same stream. Both client and server assigns stream ids.
 - Multiplexing: In a single connection, a client sends all the streams asynchronously without opening additional connection. A server responses asynchronously too with order. The client uses the assigned stream id to identify the stream to which a specific packet belongs.
-- HPACK header comparession: header compression is done to reduce the redundant header information. Huffman coding is used for this compression.
+- HPACK header compression: header compression is done to reduce the redundant header information. Huffman coding is used for this compression.
 - Server push: is when a server, knowing that a client is going to ask for a certain resource, can push it to the client before client asking for it. The server sends a frame called *PUSH_PROMISE* to notify the client about the resource that the server is going to send, so that the client won't ask for it. The server then pushes the resource with the same stream id. This decreases the roundtrip of the data.
 - Request priortisation: A client can send a frame, *PRIORITY* to set processing priority for a server. Otherwise, the server processes the requests asynchronously.
 - Security: The use of Transport Layer Security (TLS) is not mandatory in HTTP/2. However, most vendors only support HTTP/2 used over TLS.
