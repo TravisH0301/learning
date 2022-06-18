@@ -31,8 +31,9 @@ Then the packets are converted back to alphabetic message information followed b
 And finally the packets reach the destination application protocol for the message to arrive.
 
 Here are some of most widely used protocols:
-- Hypertext Transfer Protocol (HTTP): is an application protocol for World Wide Web (WWW). It is a connectionless text based protocol, where the
-connection between the client (web browser) and host (web server) is only established and maintained while the HTTP request is being serviced.
+- Hypertext Transfer Protocol (HTTP): is an application protocol for World Wide Web (WWW). It is a connectionless (upto HTTP/1.0) and stateless 
+(but can be stateful with HTTP cookies) text based protocol, where the connection between the client (web browser) and host (web server) is only
+established and maintained while the HTTP request is being serviced. And the server won't keep the session information.
 - Simple Mail Transfer Protocol (SMTP): is an application protocol for email. SMTP is a connection orientated. The connection between the
 mail client and mail server will be established when the first connection is made and be maintained until the client disconnects.
 - Transmission Control Protocol (TCP): is responsible for correctly connecting the source application protocol to the destination application protocol.
