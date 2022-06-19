@@ -55,3 +55,4 @@ In 2015, Google created HTTP/2 to low latency transport of content. The followin
 - Request priortisation: A client can send a frame, *PRIORITY* to set processing priority for a server. Otherwise, the server processes the requests asynchronously.
 - Security: The use of Transport Layer Security (TLS) is not mandatory in HTTP/2. However, most vendors only support HTTP/2 used over TLS.
 
+## HTTP/3
