@@ -3,6 +3,12 @@ The Hyper Text Transfer Protocol (HTTP) is the TCP/IP based application layer pr
 server communicate with each other. It defines how the content is requested and transmitted across the internet.<br>
 Typical flow of HTTP would involve a client making a request to a server, which then sends a response.
 
+-[Stateless and connection](#stateless-and-connection)
+-[HTTP request](#http-request)
+-[HTTP response](#http-response)
+-[HTTP/2](#http2)
+-[HTTP/3](#http3)
+
 ## Stateless and connection
 HTTP is a stateless\* protocol, where there is no link between subsequent requests on the same connection. However, HTTP cookies can 
 allow stateful sessions.<br>
