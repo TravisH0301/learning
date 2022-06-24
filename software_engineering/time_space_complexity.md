@@ -43,3 +43,46 @@ Ex) Space complexity in nested loops
     - n = 1
     The space function becomes, s(n) = 3n^2 + 4
     Hence, the space function is O(n^2) - order of n^2
+
+### Examples with time complexity
+When determining the order of time complexity, only the largest degree will be concerned.
+
+Example 1.
+
+    for(i=0; i<n; i=i+2){  # The time unit for this loop won't be cared anymore, since both n+1 and n will give out the order of n
+      statement  # n/2 (Since i increases by 2, this reduces the time unit by 2 - as twice less iteration)
+    }
+    Hence, the time function is O(n)
+    
+Example 2.
+
+    for(i=n; i>0; i--){
+      statement # n (from 0 to n will be the same as from n to 0)
+    }
+    Hence, the time function is O(n)
+
+Example 3.
+
+    for(i=0; i<n; i++){
+      for(j=0; j<i; j++){
+        statement
+      }
+    }
+    In this case, we need to identify the pattern by simulating each iteration of the loop.
+|i|j|statement execution|no. of statement execution for each parent (i) iteration|
+|--|--|--|--|
+|0|0|No|0|
+|1|0|Yes|1|
+|1|1|No|1|
+|2|0|Yes|1|
+|2|1|Yes|2|
+|2|2|No|2|
+|3|0|Yes|1|
+|3|1|Yes|2|
+|3|2|Yes|3|
+|3|3|No|3|
+
+For each parent iteration, the statement run number is equivalent to the number of i.<br>
+If this iteration happens for n times, the total statement execution time will be:<br>
+0 + 1 + 2 + 3 + ... + n = n(n+1)/2 = (n^2+n)/2<br>
+Hence, the time complexity is O(n^2)
