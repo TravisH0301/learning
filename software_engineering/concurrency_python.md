@@ -1,5 +1,12 @@
 # Concurrency in Python
 
+- [Concurrent programming](#concurrent-programming)
+  - [Difference to parallel programming](#difference-to-parallel-programming)
+- [Concurrency using threading](#concurrency-using-threading)
+  - [Limitation of threading](#limitation-of-threading)
+- [Concurrency using asyncio](#concurrency-using-asyncio)
+- [Difference between threads and coroutines](#difference-between-threads-and-coroutines)
+
 ## Concurrent programming
 Concurrent programming is when an application is processing multiple tasks at the same time, but not necessarily simultaneously.<br>
 For example, CPU can process two tasks in concurrency.
