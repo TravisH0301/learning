@@ -18,6 +18,7 @@ Repository containing brief notes made during learning.
 ### Python
 - [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
 - [pre-commit](https://github.com/TravisH0301/learning/blob/master/software_engineering/pre_commit.md): How to set up Git hooks with pre-commit to review code automatically before the commit
+- [Concurrency](https://github.com/TravisH0301/learning/blob/master/software_engineering/concurrency_python.md): How to achieve concurrency to process multiple tasks asynchronously using threading and asyncio in Python
 
 ### Version Control
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
