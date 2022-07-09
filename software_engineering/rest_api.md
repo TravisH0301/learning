@@ -5,6 +5,19 @@ HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. 
 
 ![image](https://user-images.githubusercontent.com/46085656/177357787-e70ef31f-5135-45ee-87b0-073d548e7ba6.png)
 
+- [Stateless constraints](#stateless-constraints)
+- [Cache constraints](#cache-constraints)
+- [Making requests](#making-requests)
+  - [HTTP Verbs](#http-verbs)
+  - [Headers](#headers)
+    - [Paths](#paths)
+    - [Accept parameter](#accept-parameter)
+- [Sending responses](#sending-responses)
+  - [Content-type parameter](#content-type-parameter)
+  - [Response status codes](#response-status-codes)
+- [Layered system](#layered-system)
+- [Code-on-demand](#code-on-demand)
+
 ## Stateless constraints
 The communication between the client and the server is stateless. The server doesn't need to know about the state the client is in.
 The request from the client must contain all of the information neccessary to understand the request. Session state is therefore kept entirely on the client.
