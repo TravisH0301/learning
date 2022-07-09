@@ -3,6 +3,8 @@ REST (REpresentational State Transfer) API (Application Programming Interfaces) 
 It allows computer systems to communicate and transmit data. The information is delivered in one of several formats via
 HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. And HTTP: JSON is the most generally popular file format.
 
+The offical format of the JSON can be found at [Official JSON:API](https://jsonapi.org/).
+
 ![image](https://user-images.githubusercontent.com/46085656/177357787-e70ef31f-5135-45ee-87b0-073d548e7ba6.png)
 
 - [Stateless constraints](#stateless-constraints)
