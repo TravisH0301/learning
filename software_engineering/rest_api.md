@@ -66,8 +66,6 @@ The below example header says it can accept text/html & application/xhtml conten
     GET /articles/23
     Accept: text/html, application/xhtml
     
-
-
 ## Sending responses
 ### Content-type parameter
 When the server sends a data payload to the client, the content-type must be defined using MIME types. And this should be one of the types
@@ -84,6 +82,12 @@ defined in the respective request's accept parameter.
 ### Response status codes
 Responses from the server contain status codes to alert the client to information about the success of the operation.
 
+    Example response status codes
+    GET — return 200 (OK)
+    POST — return 201 (CREATED)
+    PUT — return 200 (OK)
+    DELETE — return 204 (NO CONTENT)
+
 - 200 (OK): This is the standard response for successful HTTP requests.
 - 201 (CREATED): This is the standard response for an HTTP request that resulted in an item being successfully created.
 - 204 (NO CONTENT): This is the standard response for successful HTTP requests, where nothing is being returned in the response body.
@@ -92,12 +96,6 @@ Responses from the server contain status codes to alert the client to informatio
 - 404 (NOT FOUND): The resource could not be found at this time. It is possible it was deleted, or does not exist yet.
 - 500 (INTERNAL SERVER ERROR): The generic answer for an unexpected failure if there is no more specific information available.
 
-    Example response status codes
-    GET — return 200 (OK)
-    POST — return 201 (CREATED)
-    PUT — return 200 (OK)
-    DELETE — return 204 (NO CONTENT)
-    
 ## Layered system
 The layers of the system (ex. load balancer) involved in the retrieval of the requested information are invisible to the client.
 This allows the REST API to improve functionalities and scalability with the independence to the client. However, layered system can add overhead to the
