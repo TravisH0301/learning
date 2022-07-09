@@ -36,3 +36,61 @@ There are 4 common HTTP verbs that fullfill CRUD (Create, Read, Update, Delete) 
 - POST: create a new resource
 - PUT: update a specific resource
 - DELETE: remove a specific resource
+
+### Headers
+#### Paths
+Requests must contain a path to a resource that the operation should be performed on. Paths must be constructed in a way that the client can
+understand the hierarchy. Conventionally, plural words are used (ex. ids, customers).
+
+    GET fashionboutique.com/customers/223/orders/12
+    
+#### Accept parameter
+In the header of the request, the client sends the type of content that it is able to receive from the server. This is called the Accept field.
+MIME types (Multipurpose Internet Mail Extensions) are used to define the content types, consisting of "types" and "sub types".
+
+The below example header says it can accept text/html & application/xhtml contents.
+
+    GET /articles/23
+    Accept: text/html, application/xhtml
+    
+
+
+## Sending responses
+### Content-type parameter
+When the server sends a data payload to the client, the content-type must be defined using MIME types. And this should be one of the types
+defined in the respective request's accept parameter.
+
+    Request:
+    GET /articles/23 HTTP/1.1
+    Accept: text/html, application/xhtml
+    
+    Response:
+    HTTP/1.1 200 (OK)
+    Content-Type: text/html
+    
+### Response status codes
+Responses from the server contain status codes to alert the client to information about the success of the operation.
+
+- 200 (OK): This is the standard response for successful HTTP requests.
+- 201 (CREATED): This is the standard response for an HTTP request that resulted in an item being successfully created.
+- 204 (NO CONTENT): This is the standard response for successful HTTP requests, where nothing is being returned in the response body.
+- 400 (BAD REQUEST): The request cannot be processed because of bad request syntax, excessive size, or another client error.
+- 403 (FORBIDDEN): The client does not have permission to access this resource.
+- 404 (NOT FOUND): The resource could not be found at this time. It is possible it was deleted, or does not exist yet.
+- 500 (INTERNAL SERVER ERROR): The generic answer for an unexpected failure if there is no more specific information available.
+
+    Example response status codes
+    GET — return 200 (OK)
+    POST — return 201 (CREATED)
+    PUT — return 200 (OK)
+    DELETE — return 204 (NO CONTENT)
+    
+## Layered system
+The layers of the system (ex. load balancer) involved in the retrieval of the requested information are invisible to the client.
+This allows the REST API to improve functionalities and scalability with the independence to the client. However, layered system can add overhead to the
+system and reduce the user-perceived performance.
+
+## Code-on-demand
+Optionally, the server can send an executable code to the client when requested, extending client functionality. 
+This allows the client to reduce the number of features to pre-implement by downloading features from the server. However, this will limit the visibility 
+of the system.
