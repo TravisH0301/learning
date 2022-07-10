@@ -19,7 +19,7 @@ And the third-party app has limited access to only the photos, not other Google 
 \**Authentication: 인증*
 
 ## OAuth actors
-![image](https://user-images.githubusercontent.com/46085656/178127852-3dc05256-581c-4636-81fc-90514e8a8a65.png)
+<img src="https://user-images.githubusercontent.com/46085656/178127852-3dc05256-581c-4636-81fc-90514e8a8a65.png" height="300px">
 
 In OAuth flows, there are the following actors:
 - Resource owner: owns the data in the resource server. (ex. User)
