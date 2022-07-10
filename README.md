@@ -30,10 +30,10 @@ Repository containing brief notes made during learning.
 - [HTTP](https://github.com/TravisH0301/learning/blob/master/backend_engineering/http.md): Characteristics of HTTP, how communication is made between a client and a server using HTTP request and HTTP response, and HTTP/2 & HTTP/3
 
 ### API
-- [REST API](https://github.com/TravisH0301/learning/blob/master/software_engineering/rest_api.md): Architectural constraints of REST API
+- [REST API](https://github.com/TravisH0301/learning/blob/master/backend_engineering/rest_api.md): Architectural constraints of REST API
 
 ### Authentication
-- [OAuth](https://github.com/TravisH0301/learning/blob/master/software_engineering/oauth.md): 
+- [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): 
 
 ### System Design
 - [System Design](https://github.com/TravisH0301/system_design): TBC
