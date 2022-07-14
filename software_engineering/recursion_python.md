@@ -1,4 +1,11 @@
 # Recursion in Python
+
+- [Countdown example](#countdown-example)
+- [Factorial example](#factorial-example)
+- [Count elements in nested list example](#count-elements-in-nested-list-example)
+- [Palindrome example](#palindrome-example)
+- [Quicksort example](#quicksort-example)
+
 When function is called in Python, the interpreter creates a new local namespace for the variables defined within the function.
 Even when two different functions or two identical functions are called concurrently, the variables with the same names won't collide, 
 because they are in separate namespaces.
