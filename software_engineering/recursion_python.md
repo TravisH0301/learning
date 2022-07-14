@@ -100,8 +100,11 @@ Recursion can be used, but it will not be effective as using "return True if wor
 This can be achieved by checking first and last letters, second first and second last letters, and so on
 until last letter is reached.
 
+The recursion function is built to recursively call its own function while reaching the end point. <br>
+Then once end point is reached, the returned result is combined while winding backwards.
+
     def is_palindrome(word):
-      # Define end of recursion - last letter is reached
+      # Define base case of recursion (end of recursion)
       if len(word) == 1:
         return True
       
@@ -116,9 +119,46 @@ until last letter is reached.
 6. func('cec') returns True & func('e') = True & True = True
 7. func('aceca') returns True & func('cec') = True & True = True
 8. func('racecar') returns True & func('aceca') = True & True = True
+           
+## Quicksort example
+Quicksort uses a divide-and-conquer algorithm, where a given list of numbers are divided using the pivot number recursively until the lists 
+are not dividable anymore. Then the divided lists are combined to result in the sorted list.
+
+The list will be divided recursively in the following manner:
+- Sublist 1 with numbers less than pivot number
+- Sublist 2 with numbers equal to pivot number
+- Sublist 3 with numbers larger than pivot number
+
+This is done until all sublists are not dividable. Then the sublists will be combined in "sublist 1 + sublist 2 + sublist 3" order 
+while rewinding back from the recursion.
+
+Note that in this example, pivot number is calculated by "median of (first number + last number + middle number)".
+
+    from statistics import median
+    
+    def quicksort(numbers):
+      # Define base case to end recursion
+      if len(numbers) <= 1:
+        return numbers
       
-        
-        
+      # Calculate pivot number
+      pivot = median(numbers[0] + numbers[-1] + numbers[len(numbers)//2])
+      
+      # Create sublists using pivot number
+      sub_1, sub_2, sub_3 = (
+        [n for n in numbers if n < pivot],
+        [n for n in numbers if n == pivot],
+        [n for n in numbers if n > pivot]
+      )
+      
+      # Recursively call function for 1 & 3 sublists, and collect results backwards
+      return (quicksort(sub_1) + sub_2 + quicksort(sub_3))
+      
+
+
+
+![image](https://user-images.githubusercontent.com/46085656/179007664-0dc25dbb-f53d-4c74-9dac-f028d919ceb5.png)
+
     
 
 
