@@ -34,13 +34,24 @@ People can’t reverse engineer them and get the secret key. They’re running i
 (ex. web app, smart TV)
 
 ## OAuth tokens
-refer to https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth
+- Access token: can be used by any clients (ex. public clients) to access the Resource Server (API). These tokens are short-lived, and cannot be revoked.
+- Refresh token: This token is long-lived, and often confidential clients can only get this token. This token can be revoked.
+
+OAuth doesn't limit on the type of tokens. Generally, JWT (JSON Web Tokens) is a secure and trustworthy standards.<br>
+The tokens are retrieved at the Authorisation Server, where its Authorise Endpoint will require an authorisation grant and its Token Endpoint will provide the tokens after the authorisation is granted.
 
 ## OAuth flows
-refer to https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth
+### Front channel
+![image](https://user-images.githubusercontent.com/46085656/182595480-5b92cc12-8169-457a-8f7f-e43bc34e3271.png)
 
+1. Reseouce Owner (client user) starts flow to delegate access to client to access the Resource Server
+2. Client sends authorisation request with specified scoped via browser redirect to the Authorise Endpoint of the Authorisation Server
+3. The Authorisation Server returns a consent dialog asking the Resource Owner for the authorisation grant with authentication (authentication is not required if cached session cookie exists)
+4. The authorisation grant is given to the client via browser redirect
 
-## Difference between OAuth 1.0 & OAuth 2.0
+### Back channel
+![image](https://user-images.githubusercontent.com/46085656/182595497-698dfb52-02e7-4380-b131-ab6b1959ac84.png)
 
-
-# Todo: Add headers
+1. The Client request to the Token End Point of the Authorisation Server for a token
+2. Token is exchanged with the authorisation grant
+3. The Client uses the token to access the Resource Server
