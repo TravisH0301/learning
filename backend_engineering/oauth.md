@@ -60,5 +60,4 @@ The tokens are retrieved at the Authorisation Server, where its Authorise Endpoi
 <img src="https://user-images.githubusercontent.com/46085656/182595497-698dfb52-02e7-4380-b131-ab6b1959ac84.png" height="300px">
 
 1. The Client request to the Token End Point of the Authorisation Server for a token
-2. Token is exchanged with the authorisation grant
-3. The Client uses the token to access the Resource Server
+2. Token is exchanged with the authorisation grant, and the Client uses the token to access the Resource Server
