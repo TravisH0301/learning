@@ -49,7 +49,7 @@ The tokens are retrieved at the Authorisation Server, where its Authorise Endpoi
 
 ## OAuth flows
 ### Front channel
-![image](https://user-images.githubusercontent.com/46085656/182595480-5b92cc12-8169-457a-8f7f-e43bc34e3271.png)
+<img src="https://user-images.githubusercontent.com/46085656/182595480-5b92cc12-8169-457a-8f7f-e43bc34e3271.png" height="300px">
 
 1. Reseouce Owner (client user) starts flow to delegate access to client to access the Resource Server
 2. Client sends authorisation request with specified scoped via browser redirect to the Authorise Endpoint of the Authorisation Server
@@ -57,7 +57,7 @@ The tokens are retrieved at the Authorisation Server, where its Authorise Endpoi
 4. The authorisation grant is given to the client via browser redirect
 
 ### Back channel
-![image](https://user-images.githubusercontent.com/46085656/182595497-698dfb52-02e7-4380-b131-ab6b1959ac84.png)
+<img src="https://user-images.githubusercontent.com/46085656/182595497-698dfb52-02e7-4380-b131-ab6b1959ac84.png" height="300px">
 
 1. The Client request to the Token End Point of the Authorisation Server for a token
 2. Token is exchanged with the authorisation grant
