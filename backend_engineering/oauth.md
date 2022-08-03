@@ -1,5 +1,12 @@
 # OAuth
 
+- [Access delegation](#access-delegation)
+- [OAuth actors](#oauth-actors)
+- [OAuth tokens](#oauth-tokens)
+- [OAuth flows](#oauth-flows)
+  - [Front channel](#front-channel)
+  - [Back channel](#back-channel)
+
 ## Access delegation
 OAuth stands for "Open Authorisation\*" and is an open standard for authorisation. 
 It works to authorise devices, APIs, servers and applications using access tokens 
