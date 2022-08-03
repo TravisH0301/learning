@@ -34,7 +34,7 @@ Repository containing brief notes made during learning.
 - [REST API](https://github.com/TravisH0301/learning/blob/master/backend_engineering/rest_api.md): Architectural constraints of REST API
 
 ### Authentication
-- [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): 
+- [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
 
 ### System Design
 - [System Design](https://github.com/TravisH0301/system_design): TBC
