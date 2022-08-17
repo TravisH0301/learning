@@ -37,7 +37,7 @@ In Teradata, partitioning is done by hash of key using a hash function. When a r
 ## Partitioned Primary Index
 Hash partitioning can help to achieve even distribution when key values are not evenly distributed. However, partitioning by hash of key removes the order of the key values - which can improve data scanning. Teradata's Partitioned Primary Index (PPI) can help to compensate this by further partitioning the data within AMPs.
 
-Partitioning data within AMPs removed the need of full table scan and improves query performance. <br>
+Partitioning data within AMPs removes the need of full table scan and improves query performance. <br>
 This can be achieved using "Partition By" clause. Some examples include:
 
 ### Direct partitioning on a numeric column
