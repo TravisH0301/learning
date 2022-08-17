@@ -120,7 +120,7 @@ Multilevel parititoning can be achieved using RANGE_N or CASE_N functions.
     
 In this case, the records in each partition level defined by CASE_N will be further partitioned on SALE_DT with a 1 day interval.
 
-Note that only one CASE_N or RANGE_N can be used for each partition level.
+Note that only one CASE_N or one RANGE_N can be used for each partition level.
 
 ## Collecting Statistics
 In Teradata, the query optimiser can use pre-calculated statistics on the data demographics to optimise the query. 
