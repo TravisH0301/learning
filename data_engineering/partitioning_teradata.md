@@ -92,6 +92,8 @@ In AMPs, the records are partitioned into 4 partitions.
 3. Records with REVENUE greater or equal to 1000
 4. Records with NULL REVENUE
 
+This partitioning helps when querying data with a filter on REVENUE.
+
 Note that "NO CASE" creates a partition when a record doesn't fit into any of the defined conditions. <br>
 And "UNKNOWN" creates a partition for NULL values.
 
@@ -119,6 +121,8 @@ Multilevel partitoning can be achieved using RANGE_N or CASE_N functions.
     );
     
 In this case, the records in each partition level defined by CASE_N will be further partitioned on SALE_DT with a 1 day interval.
+
+This helps when filtering data on both REVENUE and SALE_DT.
 
 Note that only one CASE_N or one RANGE_N can be used for each partition level.
 
