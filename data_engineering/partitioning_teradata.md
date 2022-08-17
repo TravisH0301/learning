@@ -1,4 +1,4 @@
-# Parititioning in Teradata
+# Partitioning in Teradata
 Teradata is a relational database management system (RDBMS) based on MPP (Masively Parallel Processing) architecture. 
 In Teradata, each node can contain multiple Access Module Processors (AMPs) that share nothing between each other to achieve parallel processing.
 
@@ -96,7 +96,7 @@ Note that "NO CASE" creates a partition when a record doesn't fit into any of th
 And "UNKNOWN" creates a partition for NULL values.
 
 ### Multilevel partitioning on RANGE_N or CASE_N functions
-Multilevel parititoning can be achieved using RANGE_N or CASE_N functions.
+Multilevel partitoning can be achieved using RANGE_N or CASE_N functions.
 
     CREATE TABLE SALES (
       SALE_ID INTEGER NOT NULL
