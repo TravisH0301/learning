@@ -14,7 +14,7 @@ Note that there are two data vaults in the architecture; raw data vault and busi
 implement business changes by adding new data sources or dimensions. The business data vault also makes the data more understandable to the business users. 
 
 ## Data Vault Components
-The data vaults is mainly consisted of three components. 
+The data vaults is mainly consisted of three core components. 
 
 ![data_vault_architecture](https://github.com/TravisH0301/learning/blob/master/images/data_vault_example.png)
 
