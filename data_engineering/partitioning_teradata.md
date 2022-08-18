@@ -32,7 +32,7 @@ If no unique column exists, a combination of columns can be used instead to crea
 ## Partitioning by Primary Index
 In Teradata, partitioning is done by hash of key using a hash function. When a row is inserted, the key of the row will be hashed. And the row value will be allocated by the hash bucket to the AMP, where its hash is covered by the AMP's range of hash codes.
 
-![image](https://user-images.githubusercontent.com/46085656/185113418-d9ec5871-1fcc-4521-a37f-bb05776086b0.png)
+<img src="https://user-images.githubusercontent.com/46085656/185113418-d9ec5871-1fcc-4521-a37f-bb05776086b0.png" width="600px">
 
 ## Partitioned Primary Index
 Hash partitioning can help to achieve even distribution when key values are not evenly distributed. However, partitioning by hash of key removes the order of the key values - which can improve data scanning. Teradata's Partitioned Primary Index (PPI) can help to compensate for this by further partitioning the data within AMPs.
