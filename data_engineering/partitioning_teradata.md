@@ -2,7 +2,7 @@
 Teradata is a relational database management system (RDBMS) based on MPP (Massively Parallel Processing) architecture. 
 In Teradata, each node can contain multiple Access Module Processors (AMPs) that share nothing with each other to achieve parallel processing.
 
-![image](https://user-images.githubusercontent.com/46085656/185266803-d47fd0e9-704c-4380-b517-80bbe1602f59.png)
+<img src="https://user-images.githubusercontent.com/46085656/185266803-d47fd0e9-704c-4380-b517-80bbe1602f59.png" width="600px">
 
 ## Primary Index
 Primary Index (PI), or Distribution Key (DK) in other MPP systems, is the important aspect of Teradata to maximise performance.
