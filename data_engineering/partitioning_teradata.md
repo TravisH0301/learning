@@ -25,9 +25,9 @@ The uniqueness of the primary index can be governed by using Unique Primary Inde
     UNIQUE PRIMARY INDEX (SALE_ID); -- The term "UNIQUE" governs uniqueness of the primary index "SALES_ID"
 
 ### Selection of Primary Index
-When selecting a primary index, a primary key of the table is a good choice, given it is a unique column providing even distribution of the data throughout AMPs.
+When selecting a primary index, a primary key of the table is a good choice, given it is a unique column providing even data distribution throughout AMPs.
 
-If no unique column exists, a combination of columns can be used instead to create a unique primary key
+If no unique column exists, a combination of columns can be used instead to create a unique primary key.
 
 ## Partitioning by Primary Index
 In Teradata, partitioning is done by hash of key using a hash function. When a row is inserted, the key of the row will be hashed. And the row value will be allocated by the hash bucket to the AMP, where its hash is covered by the AMP's range of hash codes.
