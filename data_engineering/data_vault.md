@@ -4,7 +4,6 @@ Data warehouse plays a crucial role in BI and data analytics as consolidated dat
 ## Data Warehouse Architecture
 The data warehouse architecture of the data vault modelling approach consists of three layers; Staging Area, Data Vaults (Raw & Business), and Data Marts.
 
-![data_vault_architecture](https://github.com/TravisH0301/learning/blob/master/images/data_vault_architecture.png)
 <img src=https://github.com/TravisH0301/learning/blob/master/images/data_vault_architecture.png width=600px>
 
 - Staging Area: This layer supports the data loading process from heterogeneous data sources.
@@ -17,7 +16,7 @@ implement business changes by adding new data sources or dimensions. The busines
 ## Data Vault Components
 The data vaults is mainly consisted of three core components. 
 
-![data_vault_architecture](https://github.com/TravisH0301/learning/blob/master/images/data_vault_example.png)
+<img src=https://github.com/TravisH0301/learning/blob/master/images/data_vault_example.png width=60px>
 
 ### Hub
 Hubs are tables containing business entity identifiers. Each row is uniquely identified by the business key (BK) which has either real business meaning or is a surrogate key
