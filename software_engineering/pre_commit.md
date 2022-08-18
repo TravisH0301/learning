@@ -139,8 +139,13 @@ download, install and run the hooks specified in the `.pre-commit-config.yaml`.
 When configured hooks are not installed, they are installed first.<br>
 ![pre_commit_hook_installation](https://github.com/TravisH0301/learning/blob/master/images/pre_commit_hook_installation.jpg)
 
+<img width=600px src=https://user-images.githubusercontent.com/46085656/185391757-1a4753b4-f554-4f6f-b826-7a9d66923e5b.png>
+
 Hooks are triggered to check the codes.<br>
 ![pre_commit_check](https://github.com/TravisH0301/learning/blob/master/images/pre_commit_check.jpg)
+
+<img width=600px src=https://user-images.githubusercontent.com/46085656/185391776-6d7f86d5-3ffe-4c2c-a581-a314099f24c3.png>
+
 
 Once the code has passed all the hooks, then the code gets committed (or is ready to be committed if hooks called manually).
 
