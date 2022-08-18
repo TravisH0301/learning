@@ -34,6 +34,8 @@ In Teradata, partitioning is done by hash of key using a hash function. When a r
 
 <img src="https://user-images.githubusercontent.com/46085656/185113418-d9ec5871-1fcc-4521-a37f-bb05776086b0.png" width="600px">
 
+When a table is created with FALLBACK enabled, the backup of the "row with hash" will be stored in another AMP. Each AMP will store both primary and backup rows in case of any AMP going down.
+
 ## Partitioned Primary Index
 Hash partitioning can help to achieve even distribution when key values are not evenly distributed. However, partitioning by hash of key removes the order of the key values - which can improve data scanning. Teradata's Partitioned Primary Index (PPI) can help to compensate for this by further partitioning the data within AMPs.
 
