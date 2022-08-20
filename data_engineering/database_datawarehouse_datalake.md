@@ -184,4 +184,4 @@ Columnar storage is widely used in data warehouses and NoSQL databases.
 ## Data Lake 
 Centralised repository for both structured and unstructured data storage. It can contain raw and unprocess data. 
 Usually data stored are not determined for their usages. <br>
-Just like ELT based data warehouse, data lake can also use ELT process where transformation process occurs after data is loaded into the data lake. 
+Just like ELT based data warehouse, data lake makes use of ELT process where transformation process occurs after data is loaded into the data lake. 
