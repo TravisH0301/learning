@@ -7,7 +7,7 @@ Three terms all describe a data store, yet they have different stuctures and pur
   - [Database System: Online Analytical Processing (OLAP)](#Database-System-Online-Analytical-Processing-OLAP)
 - [Data Warehouse](#Data-Warehouse)
   - [Dimensional Modelling](#Dimensional-Modelling) 
-  - [ETL vs ELT](#ETL-vs-ELT)
+  - [ETL vs ELT](#ETL-vs-ELT-EtLT)
   - [Data Warehouse Architecture](#Data-Warehouse-Architecture)
   - [OLAP Cubes](#OLAP-Cubes)
   - [Columnar Storage](#Columnar-Storage)
