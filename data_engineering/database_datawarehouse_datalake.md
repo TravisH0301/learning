@@ -70,20 +70,33 @@ When the database with 3NF tables are converted into data warehouse, the tables 
 better with simplied & denormalised tables. (ex. instead of querying data from address and city tables, query can be done using a single dim_location table)
 
 ### ETL vs ELT
-#### ETL based Data Warehouse
+#### ETL
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources into a staging area, where the data is transformed into required formats
 using a separete engine (ex. ETL tool or Python). The transformed data is then loaded into the destinated dimensional model. This way, only the processed 
 data is accessible in the data warehouse.
 
-#### ELT based Data Warehouse
-For ELT (Extract, Load, Transform) process, there is no separate engine/tool required for the transformation. The data is extracted and loaded into the 
-destinated database and transformed within the database using its own power. 
+Addtionally, prior to the modern breed of data warehouses, the data warehouses didn't not have storage and compute power necessary to handle loading and transforming vase amount of raw data. Hence, the transformation took place elsewhere before loading the data into the data warehouse.
 
-Note that, the term "ELT" was introduced from around 2020. So, some may still call ELT pipeline as ETL.
+#### ELT
+For ELT (Extract, Load, Transform) process, there is no separate engine/tool required for the transformation. The data is extracted and loaded into the destinated database and transformed within the database using its own power. 
+
+With the emerging of modern data warehouses, which are scalable (and even columnar), both storing and transformation can be done on the data warehouses. <br>
+Also the data lakes make use of ELT process, where the raw data is loaded into the bucket and transformed afterwards.
+
+Note that, the term "ELT" was introduced from around 2020. So, some may use ELT and ETL interchangeably.
+
+#### EtLT
+Additionally, small transformation is often conducted after extraction where simple data filterings are conducted to:
+- remove duplication
+- parse values
+- mask or obfuscate sensitive data
+
+Usually, transformation involving business logic or data modelling is not conducted. Hence, it is called "EtLT".
 
 #### Advantages of ELT over ETL
 - Quicker loading: as transformation occurs after loading, the data is loaded into the storage quicker
 - Flexibility: only required data undergoes transformation and different transformations can be applied each time
+- Split of responsibility: at some companies, data engineers take care of the data ingestion (Extraction & Loading) and data analytics or analytics engineers take care of the transformation process for the analytics works
 
 #### Disadvantages of ELT
 - Slower analysis: compared to pre-structured ETL, ELT may be slow and unstable in anaylsis when data is all loaded into the storage
