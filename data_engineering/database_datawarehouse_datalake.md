@@ -69,7 +69,7 @@ Dimension tables has characteristics of:
 When the database with 3NF tables are converted into data warehouse, the tables are denormalised into dimension tables. So the query performance becomes 
 better with simplied & denormalised tables. (ex. instead of querying data from address and city tables, query can be done using a single dim_location table)
 
-### ETL vs ELT
+### ETL vs ELT (EtLT)
 #### ETL
 During ETL (Extract, Transform, Load) process, the data is extracted from data sources into a staging area, where the data is transformed into required formats
 using a separete engine (ex. ETL tool or Python). The transformed data is then loaded into the destinated dimensional model. This way, only the processed 
