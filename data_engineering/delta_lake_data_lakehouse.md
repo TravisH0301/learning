@@ -1,5 +1,15 @@
 # Delta Lake and Data Lakehouse
 
+reference about data lakehouse architecture
+https://www.databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html?itm_data=lakehouse-link-lakehouseblog
+https://www.databricks.com/discover/pages/the-rise-of-the-lakehouse-paradigm?itm_data=lakehouse-link-riseoflakehouse
+
+reference about delta lake framework for building data lakehouse on data lake
+https://delta.io/
+https://delta.io/learn/tutorials/
+
+reference on how to build delta lake on S3
+https://medium.com/seek-blog/data-lakehousing-in-aws-7c76577ed88f
 
 <img width=800px src=https://user-images.githubusercontent.com/46085656/185820259-7256d30e-892c-4e5b-8e28-7f27ce299f19.png>
 <img width=1000px src=https://user-images.githubusercontent.com/46085656/185817783-9d99b1a0-d260-4b53-9179-e77971dd0502.png>
