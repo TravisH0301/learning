@@ -15,8 +15,20 @@ https://medium.com/seek-blog/data-lakehousing-in-aws-7c76577ed88f
 <img width=1000px src=https://user-images.githubusercontent.com/46085656/185817783-9d99b1a0-d260-4b53-9179-e77971dd0502.png>
 
 ## Delta Lake
+- Delta table provides warehousing features while data still stored as parquet files in S3.
+- Delta lake creating warehousing layer on top of storage layer in data lake
 
-## Data Lakehouse on AWS
+- Data lake: storage + processing engine
+- Data lakehouse: data lake + warehousing
+
+## Data Lakehouse 
+
+### Data Modelling in Lakehouse
+https://www.confessionsofadataguy.com/data-modeling-in-deltalake-databricks/
+
+### Lakehouse using Delta Lake
+
+## Lakehouse on AWS
 
 ## Data Lakehouse on Databricks
 
