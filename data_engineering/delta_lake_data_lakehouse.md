@@ -1,6 +1,5 @@
 # Delta Lake and Data Lakehouse
-
-<img width=1000px src=https://user-images.githubusercontent.com/46085656/185817547-6ee552c3-dca1-4466-81e3-1753fa47677a.png>
+<img width=1000px src=https://user-images.githubusercontent.com/46085656/185817711-c1a4e9a5-35fc-4ad9-817a-eb6039f6f38b.png>
 
 ## Delta Lake
 
