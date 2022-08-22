@@ -21,6 +21,8 @@ reference on how to build delta lake on S3
 - Data lake: storage + processing engine
 - Data lakehouse: data lake + warehousing
 
+- bronze(Landing, ingestion) -> silver(refined tables, 3NF) -> gold (featured tables, modelling)
+
 ## Data Lakehouse 
 
 ### Data Modelling in Lakehouse
