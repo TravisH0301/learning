@@ -24,7 +24,8 @@ reference on how to build delta lake on S3
 ## Data Lakehouse 
 
 ### Data Modelling in Lakehouse
-https://www.confessionsofadataguy.com/data-modeling-in-deltalake-databricks/
+- https://www.confessionsofadataguy.com/data-modeling-in-deltalake-databricks/
+- https://www.databricks.com/blog/2022/06/24/data-warehousing-modeling-techniques-and-their-implementation-on-the-databricks-lakehouse-platform.html
 
 ### Lakehouse using Delta Lake
 
