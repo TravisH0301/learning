@@ -23,6 +23,8 @@ reference on how to build delta lake on S3
 
 - bronze(Landing, ingestion) -> silver(refined tables, 3NF) -> gold (featured tables, modelling)
 
+- create manifest files -> create external tables using manifest files for AWS Athena -> access delta tables via external tables from Athena
+
 ## Data Lakehouse 
 
 ### Data Modelling in Lakehouse
