@@ -88,6 +88,8 @@ a SSH tunnel to the server.
 
         ssh -i <path to identity key> -d <port> <username>@<host>
 
+The connection can be closed using `exit` command.
+
 ### Config File
 Configuration file for the SSH connection can be set up for quick connection on the client. <br>
 OpenSSH client-side configuration file is named `config`, and it is stored in ~/.ssh.
@@ -96,7 +98,7 @@ OpenSSH client-side configuration file is named `config`, and it is stored in ~/
         Host <define name for the connection ex.cdsw>
           HostName <remote server hostname ex.localhost>
           IdentitiesOnly <whether to use only passed secret key | ex.yes>
-          IdentityFile <location of secret key | ex.c:/users/hongj5/.ssh/ssh>
+          IdentityFile <location of secret key | ex.c:/users/user/.ssh/ssh>
           User <remote server username | ex.cdsw>
           Port <port number | ex.2024>
 
@@ -104,7 +106,42 @@ The following command can be used to connect to the server using the config file
 
         ssh cdsw
   
-*Note that when there are multiple secret keys on computer, enable "IdentitiesOnly" parameter to use only the given secret key for the connection.*
+*Note that when there are multiple secret keys on computer, enable "IdentitiesOnly" parameter to use only the given secret key for the connection.*<br>
+*On command line, "IdentitiesOnly" can be used using "-o" parameter alongside "-i" parameter to point to the identity key.*
+
+        ssh -p <port> <username>@<host> -o "IdentitiesOnly=yes" -i <path to identity key>
+
+## SSH File Transfer Protocol
+SSH File Transfer Protocol (SFTP) is a file transfer protocol (FTP) implemented in SSH. It allows a user to transfer files over the SSH tunnel. <br>
+Given the public key is stored in the server, the following command can be used to connect to the server using SFTP.
+
+        sftp -P <port> -o "IdentitiesOnly=yes" -i <path to identity key> <username>@<host>
+        
+*Note that capital P is used for the port parameter and the <username>@<host> is given at the end of the command.*
+
+Once the SFTP session is established, the command line will show "sftp\>" on the command line input. Now all commands entered are executed in the server.<br>
+To execute the commands on the client, put "l" (for local) in front of the commands as below:
+  
+        # remote command
+        sftp\> pwd
+        Remote working directory: /home/cdsw
+        # local command
+        sftp\> lpwd
+        Local working directory: c:\users\user\.ssh
+  
+### Transfer Files from Server to Client
+`get` command can be used to fetch a file from server to client. The working directories of the server and the client will be used as the source and the destination.
+  
+        sftp\> get <source file> <destination file (if not given, same name is used)>
+        sftp\> get -r <directory>
+
+*Note that "-r" is used to fetch child files in the directory recursively.*
+  
+### Transfer Files from Client to Server
+`put` command can be used to push a file from client to server.
+  
+        sftp\> put <source file> <destination file>
+        sftp\> put -r <directory>
 
 ## Remote Development on VS Code via SSH
 VS code can be used for remote development using SSH extension. The following steps can be taken to establish a SSH tunnel to the remote server.
