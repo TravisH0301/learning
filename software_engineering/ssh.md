@@ -1,4 +1,16 @@
 # SSH
+- [SSH Installation](#ssh-installation)
+  - [SSH on Client](#ssh-on-client)
+  - [SSH on Server](#ssh-on-server)
+- [Public Key Authentication](#public-key-authentication)
+  - [Key Pair - Public & Private](#key-pair---public--private)
+  - [Copy Public Key to Server](#copy-public-key-to-server)
+  - [SSH connection using Public Key Authentication](#ssh-connection-using-public-key-authentication)
+  - [Config File](#config-file)
+- [Remote Development on VS Code via SSH](#remote-development-on-vs-code-via-ssh)
+  - [Port Forwarding on VS Code](#port-forwarding-on-vs-code)
+- [Connect to Cloudera CDSW](#connect-to-cloudera-cdsw)
+
 Secure Shell(SSH) is a network protocol to access a computer remotely over an unsecured network.
 It also refers to the suite of utilities to implement the SSH protocol. 
 
@@ -68,16 +80,17 @@ On the other hand, the private key used for user identity is called the *identit
 The public key can be copied to the server by using the command below. The public key will be stored in the authorized_key file, and will
 allow client to establish a connection using the private key.
 
-        ssh-copy-id -i ~/.ssh/tatu-key-ecdsa user@host
+        ssh-copy-id -i <path to identity key> <username>@<host>
         
 ### SSH connection using Public Key Authentication
 After the authentication key pair is generated and the public key is copied to the server, the following command can be used to establish 
 a SSH tunnel to the server.
 
-        ssh -i <path of private key> -d <port> <username>@<host>
+        ssh -i <path to identity key> -d <port> <username>@<host>
 
 ### Config File
-Configuration file for the SSH connection can be set up for quick connection on the client.
+Configuration file for the SSH connection can be set up for quick connection on the client. <br>
+OpenSSH client-side configuration file is named `config`, and it is stored in ~/.ssh.
 
         # config file
         Host <define name for the connection ex.cdsw>
@@ -98,7 +111,7 @@ VS code can be used for remote development using SSH extension. The following st
 
 1. Install remote development extension pack (ex. Remote - SSH)
 2. Select "Remote-SSH: Connect to Host" from Command Palette (F1, Ctrl+Shift+P)
-3. Either input ssh command or choose configured host name (from `Config File` section)
+3. Either input ssh command or choose the configured host name (from `Config File` section)
 
 ### Port Forwarding on VS Code
 Port forwarding can be done using VS Code to allow the client to open up any applications using the forwarded port.<br>
@@ -118,9 +131,9 @@ Cloudera CDSW provides remote development via SSH. The following steps can be ta
 
 5. Create a new session on CDSW
 
-        cdswctl ssh-endpoint -p <username>/<project_name> [-c <CPU_cores>] [-m <memory_in_GB>] [-g <number_of_GPUs>] [-r <runtime ID> ]
+        cdswctl ssh-endpoint -p <username>/<project name> [-c <CPU_cores>] [-m <memory in GB>] [-g <number of GPUs>] [-r <runtime ID> ]
         
-*runtime refers to the session specification (ex. Python version). Available runtimes can be viewed using `cdswctl.ext runtimes list`
+*runtime refers to the session specification (ex. Python version). Available runtimes can be viewed using `cdswctl runtimes list`
 
 7. Connect to CDSW server using development tool (ex. VS Code) for remote development. Upon creation of a new session, connection information is required as below.
 
