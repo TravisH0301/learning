@@ -120,7 +120,7 @@ Given the public key is stored in the server, the following command can be used 
 
         sftp -P <port> -o "IdentitiesOnly=yes" -i <path to identity key> <username>@<host>
         
-*Note that capital P is used for the port parameter and the <username>@<host> is given at the end of the command.*
+*Note that capital P is used for the port parameter and the \<username\>@\<host\> is given at the end of the command.*
 
 Once the SFTP session is established, the command line will show "sftp\>" on the command line input. Now all commands entered are executed in the server.<br>
 To execute the commands on the client, put "l" (for local) in front of the commands as below:
