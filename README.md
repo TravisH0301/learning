@@ -24,6 +24,9 @@ Repository containing brief notes made during learning.
 ### Version Control
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
 
+### Network
+- [SSH](https://github.com/TravisH0301/learning/blob/master/software_engineering/ssh.md#ssh-connection-using-public-key-authentication): How to establish SSH session between server and client using public key authentication, and how to transfer files using SFTP
+
 ## 2. Backend Engineering
 [Back to table of contents](#Table-of-Contents)
 ### Internet
