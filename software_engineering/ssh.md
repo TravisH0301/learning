@@ -109,7 +109,7 @@ The following command can be used to connect to the server using the config file
 
         ssh cdsw
   
-*Note that when there are multiple secret keys on computer, enable "IdentitiesOnly" parameter to use only the given secret key for the connection.*<br>
+*Note that when there are multiple identity keys on computer, enable "IdentitiesOnly" parameter to use only the given secret key for the connection.*<br>
 *On command line, "IdentitiesOnly" can be used using "-o" parameter alongside "-i" parameter to point to the identity key.*
 
         ssh -p <port> <username>@<host> -o "IdentitiesOnly=yes" -i <path to identity key>
