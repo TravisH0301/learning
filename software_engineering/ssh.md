@@ -101,7 +101,7 @@ OpenSSH client-side configuration file is named `config`, and it is stored in ~/
         Host <define name for the connection ex.cdsw>
           HostName <remote server hostname ex.localhost>
           IdentitiesOnly <whether to use only passed secret key | ex.yes>
-          IdentityFile <location of secret key | ex.c:/users/user/.ssh/ssh>
+          IdentityFile <location of identity key | ex.c:/users/user/.ssh/ssh>
           User <remote server username | ex.cdsw>
           Port <port number | ex.2024>
 
