@@ -1,4 +1,14 @@
 # Partitioning in Teradata
+- [Primary Index](#primary-index)
+  - [Selection of Primary Index](#selection-of-primary-index)
+- [Partitioning by Primary Index](#partitioning-by-primary-index)
+- [Partitioned Primary Index](#partitioned-primary-index)
+  - [Direct partitioning on a numeric column](#direct-partitioning-on-a-numeric-column)
+  - [Expression partitioning on RANGE_N function](#expression-partitioning-on-range_n-function)
+  - [Expression partitioning on CASE_N function](#expression-partitioning-on-case_n-function)
+  - [Multilevel partitioning on RANGE_N or CASE_N functions](#multilevel-partitioning-on-range_n-or-case_n-functions)
+- [Collecting Statistics](#collecting-statistics)
+
 Teradata is a relational database management system (RDBMS) based on MPP (Massively Parallel Processing) architecture. 
 In Teradata, each node can contain multiple Access Module Processors (AMPs) that share nothing with each other to achieve parallel processing.
 
