@@ -1,14 +1,34 @@
 # Data Vault
-Data warehouse plays a crucial role in BI and data analytics as consolidated data from multiple data sources. Kimball's and Inmon's approaches are widely used to build data warehouses. However, it can be cumbersome and risky to refactor the dimensional models every time the business requirement changes. And this is where Data Vault comes in handy. Created by Dan Linstedt in 2001, the data vault approach combines the advantages of 3NF and dimensional modellings to provide a robust solution to the business requirement changes.
+For a large data asset, a medallion architecture (or Multi-hop) is implemented to progressviely develop structure and quality of the data assets. <br>
 
-## Data Warehouse Architecture
-The data warehouse architecture of the data vault modelling approach consists of three layers; Staging Area, Data Vaults (Raw & Business), and Data Marts.
+## Data Vault in Medallion Architecture
+In the medallion architecture, there are 3 layers; Bronze, Silver and Gold.
+
+The `Bronze layer` of the medallion architecture stores the raw data as it is. The data comes in from many different sources such as CDC (Change Data Capture), 
+flat files or APIs. 
+
+In the `Silver layer`, the raw data is processed to provide the enterprise view of the key business entities, concepts and transactions. 
+This is where 3NF or data vault comes in to implement data modelling.
+
+Lastly, the `Gold layer` contains data that are consumption-ready for the business. The data is aggregated, denormalised and optimised for read with fewer joins.
+Kimball's star schema model or Inmon's data mart fits into this layer.
+
+Going back to the silve layer, data vault provides enhanced features over 3NF data modelling. Some of advantages include:
+- 3NF data modelling requires re-modelling when the business relationship changes - ex. one-to-many relationship between customers and products changing to many-to-many requires implementation of a bridge table.<br>
+However, in data vault, link tables which acts as a bridge table are always present to prevent any re-modelling due to business rule changes.
+- 3NF data modelling requires separate management of history tables. And this can become cumbersome when the number of tables that require history tables increases.<br>
+In data vault, historical changes are captured (similar to SCD type 2 in dimensional data models) to avoid such additional workloads.
+
+Note that for a small or one-off data asset, this approach of data management may not be appropriate, as it adds extra complexity and workloads to the system.
+
+## Data Vault Architecture
+The medallion architecture using data vault can be represented as below.
 
 <img src=https://user-images.githubusercontent.com/46085656/185341771-45ca2e62-793b-426c-b36d-6af47be441ae.png width=600px>
 
-- Staging Area: This layer supports the data loading process from heterogeneous data sources.
-- Raw Data Vault / Business Data vault: The raw data vault holds the raw data that its contents have not been processed. And the business data vault contains modified data based on the business rules.
-- Data Marts: This is an information delivery layer, where it can either be a physical model or a virtual model.
+- Bronze layer - Staging Area: This layer supports the data loading process from heterogeneous data sources.
+- Silver layer - Raw Data Vault / Business Data vault: The raw data vault holds the raw data that its contents have not been processed. And the business data vault contains modified data based on the business rules.
+- Gold layer - Data Marts: This is an information delivery layer, where it can either be a physical model or a virtual model.
 
 Note that there are two data vaults in the architecture; raw data vault and business data vault. By having the raw data kept separated to the modified data, one can easily 
 implement business changes by adding new data sources or dimensions. The business data vault also makes the data more understandable to the business users. 
