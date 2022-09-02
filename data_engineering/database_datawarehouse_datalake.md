@@ -19,14 +19,15 @@ Data base is designed to be transactional (transaction: usage of database).
 
 ### Database System Online: Transaction Processiong (OLTP)
 Database architecture that emphasises on fast operational query processing and characterised by large volume of short online transactions such as insert, update & delete.<br>
-It provides no redundancy and high integrity, but it is slow for complex queries with JOINs.
+It provides no redundancy and high integrity, but it is slow for complex queries with JOINs.<br>
+Example: 3NF data modelling
 
 ### Database System: Online Analytical Processing (OLAP)
 Database architecture for complex analytical queries with JOINs and characterised by relatively low volume of transactions. Data warehouse is OLAP system.<br>
-
+Example: Kimball's star schema data modelling
 
 ## Data Warehouse
-Data warehouse is a centralised data storage built upon multiple relational databases, and is used for Business Intelligence.
+Data warehouse is a centralised data storage built upon one or multiple relational databases, and is used for Business Intelligence.
 Data warehouse can have different architectural designs depending on business requirements and purposes. 
 And the data can be stored in various data models (ex. 3NF, dimensional model & data vault) for its optimised usage.
 
