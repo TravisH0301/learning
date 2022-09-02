@@ -56,7 +56,7 @@ Repository containing brief notes made during learning.
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Slowly Changing Dimension (SCD)](https://github.com/TravisH0301/learning/blob/master/data_engineering/slowly_changing_dimension.md): Types of slowly changing dimensions (SCDs) to adapt to changes in the data source
-- [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): data vault architecture and its components
+- [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): Data vault architecture and its components, and how data vault fits into the medallion architecture
 
 ### Data Pipeline
 - [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
