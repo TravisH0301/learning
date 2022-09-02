@@ -51,7 +51,7 @@ Repository containing brief notes made during learning.
 - [Partitioning in Teradata](https://github.com/TravisH0301/learning/blob/master/data_engineering/partitioning_teradata.md): How data is partitioned in Teradata and how to optimise for queries by further partitioning data in nodes and collecting statistics
 
 ### Data Modelling
-- [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehouse (architecture, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
+- [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehousing (architecture - Kimball's & Inmon's, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
 - [Data Modelling](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_modelling.md): How to do data modelling (Entity Relationship Diagram) and aspects of relational database & non-relational (NoSQL) database
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
