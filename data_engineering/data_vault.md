@@ -1,4 +1,11 @@
 # Data Vault
+- [Data Vault in Medallion Architecture](#data-vault-in-medallion-architecture)
+- [Data Vault Architecture](#data-vault-architecture)
+- [Data Vault Components](#data-vault-components)
+  - [Hub](#hub)
+- [Link](#link)
+- [Satellite](#satellite)
+
 For a large data asset, a medallion architecture (or Multi-hop) is implemented to progressviely develop structure and quality of the data assets. <br>
 
 ## Data Vault in Medallion Architecture
