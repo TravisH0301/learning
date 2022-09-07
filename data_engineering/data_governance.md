@@ -1,4 +1,9 @@
 # Data Governance
+- [Key Components in Data Governance](#key-components-in-data-governance)
+  - [Processes - Data Governance Framework](#processes---data-governance-framework)
+  - [People - Data Stewardship](#people---data-stewardship)
+  - [Technology](#technology)
+ 
 In modern business, many companies are "data-driven" and data is treated as an "asset". Just as other assets such as cash, houses or jewleries, data needs to be properly managed to build confidence in data and harness benefits from the data asset.
 
 Data governance plays a key role in data management - part of full data lifecycle needs of an organisation, ranging from creation and implementation of architectures to policies and procedures.
