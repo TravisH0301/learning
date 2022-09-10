@@ -67,7 +67,7 @@ Repository containing brief notes made during learning.
 - [Data Governance](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_governance.md): What is data governance? Key components of data governance - processes, people & technology
 
 ### SQL
-- [SQL Join](https://github.com/TravisH0301/learning/blob/master/data_engineering/slq_join.md): Examples for SQL joins; Inner Join, Left Join, Right Join, Full Join, Anti-Join, Cross Join
+- [SQL Join](https://github.com/TravisH0301/learning/blob/master/data_engineering/slq_join.md): Examples for SQL joins; Inner Join, Left Join, Right Join, Full Join, Anti-Join & Cross Join
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
   
 ### Parallel and Distributed Processing
