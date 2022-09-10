@@ -1,4 +1,11 @@
 # SQL Join
+- [Inner Join](#inner-join)
+- [Left (Outer) Join](#left-outer-join)
+- [Right (Outer) Join](#right-outer-join)
+- [Full (Outer) Join](#full-outer-join)
+- [Anti-Join](#anti-join)
+- [Cross Join](#cross-join)
+
 This document shows examples for SQL joins.
 <!--
 	-- Create table Customers
