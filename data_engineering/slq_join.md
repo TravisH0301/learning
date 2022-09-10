@@ -6,7 +6,7 @@
 - [Anti-Join](#anti-join)
 - [Cross Join](#cross-join)
 
-This document shows examples for SQL joins.
+This document shows examples for SQL joins. And the below tables are used in the examples.
 <!--
 	-- Create table Customers
 	CREATE TABLE CUSTOMERS (
