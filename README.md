@@ -10,10 +10,15 @@ Repository containing brief notes made during learning.
 
 ## 1. Software Engineering 
 [Back to table of contents](#Table-of-Contents)
+<--!
 ### Data Structures
 - [Linked Lists](https://github.com/TravisH0301/learning/blob/master/software_engineering/linked_lists.md): Introduction to linked lists and Python implementation
+-->
+
+<--!
 ### Algorithms
 - [Time & Space Complexity](https://github.com/TravisH0301/learning/blob/master/software_engineering/time_space_complexity.md): Analysis method for time and space complexity
+-->
 
 ### Python
 - [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
