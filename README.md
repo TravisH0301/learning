@@ -23,6 +23,8 @@ Repository containing brief notes made during learning.
 ### Python
 - [Context Manager](https://github.com/TravisH0301/learning/blob/master/software_engineering/context_manager.md): Use of context manager to manage external resources on Python
 - [pre-commit](https://github.com/TravisH0301/learning/blob/master/software_engineering/pre_commit.md): How to set up Git hooks with pre-commit to review code automatically before the commit
+- [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
+- [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
 - [Concurrency](https://github.com/TravisH0301/learning/blob/master/software_engineering/concurrency_python.md): How to achieve concurrency to process multiple tasks asynchronously using threading and asyncio in Python
 - [Recursion](https://github.com/TravisH0301/learning/blob/master/software_engineering/recursion_python.md): Recursion in Python using examples
 
@@ -31,6 +33,7 @@ Repository containing brief notes made during learning.
 
 ### Network
 - [SSH](https://github.com/TravisH0301/learning/blob/master/software_engineering/ssh.md): How to establish SSH session between server and client using public key authentication, and how to transfer files using SFTP
+
 
 ## 2. Backend Engineering
 [Back to table of contents](#Table-of-Contents)
@@ -46,6 +49,7 @@ Repository containing brief notes made during learning.
 
 ### System Design
 - [System Design](https://github.com/TravisH0301/system_design): TBC
+
 
 ## 3. Data Engineering
 [Back to table of contents](#Table-of-Contents)
@@ -74,10 +78,10 @@ Repository containing brief notes made during learning.
 ### SQL
 - [SQL Join](https://github.com/TravisH0301/learning/blob/master/data_engineering/slq_join.md): Examples for SQL joins; Inner Join, Left Join, Right Join, Full Join, Anti-Join & Cross Join
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
-  
-### Parallel and Distributed Processing
-- [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
-- [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
+
+### Spark
+- [Apache Spark](https://github.com/TravisH0301/learning/blob/master/data_engineering/apache_spark.md): Basics of Apache Spark
+
 
 ## 4. Data Science
 [Back to table of contents](#Table-of-Contents)
