@@ -17,7 +17,7 @@ Spark uses in-memory storage for computations, and the Spark ecosystem consists 
 - GraphX: Building and analysing graph-structured data
 
 ## Spark's Distributed Execution
-<img width=600px src='https://user-images.githubusercontent.com/46085656/190640538-e2d8b71f-212d-49f6-99df-9614a6610624.png'>
+<img width=600px src='https://user-images.githubusercontent.com/46085656/190648410-ca54e996-617d-49d0-b9fc-19e3deb6d4ea.png'>
 
 - Spark driver:
   - part of the Spark application responsible for instantiating a SparkSession
