@@ -1,4 +1,8 @@
 # Apache Spark
+- [Spark Ecosystem](#spark-ecosystem)
+- [Spark's Distributed Execution](#sparks-distributed-execution)
+  - [Deployment modes:](#deployment-modes)
+  - [Distributed data and partitions](#distributed-data-and-partitions)
 
 ## Spark Ecosystem
 Apache Spark is a unified engine for distributed data processing. 
