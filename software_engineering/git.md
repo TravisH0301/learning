@@ -163,6 +163,14 @@ This code will rollback to the stage where the specified commit was just made.
 
     $ git revert --no-commit <commit hash ex)0766c053>..HEAD
     $ git commit 
+    
+The above commands will however still keep the old commit histories.
+
+To rollback while completely remove all history, use the following command.
+
+    $ git rebase -i <commit hash> 
+    
+`-i` allows a user to pick commits to drop or amend.
 
 ## Checking Difference
 In addition to Git status, the following code shows all changes made to the files.<br>
