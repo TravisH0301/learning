@@ -21,6 +21,7 @@ Git works on commandline and it can be used with local or remote repositories. G
 - [Making Commits](#making-commits)
   - [Commit Practice](#commit-practice)
   - [Commit History](#commit-history)
+  - [Rollback/Revert to specific commit history](#Rollback/Revert-to-specific-commit-history)
 - [Checking Difference](#checking-difference)
   - [Visually Checking Changes](#visually-checking-changes)
 - [Restore Staged File or Committed File](#restore-staged-file-or-committed-file)
@@ -137,6 +138,11 @@ $ git show \<commit hash\>
 And file tree at that commit can be viewed by: <br>
 $ git ls-tree \<commit hash\> <br>
 \* This will show file has, and you can 'git show \<file hash\>' to view the content at that commit snapshot.
+
+### Rollback/Revert to specific commit history
+This code will rollback to the stage where the specified commit was just made.
+$ git revert --no-commit \<commit hash ex)0766c053\>..HEAD
+$ git commit 
 
 ## Checking Difference
 In addition to Git status, the following code shows all changes made to the files.<br>
