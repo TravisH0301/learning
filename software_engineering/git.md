@@ -64,8 +64,8 @@ Git bash will be used for any examples below.
 ### Current User Setup
 This configuration enables identification of any changes made by the user. <br>
 
-    $ git config --global user.name "Your name" <br>
-    $ git config --global user.email "Your email"<br>
+    $ git config --global user.name "Your name"
+    $ git config --global user.email "Your email"
 
 \*There are 3 levels in configuration:
 - System: on all users
@@ -75,7 +75,7 @@ This configuration enables identification of any changes made by the user. <br>
 ### Default Editor Setup
 Default editor can be defined as below.<br>
 
-    $ git config --global core.editor "code --wait"<br>
+    $ git config --global core.editor "code --wait"
 
 \*code refers to Visual Studio Code
 \*--wait makes the git bash to wait while the editor is open
@@ -104,9 +104,9 @@ To create a new repository, Git must be initialised in the working directory. <b
 ## Staging Files
 Files can be added to Staging Area to let Git to track the changes made. <br>
     
-    $ git add "File 1" "File 2" -> Specific files can be added together. <br>
-    $ git add . -> Adds all files in the working directory. <br>
-    $ git add *.txt -> Adds all .txt files. <br>
+    $ git add "File 1" "File 2" -> Specific files can be added together.
+    $ git add . -> Adds all files in the working directory.
+    $ git add *.txt -> Adds all .txt files.
     $ git reset "file 1" "File 2" -> To unstage files
 
 ### Check Staging Files
