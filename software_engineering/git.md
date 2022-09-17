@@ -21,7 +21,7 @@ Git works on commandline and it can be used with local or remote repositories. G
 - [Making Commits](#making-commits)
   - [Commit Practice](#commit-practice)
   - [Commit History](#commit-history)
-  - [Rollback/Revert to specific commit history](#Rollback/Revert-to-specific-commit-history)
+  - [Rollback/Revert to specific commit history](#RollbackRevert-to-specific-commit-history)
 - [Checking Difference](#checking-difference)
   - [Visually Checking Changes](#visually-checking-changes)
 - [Restore Staged File or Committed File](#restore-staged-file-or-committed-file)
