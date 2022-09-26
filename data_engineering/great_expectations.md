@@ -93,8 +93,17 @@ The last code cell of the notebook will run the checkpoint and open up the Data 
 ## CLI Commands
 The following commands can be used to easily configure and run Great Expectations.
 
-- great_expectations init: Initialise Great Expectations in the project directory
-- great_expectations datasource new: Creates a new datasource for data connection
-- great_expectations suite new: Create a new expectation suite for validation rules
-- great_expectations checkpoint new <checkpoint_name>: Creates a new checkpoint for validation check using datasource and expectation suite
-- great_expectations checkpoint run <checkpoint_name>: Runs a checkpoint to validate the dataset against expectation suite as configured
+    # Initialise Great Expectations in the project directory
+    great_expectations init
+    
+    # Create a new datasource for data connection
+    great_expectations datasource new
+    
+    # Create a new expectation suite for validation rules
+    great_expectations suite new
+    
+    # Create a new checkpoint for validation check using datasource and expectation suite
+    great_expectations checkpoint new <checkpoint_name>
+    
+    # Run a checkpoint to validate the dataset against expectation suite as configured
+    great_expectations checkpoint run <checkpoint_name>
