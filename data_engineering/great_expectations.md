@@ -6,6 +6,8 @@
   - [Validate Data](#validate-data)
 - [CLI Commands](#cli-commands)
 
+<img width=600px src="https://user-images.githubusercontent.com/46085656/192320140-fa4ee8e1-e1bd-45c1-a8b6-8b4abcd4eae8.png">
+
 Great Expectations is an open-source data validation framework that helps to build a data validation layer in the data pipeline with built-in and 
 custom data validation methods. It also provides features to build actionable data quality checks by triggering alerts or sending email notifications.
 
