@@ -66,7 +66,74 @@ Spark treats each partition as a high-level logical data abstraction-as a DataFr
 Perferably, a task is allocated to the executor for the data closest to the executor. Hence, this can minimise network bandwidth.
 And each executor's core is assigned its own data partition.
 
+## Spark Dataframes
+### Create Dataframe using List
+    # Define a list
+    id_list = [1, 2, 3]
+    
+    # Create a dataframe
+    ## Giving string as a schema
+    df = spark.createDataframe(id_list, "int")  # parameter: data, schema
+    
+    ## Giving sql type as a schema
+    from pyspark.sql.types import IntegerType
+    df = spark.createDataframe(id_list, IntegerType())
+    
+### Create Multi Column Dataframe using List
+    # Define a list
+    user_list = [(1, "Scott"), (2, "David"), (3, "Tom")]
+    
+    # Create a dataframe
+    """id & first_name are column names
+    int & string are data types
+    """
+    df = spark.createDataframe(user_list, "id int, first_name string")
+    
+### Create Dataframe with List of Lists using Row
+    # Define a list of lists
+    user_list = [[1, "Scott"], [2, "David"], [3, "Tom"]]
+     
+    # Convert to a list or rows
+    """Row(*args) takes in varying arguments = takes in multiple arguments as a tuple
+    Row(*user) is used to expand the list (ex. [1, "Scott"]) to individual arguments
+    and pass as the varying arguments.
+    Hence, the function will have (1, "Scott") instead of ([1, "Scott"],).
+    Note that * will work the same way with a tuple too.
+    """
+    from pyspark.sql import Row
+    user_rows = [Row(*user) for user in user_list]
+    
+    # Create a dataframe using rows
+    df = spark.createDataframe(user_rows, "id int, first_name string") 
+    
+### Create Dataframe with List of Dictionaries using Row
+    # Define a list of dictionaries
+    user_list = [
+      {"id": 1, "first_name": "Scott"},
+      {"id": 2, "first_name": "David"},
+      {"id": #, "first_name": "Tom"}
+    ]
+    
+    # Convert to a list of rows
+    """Row(**args) takes in keyword arguments = takes in multiple key:value arguments as a dictionary
+    ** is used to expand the dictionary as key arguments.
+    """
+    from pyspark.sql import Row
+    user_rows = [Row(**user) for user in user_list]
+    
+    # Create a dataframe using rows
+    df = spark.createDataframe(user_rows, "id int, first_name string")
+    
+### Specifying Schema using String
 
 
+### Specifying Schema using List
+
+
+### Specifying Schema using Spark Types
+    
+    
+    
+    
 
 
