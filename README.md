@@ -79,6 +79,7 @@ Repository containing brief notes made during learning.
 ### SQL
 - [SQL Join](https://github.com/TravisH0301/learning/blob/master/data_engineering/slq_join.md): Examples for SQL joins; Inner Join, Left Join, Right Join, Full Join, Anti-Join & Cross Join
 - [Window Functions in SQL](https://github.com/TravisH0301/learning/blob/master/data_engineering/window_functions_sql.md): Introduction to window functions in SQL with examples
+- [SQL Update using a Table](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_update_table.md): Demonstrates how a target table can be updated using a source table
 
 ### Spark
 - [Apache Spark](https://github.com/TravisH0301/learning/blob/master/data_engineering/apache_spark.md): Basics of Apache Spark
