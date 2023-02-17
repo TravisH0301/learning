@@ -1,5 +1,13 @@
 # Encoding & Schema
 
+- [Data Representation](#data-representation)
+- [Encoding](#encoding)
+  - [Textual Format Encoding](#textual-format-encoding)
+  - [Binary Format Encoding](#binary-format-encoding)
+  - [Avro](#avro)
+    - [Avro Schema](#avro-schema)
+    - [Schema Compatibility](#schema-compatibility)
+   
 ## Data Representation
 - In-memory: Data is kept in data structures (ex. objects, lists, arrays). These are optimised for efficient access and manipulation by the CPU
 - In file / Over network: Data needs to be encoded into a sequence of bytes. 
