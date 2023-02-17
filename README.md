@@ -106,7 +106,7 @@ Repository containing brief notes made during learning.
 [Back to table of contents](#Table-of-Contents)
 ### Computer Science
 - [Binary, Bit & Byte](https://github.com/TravisH0301/learning/blob/master/miscellaneous/binary_bit_byte.md): Explanation of binary, bit and byte, and how they are used in modern computer architecture and character encoding
-- [Encoding and Schema](https://github.com/TravisH0301/learning/blob/master/miscellaneous/encoding_schema.md): Types of encoding and schema evolution & compatibility
+- [Encoding and Schema](https://github.com/TravisH0301/learning/blob/master/miscellaneous/encoding_schema.md): Types of encoding and schema (Avro as an example)
 
 ### Linux
 - [Linux Server](https://github.com/TravisH0301/learning/blob/master/miscellaneous/linux_server.md): Description of how to connect remote Linux server with some basic Linux terminal commands
