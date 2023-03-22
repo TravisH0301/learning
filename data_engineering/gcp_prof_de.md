@@ -24,9 +24,31 @@
 
 ### Cloud Storage
 - Unstructured object storage
-- Regional, dual-region or multi-region
-- Standard, nearline or coldline: Storage tier for hot/cold data
+- Buckets can be created by regional, dual-region or multi-region
+  - Buckets exists within Projects and their name exist in a global namespace
+- Provides different storage classes
+  - Standard: Availability: 99.99% regional & >99.99% multi and dual-regions
+  - Nearline: 30 days min. storage | Availability: 99.9% regional & 99.95% multi and dual-regions
+  - Coldline: 90 days min. storage | Availabiity: 99.9% regional & 99.95% multi and dual-regions
+  - Archive: 365 days min. storage | Availability: 99.9% regional & 99.95% multi and dual-regions
+- Objects are stored as opaque data, are immutable and can be versioned
+- Buckets and objects can be accessed via Google cloud console, HTTP API, SDKs, gsutil
 - Storage event trigger
+- Provides advanced features:
+  - Paralle uploads of composite objects
+  - Integrity checking (checksum generated when uploading & compared when downloading or periodically to detect file corruption)
+  - Transcoding (compressed storage & decompressed when downloaded)
+  - Requestor pays
+- Costs:
+  - Operational charges (upload, download, edit, etc.)
+  - Network charges (when data egress across different servers)
+  - Data retrieval charges (when downloading from Nearline or Coldline)
+- Lifecycle Management: configuration of a bucket to periodically set storage classes or delete objects (ex. move objects from Standard to Nearline after 30 days)
+- Security and Access Control:
+  - IAM roles for bulk access to buckets
+  - ACLs (Access control list) for granular access to buckets
+  - Singed URLs for individual objects
+  - Signed policy documents - to decide what kinds of files can be uploaded
 
 ### Cloud Bigtable
 - Petabyte-scale NoSQL database
@@ -62,6 +84,15 @@
 - Built-in high availability
 - Vertically scalable
 
-## 
+## Service Accounts
+### Identity & Access Management (IAM)
+#### Members
+- Email accounts
+#### Roles
+- Instance admin
+- Pub/Sub publisher
+#### Human users
+- Authenticates with their own credentials
+- Should not be used for non-human operations
 
 
