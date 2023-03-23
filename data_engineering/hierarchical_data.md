@@ -1,9 +1,9 @@
 # Hierarchical Data
-Hierarchical data has a parent-child relationship, where each child can have multiple children of its own. <br>
-To represent hierarchical data in a database, we can use the adjacency list design.
-
 - [Adjacency List Design](#adjacency-list-design)
 - [Recursive Queries](#recursive-queries)
+
+Hierarchical data has a parent-child relationship, where each child can have multiple children of its own. <br>
+To represent hierarchical data in a database, we can use the adjacency list design.
 
 ## Adjacency List Design
 The adjacency list is a design method for storing hierarchical data in a table by adding a column to the table that refers to the parent record's primary key. This column is regarded as the foreign key and it creates a link between the child record and its parent record.
