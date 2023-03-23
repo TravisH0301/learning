@@ -76,3 +76,53 @@ id | name | role | level
 This result set shows all employees and their level in the hierarchy, ordered by their level and id.
 
 In conclusion, the adjacency list design and recursive queries are powerful tools for representing and querying hierarchical data in a database.
+
+## Implementation
+```sql
+create table prd_app_bot_analytics_disco.employee_hier (
+	id int,
+	"name" varchar(50),
+	"role" varchar(50),
+	manager_id int
+);
+
+insert into prd_app_bot_analytics_disco.employee_hier
+(1, 'Alice', 'CEO', null);
+insert into prd_app_bot_analytics_disco.employee_hier
+(2, 'Bob', 'Head of Sales', 1);
+insert into prd_app_bot_analytics_disco.employee_hier
+(3,	'Charlie', 'Salesperson', 2);
+insert into prd_app_bot_analytics_disco.employee_hier
+(4, 'David', 'Salesperson', 2);
+insert into prd_app_bot_analytics_disco.employee_hier
+(5,	'Emily', 'Head of Support',	1);
+insert into prd_app_bot_analytics_disco.employee_hier
+(6, 'Frank', 'Customer Support', 5);
+insert into prd_app_bot_analytics_disco.employee_hier
+(7, 'Grace', 'Customer Support', 5);
+insert into prd_app_bot_analytics_disco.employee_hier
+(8, 'Henry', 'Customer Support', 5);
+
+select * from prd_app_bot_analytics_disco.employee_hier;
+```
+
+![image](https://user-images.githubusercontent.com/46085656/227188167-0467d56d-a8e1-4722-a569-9c1fd4cef9be.png)
+
+```sql
+with recursive temp as (
+	select id, "name", "role", manager_id, 1 as "level"
+	from prd_app_bot_analytics_disco.employee_hier
+	where id = 1
+	union all
+	select emp.id, emp."name", emp."role", emp.manager_id, temp."level" + 1
+	from prd_app_bot_analytics_disco.employee_hier emp
+	inner join temp temp
+		on emp.manager_id = temp.id
+)
+
+select id, "name", "role", "level"
+from temp
+order by "level", id;
+```
+
+![image](https://user-images.githubusercontent.com/46085656/227188383-55a16900-af9c-440d-8763-90a0725d1900.png)
