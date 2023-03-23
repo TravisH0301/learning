@@ -92,11 +92,11 @@ insert into prd_app_bot_analytics_disco.employee_hier
 insert into prd_app_bot_analytics_disco.employee_hier
 (2, 'Bob', 'Head of Sales', 1);
 insert into prd_app_bot_analytics_disco.employee_hier
-(3,	'Charlie', 'Salesperson', 2);
+(3, 'Charlie', 'Salesperson', 2);
 insert into prd_app_bot_analytics_disco.employee_hier
 (4, 'David', 'Salesperson', 2);
 insert into prd_app_bot_analytics_disco.employee_hier
-(5,	'Emily', 'Head of Support',	1);
+(5, 'Emily', 'Head of Support',	1);
 insert into prd_app_bot_analytics_disco.employee_hier
 (6, 'Frank', 'Customer Support', 5);
 insert into prd_app_bot_analytics_disco.employee_hier
