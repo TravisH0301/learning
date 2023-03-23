@@ -107,7 +107,7 @@ insert into prd_app_bot_analytics_disco.employee_hier
 select * from prd_app_bot_analytics_disco.employee_hier;
 ```
 
-![image](https://user-images.githubusercontent.com/46085656/227188167-0467d56d-a8e1-4722-a569-9c1fd4cef9be.png)
+![image](https://user-images.githubusercontent.com/46085656/227189303-88766399-1f41-4c1d-8b1f-0961c708bd30.png)
 
 ```sql
 with recursive temp as (
