@@ -1,5 +1,5 @@
 # Hierarchical Data
-Hierarchical data has a parent-child relationship, where each child can have multiple children of its own. 
+Hierarchical data has a parent-child relationship, where each child can have multiple children of its own. <br>
 To represent hierarchical data in a database, we can use the adjacency list design.
 
 - [Adjacency List Design](#adjacency-list-design)
