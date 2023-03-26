@@ -1,4 +1,11 @@
 # Outbox Pattern in Event-Driven Architecture
+- [Synchronous vs. Asynchronous Communication](#synchronous-vs-asynchronous-communication)
+- [Event-Driven Architecture and it's challenge](#event-driven-architecture-and-its-challenge)
+- [The Outbox Pattern](#the-outbox-pattern)
+- [Outbox Schema](#outbox-schema)
+- [Error Handling](#error-handling)
+- [Retention Policy](#retention-policy)
+- [Conclusion](#conclusion)
 
 Microservices require communication between services and it can be achieved via synchronous or asynchronous data exchanges. <br>
 Synchronous communication is commonly achieved by API request call, whereas, asynchronous communication is achieved using a message broker.
