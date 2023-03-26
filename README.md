@@ -75,6 +75,7 @@ Repository containing brief notes made during learning.
 - [Data Pipeline and Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_pipeline_airflow.md): Introduction of Directed Acyclic Graphs (DAGs) in data pipeline and building DAGs with Apache Airflow
 - [Data Lineage & Quality in Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_lineage_data_quality_airflow.md): Managing data lineage and data quality in Apache Airflow
 - [Great Expectations](https://github.com/TravisH0301/learning/blob/master/data_engineering/great_expectations.md): Basic instructions to spin up Great Expectations to implement a validation layer in a data project
+- [Outbox Pattern in Event-Driven Architecture](https://github.com/TravisH0301/learning/blob/master/data_engineering/outbox_pattern.md): Using the outbox pattern in event-driven architecture to address data inconsistency challenge
 
 ### Data Governance
 - [Data Governance](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_governance.md): What is data governance? Key components of data governance - processes, people & technology
