@@ -25,8 +25,8 @@ For example, if the Message Broker becomes unavailable at the time of message de
 
 ## The Outbox Pattern
 To tackle this challenge, the outbox pattern can be implemented. And the pattern consists of a two-step transactions:
-    1. Commit a single atomic database transaction to make changes to the Production DB as well as writing the payload to the outbox table.
-    2. Dispatcher to capture the data change in the outbox table (via polling or transaction log tailing) and publish the payloads to the Message Broker.
+1. Commit a single atomic database transaction to make changes to the Production DB as well as writing the payload to the outbox table.
+2. Dispatcher to capture the data change in the outbox table (via polling or transaction log tailing) and publish the payloads to the Message Broker.
 
 ![image](https://user-images.githubusercontent.com/46085656/227777314-986d40eb-7a15-456c-84d3-6484e6486346.png)
 
