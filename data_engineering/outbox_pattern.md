@@ -16,7 +16,7 @@ Synchronous communication is commonly achieved by API request call, whereas, asy
 
 ## Event-Driven Architecture and it's challenge
 Asynchronous communication provides Event-Driven architecture, yet, one of its challenges is "guaranteed message delivery". <br>
-Given the following scenario, where the Service A makes changes to the Production DB, and it's changes are captured and delivered to the Downstream Consumers. <br>
+For the following scenario, the Service A makes changes to the Production DB, and the changes are captured and delivered to the Downstream Consumers. <br>
 
 ![image](https://user-images.githubusercontent.com/46085656/227776576-e759ee42-f785-4878-95bc-d504247c2b60.png)
 
