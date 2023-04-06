@@ -9,6 +9,7 @@
 - [Environment and Cache](#environment-and-cache)
 - [Uninstallation](#uninstallation)
 - [Warning](#warning)
+- [Troubleshooting](#Troubleshooting)
 
 `pre-commit` is a framework that uses Git hooks to go through checklists before the commit. 
 This precheck can help to review if your code is meeting the coding standards or if the commiting file is too large.
@@ -179,3 +180,6 @@ The path can be altered by setting the following environment variables.
 If the repository is located in the network drive using UNC (Universal Naming Convention), 
 Git may not recognise the path and `pre-commit` may not be installed properly. 
 
+## Troubleshooting
+- ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+  - This occurs when pip is configured to use "--user". To disable this option, change the pip configuration file. It can be found by running the command: $ python3 -m pip config debug
