@@ -1,4 +1,15 @@
 # pre-commit
+- [What is Git Hooks?](#what-is-git-hooks)
+- [How to Set Up](#how-to-set-up)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Compatibility between Black & Flake8](#compatibility-between-black--flake8)
+- [Usage](#usage)
+  - [Bypass pre-commit](#bypass-pre-commit)
+- [Environment and Cache](#environment-and-cache)
+- [Uninstallation](#uninstallation)
+- [Warning](#warning)
+
 `pre-commit` is a framework that uses Git hooks to go through checklists before the commit. 
 This precheck can help to review if your code is meeting the coding standards or if the commiting file is too large.
 And the commit will only be made when all pre-defined conditions are met. 
