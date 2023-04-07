@@ -53,8 +53,10 @@ Repository containing brief notes made during learning.
 
 ## 3. Data Engineering
 [Back to table of contents](#Table-of-Contents)
+<!--
 ### Cloud Data Engineering
 - [Google Cloud Platform Certified Professional Data Engineer](https://github.com/TravisH0301/learning/blob/master/data_engineering/gcp_prof_de.md): Notes for the certification exam
+-->
 
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
