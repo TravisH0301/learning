@@ -93,7 +93,7 @@ Repository containing brief notes made during learning.
 - [Apache Spark](https://github.com/TravisH0301/learning/blob/master/data_engineering/apache_spark.md): Basics of Apache Spark
 
 ### Storage
-- [Delta Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/delta_lake.md): Demonstrates Delta Lake provides warehousing functions
+- [Delta Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/delta_lake.md): Mechanisms of how Delta Lake works and its benefits
 
 ## 4. Data Science
 [Back to table of contents](#Table-of-Contents)
