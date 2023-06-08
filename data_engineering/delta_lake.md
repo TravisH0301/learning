@@ -2,6 +2,19 @@
 Delta Lake is an open source storage layer built on top of Parquet (a.k.a open table format).
 Delta Lake provides ACID transactions, enalbing lakehouse architecture on data lakes.
 
+- [Properties](#properties)
+  - [Transaction log](#transaction-log)
+    - [Checkpoint](#checkpoint)
+  - [Optimistic concurrency control](#optimistic-concurrency-control)
+  - [Concurrency operations](#concurrency-operations)
+- [Benefits](#benefits)
+  - [ACID transactions](#acid-transactions)
+  - [Schema enforcement & evolution](#schema-enforcement--evolution)
+  - [History & Time Travel](#history--time-travel)
+  - [Upserts and deletes](#upserts-and-deletes)
+- [Limitations](#limitations)
+- [Optimisations](#optimisations)
+
 ## Properties
 Delta Lake's transaction log and optimistic concurrency allow ACID transactions and provide time travel feature.
 ### Transaction log
