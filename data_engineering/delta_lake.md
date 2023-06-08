@@ -7,6 +7,10 @@ Delta Lake's transaction log and optimistic concurrency allow ACID transactions 
 ### Transaction log
 Delta Lake has a transaction log that keep the entire historical audit trail of all operations executed on the table.
 Only conflict-free transactions are committed to the transaction log.
+#### Checkpoint
+In Delta Lake, a `checkpoint` is a mechanism to provide a snapshot of the state of a Delta table at a particular point in time. It is a version of the transaction log that includes all the actions from the start of the table up to a specific version. It is stored as a Parquet file and thus, allows reading the state of the table in a single file read, rather than reading the entire transaction log.
+
+Delta Lake uses a checkpoint retention policy to automatically manage checkpoints. By default, Delta Lake ensures that the last 10 checkpoints and all the checkpoints in the last 30 days are retained. This helps to ensure that the table can be read from a checkpoint even if some of the latest transaction log files are lost.
 
 ### Optimistic concurrency control
 Optimistic concurrency control provides transactional guarantees between writes (conflict-free). Under this mechanism, writes operate in three steps:
