@@ -3,6 +3,21 @@
 - [Spark's Distributed Execution](#sparks-distributed-execution)
   - [Deployment modes:](#deployment-modes)
   - [Distributed data and partitions](#distributed-data-and-partitions)
+  - [Execution plan](#execution-plan)
+    - [DAG (Directed Acyclic Graph)](#dag-directed-acyclic-graph)
+    - [Job](#job)
+    - [Stage](#stage)
+    - [Task](#task)
+- [Caching](#caching)
+- [Shuffling](#shuffling)
+- [Spark Dataframes](#spark-dataframes)
+  - [Create Dataframe using List](#create-dataframe-using-list)
+  - [Create Multi Column Dataframe using List](#create-multi-column-dataframe-using-list)
+  - [Create Dataframe with List of Lists using Row](#create-dataframe-with-list-of-lists-using-row)
+  - [Create Dataframe with List of Dictionaries using Row](#create-dataframe-with-list-of-dictionaries-using-row)
+  - [Specifying Schema using String](#specifying-schema-using-string)
+  - [Specifying Schema using List](#specifying-schema-using-list)
+  - [Specifying Schema using Spark Types](#specifying-schema-using-spark-types)
 
 ## Spark Ecosystem
 Apache Spark is a unified engine for distributed data processing. 
@@ -19,20 +34,20 @@ Spark uses in-memory storage for computations, and the Spark ecosystem consists 
 ## Spark's Distributed Execution
 <img width=600px src='https://user-images.githubusercontent.com/46085656/190648410-ca54e996-617d-49d0-b9fc-19e3deb6d4ea.png'>
 
-- Spark driver:
+### Spark driver:
   - part of the Spark application responsible for instantiating a SparkSession
   - communicates with the cluster manager
   - requests resources from the cluster manager to allocate them to Spark executors (JVMs)
   - transforms Spark operations into DAG computations, schedules them, and distribute them across Spark executors
 
-- SparkSession:
+### SparkSession:
   - a unified entry point to all Spark operations and data
 
-- Cluster manager:
+### Cluster manager:
   - manages and allocates resources for the cluster of nodes that Spark application runs
   - 4 Cluster managers can be used; built-in standalone cluster manager, Apache Hadoop YARN, Apache Mesos and Kubernetes
 
-- Spark executor:
+### Spark executor:
   - runs on each worker node in the cluster
   - Communicates with the driver program to execute tasks
   - Each executor has a number of slots that gets assigned a task
