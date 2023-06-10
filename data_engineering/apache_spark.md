@@ -35,6 +35,8 @@ Spark uses in-memory storage for computations, and the Spark ecosystem consists 
 - Spark executor:
   - runs on each worker node in the cluster
   - Communicates with the driver program to execute tasks
+  - Each executor has a number of slots that gets assigned a task
+  - Task slots within a executor are often referred to as CPU cores. But in Spark, they’re implemented as threads that work on a physical core's thread and don’t need to correspond to the number of physical CPU cores on the machine. (e.g. 1 CPU can have 16 task slots, given 1 CPU has 8 cores & 1 core has 2 threads) 
 
 ### Deployment modes:
   - Local:
@@ -65,6 +67,36 @@ Data is distributed across the cluster as partitions.
 Spark treats each partition as a high-level logical data abstraction-as a DataFrame in memory. <br>
 Perferably, a task is allocated to the executor for the data closest to the executor. Hence, this can minimise network bandwidth.
 And each executor's core is assigned its own data partition.
+
+### Execution plan
+![image](https://github.com/TravisH0301/learning/assets/46085656/dfb39d43-e671-401f-901f-e359abf62244)
+
+#### DAG (Directed Acyclic Graph)
+After an action has been called, Spark Session hands over a logical plan to DAGScheduler which translates to a physical execution plan consisted of set of stages.
+
+#### Job
+A Job is a sequence of stages, triggered by an action such as count(), collect(), read() or write() - Spark uses lazy evaluation and all transformations are not executed until action is called. 
+- Each parallelized action is referred to as a Job.
+- The results of each Job (parallelized/distributed action) is returned to the Driver from the Executor.
+- Depending on the work required, multiple Jobs will be required.
+
+#### Stage
+A job consists of stages that are sets of tasks.
+A stage is a sequence of tasks that can all be run together - i.e. in parallel - without a shuffle. For example: using ".read" to read a file from disk, then runnning ".filter" can be done without a shuffle, so it can fit in a single stage. The number of tasks in a stage also depends upon the number of partitions.
+
+#### Task
+A task is a unit of work that is sent to the executor. Each stage has some tasks, one task per partition. The same task is done over different partitions of the RDD.
+
+## Caching
+In applications that reuse the same datasets over and over, one of the most useful optimisations is caching. Caching will place a DataFrame or table into temporary storage across the executors in your cluster and make subsequent reads faster.
+
+## Shuffling
+A Shuffle refers to an operation where data is re-partitioned across a Cluster - i.e. when data needs to move between executors.
+Join and any operation that ends with ByKey will trigger a Shuffle. It is a costly operation because a lot of data can be sent via the network.
+
+![image](https://github.com/TravisH0301/learning/assets/46085656/dbeb2b02-7b77-4eff-bdbb-27151074976c)
+
+With the above shuffling, operations such as sum/count/average by colours can be executed efficiently.
 
 ## Spark Dataframes
 ### Create Dataframe using List
