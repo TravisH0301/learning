@@ -1,6 +1,10 @@
 # Apache Spark
 - [Spark Ecosystem](#spark-ecosystem)
 - [Spark's Distributed Execution](#sparks-distributed-execution)
+  - [Spark driver:](#spark-driver)
+  - [SparkSession:](#sparksession)
+  - [Cluster manager:](#cluster-manager)
+  - [Spark executor:](#spark-executor)
   - [Deployment modes:](#deployment-modes)
   - [Distributed data and partitions](#distributed-data-and-partitions)
   - [Execution plan](#execution-plan)
