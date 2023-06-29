@@ -1,13 +1,44 @@
 # Apache Kafka
 
-Kafka messages are key-value pairs with optional headers.  
+## Kafka Architecture
+![image](https://github.com/TravisH0301/learning/assets/46085656/6e45786e-b0aa-42e0-9c24-689c08b11005)
 
-## Magic byte & Schema ID
+### Messages 
+A message is a unit of data within Kafka. Messages are created by the producer and it consists of the components as illustrated below:
+<img src="https://github.com/TravisH0301/learning/assets/46085656/e47de5fa-a681-4800-8fdb-02f466e8b14a" width="600">
+
+- Key: key can be null and the type of key is either binary, string or number. Keys are used to distribute messages across partitions of the topic.
+- Value: contains the content of the message. The key-value pair is an important aspect of the messages.
+- Compression type: indicates any compression applied to the messages
+- Headers: Headers are optional and consist of key-value pairs holding metadata.
+- Partition & Offset: Once the message is sent into the Kafka topic, a partition number and an offset id are given to the message.
+- Timestamp: Timestamp of the message will be either added by a user or the system
+
+### Producers
+
+### Consumers
+
+### Brokers and Cluster
+
+### Topics and Partitions
+
+### Magic byte & Schema ID
 The payload of the messages may have a magic byte (1 byte) and a schema ID (4 bytes) prepended to the serialised message value. If the magic byte is "0" and the following 4 bytes are integers, this indicates, the messages have been serialised using the Confluent schema registry. 
 
 <img src="https://github.com/TravisH0301/learning/assets/46085656/f2bdf746-90b8-4a5c-be0a-7c85643f9ca4" width="800">
 
 As shown above, Confluent Kafka modules prepends a magic byte and a schema ID during serialisation and also expect them during deserialisation. This is done to ensure data formats are identical between producers and consumers. When messages don't contain these metadata, then, the byte payloads should be decoded using other deserialisation modules (ex. Avro).
+
+## Serialisation
+<img src="https://github.com/TravisH0301/learning/assets/46085656/0deea433-c262-44f0-ae1e-9986ea2d2789" width="600">
+
+Both keys and values of the messages are stored in bytes in Kafka. There are several different serialisation formats, and it's essential that both the producer and the consumer of the Kafka topic should use the same serialisation format. And key and value can have different serialisers. Below are some example serialisation formats:
+- String
+- Integer, and Float for numbers
+- JSON, Avro, Protobuf
+
+## Features
+
 
 # Troubleshooting
 ## Wrong magic byte
