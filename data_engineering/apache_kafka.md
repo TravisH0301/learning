@@ -41,6 +41,12 @@ Both keys and values of the messages are stored in bytes in Kafka. There are sev
 
 
 ## Troubleshooting
+### Segmentation Fault
+This error occurs when the program tries to access the memory beyond the reach. The following steps can be taken to identify and resolve the issue.
+- Debug and track the root cause of the issue
+- Increase memory stack size by $ulimit -s \<new value or unlimited\>
+- Either upgrade or downgrade any module used in the program - e.g., Downgrade Confluent-Kafka from 2.0.0 to 1.9.0
+
 ### Wrong magic byte
 The following error message occurs when the Confluent Kafka module tries to deserialise a message that doesn't contain a magic byte that equals "0". Confluent Kafka modules use "0" as the magic byte and will expect to process the messages with it. In this case, the byte payloads need to be deserialised using other modules like Avro.
 
