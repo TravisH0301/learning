@@ -40,8 +40,8 @@ Both keys and values of the messages are stored in bytes in Kafka. There are sev
 ## Features
 
 
-# Troubleshooting
-## Wrong magic byte
+## Troubleshooting
+### Wrong magic byte
 The following error message occurs when the Confluent Kafka module tries to deserialise a message that doesn't contain a magic byte that equals "0". Confluent Kafka modules use "0" as the magic byte and will expect to process the messages with it. In this case, the byte payloads need to be deserialised using other modules like Avro.
 
       confluent_kafka.avro.serializer.SerializerError: Message deserialization failed for message at au.dse-martech.adobeAnalyticsStreamer-v1 [1] offset 760125: message does not start with magic byte
