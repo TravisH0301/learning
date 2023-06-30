@@ -61,8 +61,8 @@ Below is an example of deserialising a message payload using the Avro module.
       import io
       
       # Retrieve schema from the schema registry
-      schema_registry_url = "https://schema-registry.emh-sit.service.dev:443"
-      schema_subject = "au.dse-martech.adobeAnalyticsStreamer-v1-value"
+      schema_registry_url = "<schema_registry_url>"
+      schema_subject = "<schema_subject>"
       schema_id = f"/subjects/{schema_subject}/versions/latest"
       response = requests.get(schema_registry_url + schema_id)
       schema_definition = response.json()['schema']
