@@ -48,6 +48,33 @@ This error occurs when the program tries to access the memory beyond the reach. 
 - Either upgrade or downgrade any module used in the program - e.g., Downgrade Confluent-Kafka from 2.0.0 to 1.9.0
 
 ### Wrong magic byte
-The following error message occurs when the Confluent Kafka module tries to deserialise a message that doesn't contain a magic byte that equals "0". Confluent Kafka modules use "0" as the magic byte and will expect to process the messages with it. In this case, the byte payloads need to be deserialised using other modules like Avro.
-
       confluent_kafka.avro.serializer.SerializerError: Message deserialization failed for message at au.dse-martech.adobeAnalyticsStreamer-v1 [1] offset 760125: message does not start with magic byte
+      
+The above error message occurs when the Confluent Kafka module tries to deserialise a message that doesn't contain a magic byte that equals "0". Confluent Kafka modules use "0" as the magic byte and will expect to process the messages with it. In this case, the byte payloads need to be deserialised using other modules like Avro.
+
+Below is an example of deserialising a message payload using the Avro module.
+
+      from avro.datafile import DataFileReader
+      from avro.io import DatumReader, BinaryDecoder
+      from avro.schema import parse
+      import requests
+      import io
+      
+      # Retrieve schema from the schema registry
+      schema_registry_url = "https://schema-registry.emh-sit.service.dev:443"
+      schema_subject = "au.dse-martech.adobeAnalyticsStreamer-v1-value"
+      schema_id = f"/subjects/{schema_subject}/versions/latest"
+      response = requests.get(schema_registry_url + schema_id)
+      schema_definition = response.json()['schema']
+      schema = parse(schema_definition)
+      
+      # Convert payload bytes to file-like object for BinaryDecoder
+      val = msg.value()
+      bytes_reader = io.BytesIO(val)  # converts the payload bytes into file-like object
+      decoder = BinaryDecoder(bytes_reader)  # wraps file-like object into the decoder object 
+      
+      # Read avro using the schema
+      reader = DatumReader(schema)  # creates reader object
+      message = reader.read(decoder)  # reader reads the payload by deserialising with the schema
+      
+      print(message)
