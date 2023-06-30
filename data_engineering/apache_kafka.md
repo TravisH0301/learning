@@ -1,7 +1,7 @@
 # Apache Kafka
 
 ## Kafka Architecture
-![image](https://github.com/TravisH0301/learning/assets/46085656/6e45786e-b0aa-42e0-9c24-689c08b11005)
+<img src="https://github.com/TravisH0301/learning/assets/46085656/cd0422a3-0f95-47a0-abad-8ba93f4327a9" width="600">
 
 ### Messages 
 A message is a unit of data within Kafka. Messages are created by the producer and it consists of the components as illustrated below:
