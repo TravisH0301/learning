@@ -55,7 +55,7 @@ By default, if a step fails, subsequent steps and stages will not run.
         revision: '${{CF_REVISION}}'  # Git hash
         
       unit_test:
-        title: Unit testing Python script
+        title: Unit testing Python script  # Freestyle step doesn't require a type definition
         stage: test
         image: hub.artifactory.gcp.anz/python:3.8
         commands:
