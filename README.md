@@ -60,7 +60,7 @@ Repository containing brief notes made during learning.
 -->
 
 ### CI/CD
-- [Codefresh](https://github.com/TravisH0301/learning/blob/master/data_engineering/codefresh.md): What is Codefresh and how to build CI/CD workflows on Codefresh
+- [Codefresh](https://github.com/TravisH0301/learning/blob/master/data_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
 
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
