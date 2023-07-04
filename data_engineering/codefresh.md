@@ -4,6 +4,7 @@ Codefresh is a Continuous Integration (CI) and Continuous Deployment (CD) platfo
 - [Pipelines](#Pipelines)
   - [Pipeline Steps](#Pipeline-Steps)
   - [Pipeline Stages](#Pipeline-Stages)
+- [Pipeline Examples](#Pipeline-Examples)
 
 ## Pipelines
 A pipeline in Codefresh is a sequence of steps that are executed as part of the CI/CD process. 
@@ -37,6 +38,7 @@ Stages are executed in the order they are defined.
 By default, if a step fails, subsequent steps and stages will not run.
 
 ## Pipeline Examples
+### Unit Test
     version: '1.0'
     stages:
       - main_clone
