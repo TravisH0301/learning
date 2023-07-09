@@ -37,8 +37,19 @@ Both keys and values of the messages are stored in bytes in Kafka. There are sev
 - Integer, and Float for numbers
 - JSON, Avro, Protobuf
 
-## Features
+## Offset
+Offset is a unique identifier of a record within a partition. An offset is a sequential number that the Kafka broker gives to the message when it gets published from the producer. Kafka keeps a track of the current offset (or position) for each consumer group. 
 
+A consumer commits the offset to the Kafka. When the consumer fails, it will start consuming messages from its last committed offset.
+
+By default, the auto commit (`enable.auto.commit`) is true, and the default auto commit interval (`auto.commit.interval.ms`) is 5000 milliseconds, or 5 seconds. 
+Committing an offset is an write operation and can create an overhead when done too frequently. Hence, the trade-off between the potential overhead of frequent commits and the risk of reprocessing messages has to be measured and controlled well.
+
+When the consumer group has no offset commit, the offset reset (`auto.offset.reset`) can be configured to determine the behaviour of the consumer.
+- `earliest`: automatically reset the offset to the earliest offset
+- `latest`: automatically reset the offset to the latest offset
+- `none`: throw exception to the consumer if no previous offset is found for the consumer's group
+- anything else: throw exception to the consumer.
 
 ## Troubleshooting
 ### Segmentation Fault
