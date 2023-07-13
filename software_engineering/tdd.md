@@ -3,6 +3,8 @@ Test-driven development (TDD), a.k.a. red-green-refactor, is a software developm
 The process relies on the software requirements being converted to test cases. And development is tracked by repeatedly testing the software against all test cases. 
 
 ## TDD Workflow
+<img src=https://github.com/TravisH0301/learning/assets/46085656/ea097d7b-cbf0-44a0-9c7e-443c09222883 width=800>
+
 1. Write a test: Unit test is written to test a small functionality of the codebase
 2. Run the test: The test is expected to fail at this stage
 3. Write the code: Simplest possible code is written that will pass the test
