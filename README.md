@@ -34,6 +34,7 @@ Repository containing brief notes made during learning.
 ### DevOps
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
 - [GitOps](https://github.com/TravisH0301/learning/blob/master/software_engineering/gitops.md): Information on how GitOps streamlines continuous deployment for a system with declarative desired states (ex. Kubernetes)
+- [Codefresh](https://github.com/TravisH0301/learning/blob/master/software_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
 
 
 ## 2. Backend Engineering
@@ -58,9 +59,6 @@ Repository containing brief notes made during learning.
 ### Cloud Data Engineering
 - [Google Cloud Platform Certified Professional Data Engineer](https://github.com/TravisH0301/learning/blob/master/data_engineering/gcp_prof_de.md): Notes for the certification exam
 -->
-
-### CI/CD
-- [Codefresh](https://github.com/TravisH0301/learning/blob/master/data_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
 
 ### Database 
 - [Database Engine & API](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_engine_api.md): Definition of database engine in database management system and introduction of database engine API such as Open Database Connectivity (ODBC) and Object Linking and Embedding, Database (OLE DB)
