@@ -76,7 +76,6 @@ Repository containing brief notes made during learning.
 - [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): Data vault architecture and its components, and how data vault fits into the medallion architecture
 
 ### Data Pipeline
-- [SQL-to-SQL ETL Design](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_to_sql_etl.md): Typical ETL process design for database to database data integration
 - [Data Pipeline and Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_pipeline_airflow.md): Introduction of Directed Acyclic Graphs (DAGs) in data pipeline and building DAGs with Apache Airflow
 - [Data Lineage & Quality in Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_lineage_data_quality_airflow.md): Managing data lineage and data quality in Apache Airflow
 - [Great Expectations](https://github.com/TravisH0301/learning/blob/master/data_engineering/great_expectations.md): Basic instructions to spin up Great Expectations to implement a validation layer in a data project
