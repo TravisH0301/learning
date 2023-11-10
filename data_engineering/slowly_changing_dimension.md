@@ -21,7 +21,8 @@ This type is useful when only the up-to-date data is important to the business o
 
 ## Type 2 SCD (Maintains History)
 In type 2 SCD, the data change history is managed by creating additional columns in the data warehouse. Then rows are added whenever the data source changes.
-For example, <br>
+For example,
+
 Before:<br>
 Source system:
 id|name|office|date effective
@@ -49,6 +50,7 @@ id|name|office|from date|to date|current flat
 In type 3 SCD, the change in data is managed by creating additional columns, yet no rows are added to the dimension. 
 Because no row is added, some historical data is going to be lost.
 For example:
+
 Before:<br>
 Source system:
 id|name|office|date effective
@@ -80,7 +82,7 @@ The type 6 SCD is a combination of type 1, 2 and 3 SCDs. A single dimension tabl
 
 Data warehouse table:
 id|name|history office|current office|from date|to date|current flag
---|--|--|--|--|--|--|--
+--|--|--|--|--|--|--
 123|Tom|Sydney|Melbourne|2020-01-01|2020-06-11|N
 123|Tom|Melbourne|Melbourne|2020-06-12|9999-12-31|Y
 
