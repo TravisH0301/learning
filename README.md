@@ -5,7 +5,7 @@ Repository containing brief notes made during learning.
 1. [Software Engineering](#1-Software-Engineering)
 2. [Backend Engineering](#2-Backend-Engineering)
 3. [Data Engineering](#3-Data-Engineering)
-4. [Data Science / Machine Learning](#4-Data-ScienceMachine-Learning)
+4. [Data Science / Machine Learning](#4-data-science--machine-learning)
 5. [Miscellaneous](#5-Miscellaneous)
 
 ## 1. Software Engineering 
