@@ -74,6 +74,14 @@ $n$ = total number of features
 With vecorisation, <br>
 $ f_{\vec{w},b} = \vec{w} \cdot \vec{x} + b $
 
+#### Feature Scaling
+Feature scaling is to normalise or standardise the range of the numeric features to improve the gradient descent performance. 
+
+When the range of feature values varies, this results in the skewed cost function leading to slower convergence process. And this also can lead to biased feature influence due to large scale feature dominating update process of the gradient descent.
+
+- Normalisation: scaling features to a range between 0 and 1
+- Standardisation: scaling features to have a mean of 0 and a standard deviation of 1
+
 ## Unsupervised Learning
 Unsupervised learning model takes unlabelled datasets with no labelled output and identifies a pattern/structure of the data.
 
