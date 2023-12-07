@@ -5,7 +5,7 @@ Repository containing brief notes made during learning.
 1. [Software Engineering](#1-Software-Engineering)
 2. [Backend Engineering](#2-Backend-Engineering)
 3. [Data Engineering](#3-Data-Engineering)
-4. [Data Science](#4-Data-Science)
+4. [Data Science / Machine Learning](#4-Data-ScienceMachine-Learning)
 5. [Miscellaneous](#5-Miscellaneous)
 
 ## 1. Software Engineering 
@@ -99,7 +99,7 @@ Repository containing brief notes made during learning.
 ### Storage
 - [Delta Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/delta_lake.md): Mechanisms of how Delta Lake works and its benefits
 
-## 4. Data Science
+## 4. Data Science / Machine Learning
 [Back to table of contents](#Table-of-Contents)
 ### Statistics
 - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
