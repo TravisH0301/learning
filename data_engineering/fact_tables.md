@@ -5,6 +5,12 @@ surrounded by dimensions that provide additional information via table joins.
 The first step in designing a fact table is to declare the grain. The grain is the business definition of what a single fact table record represents.
 For example, in the transactional fact table of the retail business, each record represents a physical transaction in the business.
 
+- [Transactional Fact Table](#transactional-fact-table)
+- [Periodic Snapshot Fact Table](#periodic-snapshot-fact-table)
+- [Accumulating Snapshot Fact Table](#accumulating-snapshot-fact-table)
+- [Factless Fact Table](#factless-fact-table)
+- [Reduced Fact Table](#reduced-fact-table)
+
 ## Transactional Fact Table
 - Captures data at the lowest level of details.
 - Records provide metrics about each transaction.
