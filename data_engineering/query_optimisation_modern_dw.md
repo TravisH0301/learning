@@ -2,7 +2,7 @@
 Query optimisation refers to the process of enhancing the efficiency of a query to minimise the use of computing resources and execution time.
 There are several aspects of query optimisation that can be implemented in modern data warehouses.
 
-## Paritioning (=Sharding) / Distribution
+## Paritioning / Sharding / Distribution
 Paritioning involes dividing a large data table into smaller pieces and storing across multiple nodes. Partitioning can be used to achieve:
 - Even distribution: prevents data skew (or hot spot) and improves overall query performance with parallel processing. However, it may not be effective for some queries that don't align with the partition key.
 - Query optimisation: significantly speed up specific queries that filter or join on partition key (via data skipping). However, it may lead to uneven data distribution.
