@@ -43,8 +43,8 @@ Apart from the above optimisation techniques used in modern data warehouses, que
 - Simplify queries by breaking down complex queries into simpler ones.
 - Use joins effectively with the right type of joins.
 - Avoid self-join, which can lead to complex and hard-to-read query. Instead use window function if possible.
-- Avoid too many subqueryies/CTEs that leads to multiple database passes. Instead use case statement if possible.
-- Use appropriate optimisation methods to reduce data reading - e.g., parititoning, clustering & etc.
+- Avoid too many subqueryies/CTEs that lead to multiple database passes. Instead use case statement if possible.
+- Use appropriate optimisation methods to reduce data reading & shuffling - e.g., parititoning, clustering & etc.
 
 ## Query Execution Plan
 Query execution plan allows one to understand how data is going to be processed in multiple steps. This can provide insights on possible bottleneck of the execution plan,
