@@ -71,6 +71,7 @@ Repository containing brief notes made during learning.
 - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehousing (architecture - Kimball's & Inmon's, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
 - [Data Modelling](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_modelling.md): How to do data modelling (Entity Relationship Diagram) and aspects of relational database & non-relational (NoSQL) database
 - [Relational Data Model](https://github.com/TravisH0301/learning/blob/master/data_engineering/relational_data_model.md): How to structure normalised/denormalised data models
+- [Types of Fact tables](https://github.com/TravisH0301/learning/blob/master/data_engineering/fact_tables.md): Different types of fact tables and what they are used for
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Slowly Changing Dimension (SCD)](https://github.com/TravisH0301/learning/blob/master/data_engineering/slowly_changing_dimension.md): Types of slowly changing dimensions (SCDs) to adapt to changes in the data source
 - [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): Data vault architecture and its components, and how data vault fits into the medallion architecture
