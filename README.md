@@ -66,6 +66,7 @@ Repository containing brief notes made during learning.
 - [Distributed Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/distributed_database.md): Pros & Cons of distributed database with an introduction to the distributed NoSQL database, Apache Cassandra
 - [MPP Database](https://github.com/TravisH0301/learning/blob/master/data_engineering/mpp_database.md): Introduction to Massively Parallel Processing (MPP) and its architectures of grid computing and clustering | Methods of table partitioning: Distribution style & Sorting key
 - [Partitioning in Teradata](https://github.com/TravisH0301/learning/blob/master/data_engineering/partitioning_teradata.md): How data is partitioned in Teradata and how to optimise for queries by further partitioning data in nodes and collecting statistics
+- [Query Optimisation in Modern Data Warehouses](https://github.com/TravisH0301/learning/blob/master/data_engineering/query_optimisation_modern_dw.md): Query optimisation methods used in modern data warehouses
 
 ### Data Modelling
 - [Datebase vs Data Warehouse vs Data Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/database_datawarehouse_datalake.md): Definition of relational database (OLTP & OLAP), data warehousing (architecture - Kimball's & Inmon's, dimensional data modelling, ETL vs ELT & OLAP Cube) and data lake
