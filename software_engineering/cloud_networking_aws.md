@@ -1,6 +1,6 @@
 # Cloud Networking (AWS)
 ## VPC
-<img src="images/vpc_network.png" width="800">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/vpc_network.png" width="800">
 
 A Virtual Private Cloud (VPC) is a service that enables launching resources in a logically isolated virtual network. VPC provides complete control over the perimeter of the virtual networking environment, including selection of IP address range, creation of subnets, and confiugration of route tables and network gateways.
 
@@ -32,4 +32,4 @@ Security groups perform `stateful` traffic filtering - they remember previous de
 ## DNS
 Domain Name Service (DNS) is a phonebook of the internet that allows humans to access websites with domain names. Amazon Route 53 enables user requests to internet applications running on AWS or on-premises.
 
-<img src="images/dns.png" width="600">
+<img src="https://github.com/TravisH0301/learning/blob/master/images/dns.png" width="600">
