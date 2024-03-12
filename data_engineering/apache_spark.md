@@ -14,6 +14,7 @@
   - [Task](#task)
 - [Caching](#caching)
 - [Shuffling](#shuffling)
+- [Optimisation](#optimisation)
 - [Spark Dataframes](#spark-dataframes)
   - [Create Dataframe using List](#create-dataframe-using-list)
   - [Create Multi Column Dataframe using List](#create-multi-column-dataframe-using-list)
