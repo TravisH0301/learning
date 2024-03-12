@@ -117,6 +117,11 @@ Join and any operation that ends with ByKey will trigger a Shuffle. It is a cost
 
 With the above shuffling, operations such as sum/count/average by colours can be executed efficiently.
 
+## Optimisation
+- Partitioning: stores data into partitions based on the partition key. Having partitions on the data table reduces data scanning. When choosing the partition key, use the attribute that can achieve good balance between evenly distributed data (to avoid skewness and hot spot) and query performance (e.g., column often used in filter/join). Also having too small or too big cardinality can result bad performance due to too less partitions or too many parititons.
+- Bucketing: stores data into buckets based on the selected column with the number of buckets. Bucketing can reduce data shuffling in join/aggregation operations. Hence, choosing columns that are widely used for join/aggregation operation can increase performance. Rule of thumb for the bucket numbers is to try to achieve 128MB for each bucket file, and choose power of 2 
+- Broadcast Join: When joining two tables, where one table is small enough to fit into a RAM of a Spark executor, using broadcast join with the small table can significantly reduce shuffling.
+
 ## Spark Dataframes
 ### Create Dataframe using List
     # Define a list
