@@ -168,7 +168,7 @@ Hence, make sure to subtract the interval from the expected excution start date.
     dag = DAG(
       dag_id="sample_dag",
       schedule_interval="@daily",
-      start_date=dt.datetime(2023, 12, 31)
+      start_date=datetime.datetime(2023, 12, 31)
     )
 
 One thing to becareful of would be setting a start_date with a past date that is more than an interval from the expected execution start date. <br>
@@ -179,8 +179,8 @@ This default behaviour can be switched off by setting `catchup` = False.
     dag = DAG(
       dag_id="sample_dag",
       schedule_interval="@daily",
-      start_date=dt.datetime(2023, 12, 1),
-      catchup= False
+      start_date=datetime.datetime(2023, 12, 1),
+      catchup=False
     )
 
 
