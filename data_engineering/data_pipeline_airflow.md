@@ -10,7 +10,7 @@ Data pipeline is a sequence of data processing. This may be consisted of an ETL,
     - [Creating Operator](#creating-operator)
     - [Hooks](#hooks)
     - [Task Context](#task-context)
-  - [start_date Concept](#start-date-concept)
+  - [start_date Concept](#start_date-concept)
 
 ## Directed Acyclic Graphs (DAGs)
 DAGs are the conceptual framework of data pipelines to better organise data engineering tasks. It is a graphical representation of the nodes and edges, where nodes represent
@@ -152,8 +152,8 @@ More templates can be found at [Airflow Documentation](https://airflow.apache.or
         dag=my_dag)
 
 ### start_date Concept
-In a Airflow DAG script, `start_date` parameter defines the start date of the DAG. However, this doesn't guarantee the task to be executed. The Airflow executes a task at the end of the given interval. <br>
-For example, on 2024-01-01, if start_date is set as "2024-01-01" and the interval is set as "@daily", the Airflow will start the execution after start_date + interval, which is "2024-01-01".
+In a Airflow DAG script, `start_date` parameter defines the start date of the DAG. However, this doesn't guarantee the task to be executed on the start_date. The Airflow executes a task at the end of the first given interval. <br>
+For example, on 2024-01-01, if start_date is set as "2024-01-01" and the interval is set as "@daily", the Airflow will start the execution after start_date + interval, which is "2024-01-02".
 
     # Airflow running from 2024-01-02 instead of 2024-01-01, given DAG is created on 2024-01-01
     dag = DAG(
@@ -162,7 +162,7 @@ For example, on 2024-01-01, if start_date is set as "2024-01-01" and the interva
       start_date=datetime.datetime(2024, 1, 1)
     )
 
-Hence, make sure the start_date is the date, which the task should run, - interval. For above example, the proper start_date would be "2023-12-31".
+Hence, make sure to subtract the interval from the expected excution start date. For above example, the proper start_date to have Airflow running from 2024-01-01 would be "2023-12-31".
 
     # Airflow running from 2024-01-01 as expected
     dag = DAG(
@@ -171,7 +171,7 @@ Hence, make sure the start_date is the date, which the task should run, - interv
       start_date=dt.datetime(2023, 12, 31)
     )
 
-One thing to becareful of would be setting a start_date with a past date that is more than an interval from the date, which the task should run. <br>
+One thing to becareful of would be setting a start_date with a past date that is more than an interval from the expected execution start date. <br>
 For example, if start_date = "2023-12-01" is given at an interval = "@daily", the Airflow will automatically execute for the number of times that is equivalent to the number of missed runs from the given past start_date until the current date. <br>
 This default behaviour can be switched off by setting `catchup` = False.
 
