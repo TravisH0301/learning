@@ -80,6 +80,7 @@ Repository containing brief notes made during learning.
 - [Star Schema & Snowflake Schema](https://github.com/TravisH0301/learning/blob/master/data_engineering/star_snowflake_schema.md): Introduction to star schema & snowflake schema
 - [Slowly Changing Dimension (SCD)](https://github.com/TravisH0301/learning/blob/master/data_engineering/slowly_changing_dimension.md): Types of slowly changing dimensions (SCDs) to adapt to changes in the data source
 - [Data Vault](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_vault.md): Data vault architecture and its components, and how data vault fits into the medallion architecture
+- [Semantic Layer](https://github.com/TravisH0301/learning/blob/master/data_engineering/semantic_layer.md): What is semantic layer, and how does it differ to metrics layer, metrics store, and headless BI
 
 ### Data Pipeline
 - [Data Pipeline and Airflow](https://github.com/TravisH0301/learning/blob/master/data_engineering/data_pipeline_airflow.md): Introduction of Directed Acyclic Graphs (DAGs) in data pipeline and building DAGs with Apache Airflow
