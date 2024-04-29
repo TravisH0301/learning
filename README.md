@@ -54,8 +54,10 @@ Repository containing brief notes made during learning.
 ### Authentication
 - [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
 
+<!--
 ### System Design
 - [System Design](https://github.com/TravisH0301/system_design): TBC
+-->
 
 
 ## 3. Data Engineering
