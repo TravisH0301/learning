@@ -215,6 +215,17 @@ With the above shuffling, operations such as sum/count/average by colours can be
     # Create a DataFrame with schema
     df = spark.createDataFrame(data, schema=schema)
 
-    
+## Spark QnA
+1. RDD vs Dataframe Vs Dataset
+2. Broadcast join vs Shuffle hash join vs Sort Merge Join
+3. Cache vs Persist
+4. Partitioning vs Bucketing
+5. Coalesce vs Repartition
+6. Serialization vs Desirialization
+7. Avro vs Parquet vs ORC file formats
+9. Jobs vs Stages vs Tasks
+10. Hash Aggregate vs Sort Aggregate
+12. Narrow vs Wide Transformation
+13. Managed vs External Table
 
 
