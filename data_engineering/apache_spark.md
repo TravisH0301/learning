@@ -182,15 +182,39 @@ With the above shuffling, operations such as sum/count/average by colours can be
     df = spark.createDataframe(user_rows, "id int, first_name string")
     
 ### Specifying Schema using String
-
+    # Define schema as a string
+    schema_string = "id INT, first_name STRING"
+    
+    # Define a list of data
+    data = [(1, "Scott"), (2, "David"), (3, "Tom")]
+    
+    # Create a DataFrame with schema
+    df = spark.createDataFrame(data, schema=schema_string)
 
 ### Specifying Schema using List
-
+    # Define schema as a list
+    schema_list = ["id INT", "first_name STRING"]
+    
+    # Define a list of data
+    data = [(1, "Scott"), (2, "David"), (3, "Tom")]
+    
+    # Create a DataFrame with schema
+    df = spark.createDataFrame(data, schema=schema_list)
 
 ### Specifying Schema using Spark Types
+    from pyspark.sql.types import StructType, StructField, IntegerType, StringType
+    # Define schema using Spark types
+    schema = StructType([
+        StructField("id", IntegerType(), True),
+        StructField("first_name", StringType(), True)
+    ])
     
+    # Define a list of data
+    data = [(1, "Scott"), (2, "David"), (3, "Tom")]
     
-    
+    # Create a DataFrame with schema
+    df = spark.createDataFrame(data, schema=schema)
+
     
 
 
