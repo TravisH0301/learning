@@ -2,6 +2,7 @@
 1. [Assumption](#Assumption)
 2. [High-level Overview on Mechanism](#High-level-Overview-on-Mechanism)
 3. [Example Code](#Example-Code)
+
 SharePoint provides two versions; SharePoint Online & SharePoint On-Premise.
 In authenticating connection to the SharePoint API, it requires a different approach for the SharePoint hosted on-prem environment.
 This note shows steps to authenticate using Python when the on-prem environment uses NTLM & AD FS for authentication.
