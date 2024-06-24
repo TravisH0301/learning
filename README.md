@@ -139,3 +139,6 @@ Repository containing brief notes made during learning.
 
 ### Geographic Information System
 - [Geographic Cooridnate System](https://github.com/TravisH0301/learning/blob/master/miscellaneous/geographic_coordinate_system.md): Explanation of commonly used geographic cooridnate system
+
+### On-prem SharePoint API
+- [Authenticating on-prem SharePoint API via NTLM & AD FS](https://github.com/TravisH0301/learning/blob/master/miscellaneous/on_prem_sharepoint_api.md): Steps on how to authenticate on-prem SharePoint API via NTLM (NT LAN Manager) & AD FS (Active Directory Federation Services)
