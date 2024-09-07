@@ -105,6 +105,9 @@ Repository containing brief notes made during learning.
 - [SQL Update using a Table](https://github.com/TravisH0301/learning/blob/master/data_engineering/sql_update_table.md): Demonstrates how a target table can be updated using a source table
 - [Querying hierarchical data using recursive query](https://github.com/TravisH0301/learning/blob/master/data_engineering/hierarchical_data.md): Demonstrates how to design a hierarchical data using adjacency list method and how to query it using a recursive query
 
+### dbt
+- [Slowly changing data type 1 & 2 in dbt](https://github.com/TravisH0301/learning/blob/master/data_engineering/scd_1_2_in_dbt.md): Demonstrates how to update tables with slowly changing data type 1 & 2 in dbt using Incremental materialization & Snapshot
+
 ### Storage
 - [Delta Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/delta_lake.md): Mechanisms of how Delta Lake works and its benefits
 
