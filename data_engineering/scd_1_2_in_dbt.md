@@ -1,4 +1,14 @@
 # Slowly changing data (SCD) type 1 & 2 in dbt
+- [Incremental materialization for SCD type 1](#Incremental-materialization-for-SCD-type-1)
+    - [Append new records](#Append-new-records)
+    - [Late arriving fact](#Late-arriving-fact)
+    - [Unique key & Incremental strategy](#Unique-key--Incremental-strategy)
+- [Snapshots for SCD type 2](#Snapshots-for-SCD-type-2)
+    - [Timestamp strategy to track changes](#Timestamp-strategy-to-track-changes)
+    - [Check strategy to track changes](#Check-strategy-to-track-changes)
+    - [Sanpshot best practices](#Sanpshot-best-practices)
+- [Reference](#Reference)
+
 Slowly changing data (SCD) refers to when data changes over time.
 And this document demonstrate how to update tables with SCD type 1 & 2 in dbt using Incremental materialization & snapshots.
 
@@ -74,12 +84,9 @@ Meanwhile, `delete+insert` strategy will delete the matching records in the targ
 
 **Note that these incremental strategies do NOT guarantee uniqueness of the records. Hence, de-duplication needs to be separately handled.**
 
-## SCD type 2
+## Snapshots for SCD type 2
 SCD type 2 is a method to keep both historical data with latest data in a table with the use of additional columns such as, valid_from, valid_to & is_valid - indicating validity of the records.<br>
-In dbt, snapshots can be used to keep track of data evolution over time.
-
-### Snapshots for SCD type 2
-In dbt, snapshots mechanism takes a snapshot of the query output and tracks the changes in between snapshot runs. The snapshot file contains a select statement within a snapshot block, and is typically stored under `snapshots` directory.
+In dbt, snapshots machanism can be used to keep track of data evolution over time by taking a snapshot of the query output and tracks the changes in between snapshot runs. The snapshot file contains a select statement within a snapshot block, and is typically stored under `snapshots` directory.
 
         {% snapshot dim_student_snapshot %}
         
