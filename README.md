@@ -106,6 +106,7 @@ Repository containing brief notes made during learning.
 - [Querying Hierarchical Data using Recursive Query](https://github.com/TravisH0301/learning/blob/master/data_engineering/hierarchical_data.md): Demonstrates how to design a hierarchical data using adjacency list method and how to query it using a recursive query
 
 ### dbt
+- [Jinja 101](https://github.com/TravisH0301/learning/blob/master/data_engineering/jinja_101.md): Covers basic Jinja syntax and functionalities
 - [Slowly Changing Data Type 1 & 2 in dbt](https://github.com/TravisH0301/learning/blob/master/data_engineering/scd_1_2_in_dbt.md): Demonstrates how to update tables with slowly changing data type 1 & 2 in dbt using Incremental materialization & Snapshot
 
 ### Storage
