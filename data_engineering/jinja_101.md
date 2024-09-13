@@ -1,4 +1,4 @@
-Jinja 101
+# Jinja 101
 Jinja is a python-based template engine that is widely used in web frameworks like Flask and Django.
 It allows users to generate templates with dynamic contents like variables and loops.<br>
 This is possible as Jinja reads and compiles the templates, holding both static content and dynamic placeholders,
@@ -44,9 +44,17 @@ Filters are separated from the variable by a pipe symbol (|) and may have option
 For Jinja's built-in filters, visit https://tedboy.github.io/jinja2/templ14.html
 
     {% set words = ["World", "Hello"] %}
-    {{ words|sort|join(' ') }}
+    {{ words | sort | join(' ') }}
 
     Returns: "Hello World"
+
+Filters can also be applied to a block of code
+
+        {% filter upper %}
+            this text becomes uppercase
+        {% endfilter %}
+
+        Returns: THIS TEXT BECOMES UPPERCASE
 
 *Note: Multiple filters can be applied in series.
 
@@ -74,4 +82,159 @@ Adding a dash symbol (-) at the start of end of the tag will remove all whitespa
     Returns: helloworld
 
 ## Escaping
+Using expression delimiter with quotations can output escaped strings.
+
+        {{ '{{' }}
+
+        Returns: '{{'
+
+A block of code can also be escaped using `raw` statement.
+
+        {% raw %}
+            {% for item in items %}
+                ...
+            {% endfor %}
+        {% endraw %}
+
+        Returns: {% for item in items %} 
+                     ...
+                 {% endfor %}
+
+## Control Structures
+A control structure controls the flow of a program - conditionals (e.g., if), for-loops, as well as macros and blocks.
+Control structures appear inside statement blocks.
+
+### For
+        {% for user in users %}
+            {{ user.username }}
+        {% endfor %}
+
+Inside of a for-loop block, the following special variables can be accessed.
+
+|variable|description|
+|--|--|
+loop.index|Current iteration of the loop (starts from 1).
+loop.index0|Current iteration of the loop (starts from 0).
+loop.first|True if first iteration.
+loop.last|True if last iteration.
+loop.length|The number of items in the sequence.
+loop.previtem|Previously iterated item. Undefined during first iteration.
+loop.nextitem|Next iterating item. Undefined during last iteration.
+
+`else` can be used in case no iteration took place due to empty sequence or filtering removed all items.
+
+        {% for user in users %}
+            {{ user.username }}
+        {% else %}
+            no users found
+        {% endfor %}
+
+### If
+`if` statement can be used to test if a variable is defined, not empty and not false.
+
+        {% if users %}
+            {% for user in users %}
+                ...
+            {% endfor %}
+        {% endif %}
+
+`elif` and `else` can be used like Python.
+
+        {% if num > 0 %}
+            positive number
+        {% elif num < 0 %}
+            negative number
+        {% else %}
+            zero
+        {% endif %}
+
+### Macros
+Macros are comparable with functions in regular programming.
+
+        {% macro introduce(name, age=20) %}
+            Hi my name is {{ name }} and I am {{ age }} years old
+        {% endmacro %}
+
+        {{ introduce("David") }}
+
+        Returns: Hi my name is David and I am 20 years old
+
+*Note: macro arguments can be predefined with default values.
+
+## Scoping Behaviour
+Variables set inside a block are not accessible outside of it (like local and global variables in Python). <br>
+`namespace` objects allow propagating changes across scopes (acts as a global variable in Python).
+
+        {% set global_num = namespace(value=1) %}
+        
+        {% if true %}
+            {% set global_num.value = 2 %}
+        {% endif %}
+
+        {{ global_num.value }}
+
+        Returns: 2
+
+## Block Assignments
+Block assignments can capture the contents of a block into a variable. And they supports filters.
+
+        {% set hello | upper %}
+            hello world
+        {% endset %}
+
+        {{ hello }}
+
+        Returns: HELLO WORLD
+
+## Expressions
+### Literals
+Literals are the simplest form of expressions such as strings and numbers.
+
+- String: Defined within single or double quotations.
+- Integers
+- Floating point numbers
+- List: Defined within square brackets.
+- Tuple: Defined within round brackers. Immutable.
+- Dictionary: Defined within braces (curly brackets) with a key and value.
+- Boolean: true (=True) or flase (=False).
+
+### Math
+- Addition: "+"
+- Subtraction: "-"
+- Division: "/"
+- Floor: "//" Truncated division result (e.g., 20 // 7 = 2)
+- Modulo: "%" Reminder of division result (e.g., 20 // 7 = 6)
+- Multiplication: "*"
+- Power: "**"
+
+### Comparison
+- Equal: "=="
+- Not Equal: "!="
+- Larger Than: ">"
+- Larger or Equal to: ">="
+- Smaller Than: "<"
+- Smaller or Equal to: "<="
+
+### Logic
+- and: Returns true if left and right operands are both true
+- or: Returns true if left of right operand is true
+- not: Negates a statement (e.g., `is not`, `not in`)
+
+### Other Operators
+- in: Returns true if the left operand exists in the right operand sequence
+- is: Performs `test`
+- Pipe: "|" Applies a `filter`
+- Tilde: "~" Convers all oeprans into strings and concatenates them (e.g., {{ "Hello " ~ name ~ "!"}} Returns: Hello John! (given name="John"))
+- Callable: "()" Calls a callable (e.g., {% set words = ["hello", "world"] | join(' ') %} {{ words }} Returns: hello world)
+- Access attribute of an object: "." or "[]"
+
+
+
+
+
+
+
+
+
+
 
