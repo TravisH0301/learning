@@ -1,4 +1,23 @@
 # Jinja 101
+- [Delimiters](#delimiters)
+- [Variables](#variables)
+- [Filters](#filters)
+- [Tests](#tests)
+- [Whitespace Control](#whitespace-control)
+- [Escaping](#escaping)
+- [Control Structures](#control-structures)
+- [Scoping Behaviour](#scoping-behaviour)
+- [Block Assignments](#block-assignments)
+- [Expressions](#expressions)
+  - [For](#for)
+  - [If](#if)
+  - [Macros](#macros)
+  - [Literals](#literals)
+  - [Math](#math)
+  - [Comparison](#comparison)
+  - [Logic](#logic)
+  - [Other Operators](#other-operators)
+
 Jinja is a python-based template engine that is widely used in web frameworks like Flask and Django.
 It allows users to generate templates with dynamic contents like variables and loops.<br>
 This is possible as Jinja reads and compiles the templates, holding both static content and dynamic placeholders,
