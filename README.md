@@ -26,7 +26,7 @@ Repository containing brief notes made during learning.
 - [Multiprocessing and Ray on Python](https://github.com/TravisH0301/learning/blob/master/data_engineering/multiprocessing_ray_python.md): Instruction on implementing parallel processing on Python using Multiprocessing and Ray, and their comparison 
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
 - [Concurrency](https://github.com/TravisH0301/learning/blob/master/software_engineering/concurrency_python.md): How to achieve concurrency to process multiple tasks asynchronously using threading and asyncio in Python
-- [Recursion](https://github.com/TravisH0301/learning/blob/master/software_engineering/recursion_python.md): Recursion in Python using examples
+- [Recursion](https://github.com/TravisH0301/learning/blob/master/software_engineering/recursion_python.md): Recursion in Python with examples
 
 ### Network
 - [SSH](https://github.com/TravisH0301/learning/blob/master/software_engineering/ssh.md): How to establish SSH session between server and client using public key authentication, and how to transfer files using SFTP
@@ -36,11 +36,11 @@ Repository containing brief notes made during learning.
 - [IAM in AWS](https://github.com/TravisH0301/learning/blob/master/software_engineering/iam_aws.md): Basic IAM concepts in AWS
 
 ### DevOps
-- [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
+- [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instruction to version control using Git
 - [GitOps](https://github.com/TravisH0301/learning/blob/master/software_engineering/gitops.md): Information on how GitOps streamlines continuous deployment for a system with declarative desired states (ex. Kubernetes)
 - [Git Workflows](https://github.com/TravisH0301/learning/blob/master/software_engineering/git_workflows.md): Covers different types of development workflows using Git
 - [Codefresh](https://github.com/TravisH0301/learning/blob/master/software_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
-- [Test-Drive Development (TDD)](https://github.com/TravisH0301/learning/blob/master/software_engineering/tdd.md): What is Test-Driven Development and example unit testing in Python using unittest
+- [Test-Drive Development (TDD)](https://github.com/TravisH0301/learning/blob/master/software_engineering/tdd.md): Definition of Test-Driven Development with examples of unit test in Python using unittest module
 
 
 ## 2. Backend Engineering
