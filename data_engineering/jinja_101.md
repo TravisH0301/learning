@@ -7,6 +7,7 @@
 - [Escaping](#escaping)
 - [Control Structures](#control-structures)
   - [For](#for)
+    - [For-loop Controls](#for-loop-controls)
   - [If](#if)
   - [Macros](#macros)
 - [Scoping Behaviour](#scoping-behaviour)
@@ -17,6 +18,9 @@
   - [Comparison](#comparison)
   - [Logic](#logic)
   - [Other Operators](#other-operators)
+- [Python Methods](#python-methods)
+- [Global Functions](#global-functions)
+- [With Statement](#with-statement)
 
 Jinja is a python-based template engine that is widely used in web frameworks like Flask and Django.
 It allows users to generate templates with dynamic contents like variables and loops.<br>
