@@ -1,4 +1,8 @@
 # Git Workflows
+- [Centralised Workflow](#centralised-workflow)
+- [Feature Branch Workflow](#feature-branch-workflow)
+- [Gitflow Workflow](#gitflow-workflow)
+- [Forking Workflow](#forking-workflow)
 
 ## Centralised Workflow
 <img src="https://github.com/user-attachments/assets/b560d0ca-18bb-42de-9118-7f2a8a48d95f" height="200">
