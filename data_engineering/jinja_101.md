@@ -148,6 +148,19 @@ loop.nextitem|Next iterating item. Undefined during last iteration.
             no users found
         {% endfor %}
 
+#### For-loop Controls
+`break` and `continue` can be used in loops.
+
+    {% for user in users %}
+        {% if loop.index is even %}{% continue %}{% endif %}
+        ...
+    {% endfor %}
+
+    {% for user in users %}
+        {% if loop.index >= 10 %}{% break %}{% endif %}
+        ...
+    {% endfor %}
+
 ### If
 `if` statement can be used to test if a variable is defined, not empty and not false.
 
@@ -166,6 +179,12 @@ loop.nextitem|Next iterating item. Undefined during last iteration.
         {% else %}
             zero
         {% endif %}
+
+Inline `if` statement can be done too.
+
+    {{ "Hello {}".format(name) if name }}
+
+    {{ "Hello {}".format(name) if name else "Hello John" }}
 
 ### Macros
 Macros are comparable with functions in regular programming.
@@ -247,6 +266,43 @@ Literals are the simplest form of expressions such as strings and numbers.
 - Callable: "()" Calls a callable (e.g., {% set words = ["hello", "world"] | join(' ') %} {{ words }} Returns: hello world)
 - Access attribute of an object: "." or "[]"
 
+## Python Methods
+Python methods of a variable's type (e.g., string methods) can be used.
+
+    {% set name = "thomas" %}
+    {{ name.upper() }}
+
+    Returns: THOMAS
+
+    {% set name = "Tavid" %}
+    {{ name.replace("T", "D") }}
+
+    Returns: David
+
+String format method is also feasible.
+
+    {{ "Hello %s!" % name }}
+
+    {{ "Hello {}".format(name) }}
+
+## Global Functions
+Jinja provides functions available in the global scope.
+
+- range([start, ]stop[, step]
+- dict(**items)
+- namespace(...): Global container that can have attributes assigned using `set` statement. Assigned attributes can propagate different scopes.
+
+## With Statement
+The `with` statement creates a new inner scope, and variables set within this scope are not accessible outside of the scope. There are 2 ways to set a variable within the `with` statement.
+
+    {% with name = "Jay" %}
+        {{ name }}
+    {% endfor %}
+
+    {% with %}
+        {% set name = "Jay" %}
+        {{ Jay }}
+    {% endwith %}
 
 
 
