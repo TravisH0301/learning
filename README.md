@@ -38,6 +38,7 @@ Repository containing brief notes made during learning.
 ### DevOps
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instructions to version control using Git
 - [GitOps](https://github.com/TravisH0301/learning/blob/master/software_engineering/gitops.md): Information on how GitOps streamlines continuous deployment for a system with declarative desired states (ex. Kubernetes)
+- [Git Workflows](https://github.com/TravisH0301/learning/blob/master/software_engineering/git_workflows.md): Covers different types of development workflows using Git
 - [Codefresh](https://github.com/TravisH0301/learning/blob/master/software_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
 - [Test-Drive Development (TDD)](https://github.com/TravisH0301/learning/blob/master/software_engineering/tdd.md): What is Test-Driven Development and example unit testing in Python using unittest
 
