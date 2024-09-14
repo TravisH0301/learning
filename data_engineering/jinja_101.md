@@ -292,7 +292,7 @@ String format method is also feasible.
 ## Global Functions
 Jinja provides functions available in the global scope.
 
-- range([start, ]stop[, step]
+- range([start, ]stop[, step])
 - dict(**items)
 - namespace(...): Global container that can have attributes assigned using `set` statement. Assigned attributes can propagate different scopes.
 
