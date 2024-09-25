@@ -27,7 +27,7 @@ Repository containing brief notes made during learning.
 - [Pandas Parallelism via Modin](https://github.com/TravisH0301/learning/blob/master/data_engineering/pandas_parallelism_modin.md): Instruction on how to run Pandas operations in parallel by using Modin
 - [Concurrency](https://github.com/TravisH0301/learning/blob/master/software_engineering/concurrency_python.md): How to achieve concurrency to process multiple tasks asynchronously using threading and asyncio in Python
 - [Recursion](https://github.com/TravisH0301/learning/blob/master/software_engineering/recursion_python.md): Recursion in Python with examples
-- [Python Style Guides](https://github.com/TravisH0301/learning/blob/master/software_engineering/python_style_guide.md#type-annotation): Summary of recommended style guides from PEP 8, Google and Black
+- [Python Style Guides](https://github.com/TravisH0301/learning/blob/master/software_engineering/python_style_guide.md): Summary of recommended style guides from PEP 8, Google and Black
 
 ### Network
 - [SSH](https://github.com/TravisH0301/learning/blob/master/software_engineering/ssh.md): How to establish SSH session between server and client using public key authentication, and how to transfer files using SFTP
