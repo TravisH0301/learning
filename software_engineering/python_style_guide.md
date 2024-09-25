@@ -117,7 +117,7 @@ Long lines can be wrapped in parenthesis. A backslash can also be used for line 
   - Use "cls" for the first argument of class methods
 - Constants should have UPPERCASE (with underscores) names
 
-### Type Hints (Type Annotation)
+### Type Annotation
 Type hints make Python code more explicit about the types of the variables/arguments.
 Python is dynamically typed, where a varible type is not defined in the beginning.
 By explicitly annotating the type, it can enhance maintainability and bug prevention (through type checker program).
