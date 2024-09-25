@@ -4,6 +4,21 @@ This note summarises recommended Python style guides from PEP 8, Google & Black.
 Note that different style guides may have conflicts, and based on the personal perference, one may choose a style over the other or even mix them.
 The main purpose of the style guide is to improve code ***readability*** and make it ***consistent***.
 
+- [PEP 8](#pep-8)
+  - [Indentation](#indentation)
+    - [Hanging Indentation](#hanging-indentation)
+  - [Maximum Line Length](#maximum-line-length)
+  - [Break before Binary Operation](#break-before-binary-operation)
+  - [Blank Lines](#blank-lines)
+  - [Imports](#imports)
+  - [String Quotes](#string-quotes)
+  - [Whitespace in Expressions and Statements](#whitespace-in-expressions-and-statements)
+  - [Trailing Commas](#trailing-commas)
+  - [Comments](#comments)
+  - [Naming Conventions](#naming-conventions)
+  - [Type Annotation](#type-annotation)
+  - [Other Recommendations](#other-recommendations)
+
 ## PEP 8
 ### Indentation
 4 spaces. However many IDE automatically converts a tab into 4 spaces. Hence, tab can be used as long as it results in 4 spaces.
