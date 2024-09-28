@@ -18,6 +18,11 @@ The main purpose of the style guide is to improve code ***readability*** and mak
   - [Naming Conventions](#naming-conventions)
   - [Type Annotation](#type-annotation)
   - [Other Recommendations](#other-recommendations)
+- [Google](#google)
+  - [Python Rules](#python-rules)
+    - [Lint](#lint)
+    - [Imports](#imports)
+
 
 ## PEP 8
 ### Indentation
@@ -235,7 +240,34 @@ Below shows examples of types that can be annotated.
 where the flow control statement would jump outside the finally suite.
 This is because such statements will implictly cancel any active exception that is propagating through the finally suite.
 
+## Google
+### Python Rules
+#### Lint
+Linting provides a static analysis over the code to detect bugs and check compliance against PEP 8.<br>
+Best practice is to use a style formatter (e.g., Black) followed by a linter like Flake 8 or Pylint (Flake 8 is lighter than Pylint).
 
+#### Imports
+Use `import` statements for packages* and modules only, not for individual types, classes or functions - except for common utility modules (e.g., from typing import List) or long module names to enhance readability.<br>
+This is to explicitly define which namespace* the types, classes or functions are from to avoid confusion.
+
+- Use `import x` for importing packages and modules
+- Use `from x import y` where x is the package prefix (location or namespace) and y is the module name without prefix
+- Use `from x import y as z` in to avoid name conflict with other modules or built-in names, when y is too long or too generic
+- Use `import y as z` only when z is a standard abbreviation (e.g., import pandas as pd)
+
+*Package: directory containing collection of sub-packages or modules (single .py file). This directory contains `__init__.py` to indicate it's a package.
+
+*Namespace: container holding set of names (variables, functions, etc.) There are several namespopes in Python:
+- Local: defined within a function
+- Enclosing: defined within an enclosing function of nested functions<br>
+
+      def outer_func():
+          x = 5  # enclosing scope
+
+          def inner_func():
+              x = 2  # local scope
+- Global: defined in the global level of modules or scripts, including imported packages/modules.
+- Built-in: Python's built-in namespace (e.g., print())
 
 
 
