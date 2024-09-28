@@ -21,7 +21,7 @@ The main purpose of the style guide is to improve code ***readability*** and mak
 - [Google](#google)
   - [Python Rules](#python-rules)
     - [Lint](#lint)
-    - [Imports](#imports)
+    - [Imports](#imports-1)
 
 
 ## PEP 8
