@@ -120,7 +120,8 @@ Repository containing brief notes made during learning.
 - [Measure of Skewness and Kurtosis](https://github.com/TravisH0301/learning/blob/master/data_science/skewness_kurtosis.md): Understanding of skewness and kurtosis
 - [Statistical Feature Selection Methods](https://github.com/TravisH0301/learning/blob/master/data_science/feature_selection_methods.md): Reference to feature selection methods for numercial and categorical data
 - [Average of Average](https://github.com/TravisH0301/learning/blob/master/data_science/avg_of_avg.md): Interpretation of different average of average methods
-- [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/data_science/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering 
+- [Image Segmentation by K-Means Clustering](https://github.com/TravisH0301/learning/blob/master/data_science/image_segmentation_with_k_means_clustering.md): Unsupervised image segmentation by k-means clustering
+- [Anomaly Detection in Time Series using Statistics](https://github.com/TravisH0301/learning/blob/master/data_science/anomaly_detection_ts_stats.md): Anomaly detection in time series data using statistics
 
 ### Machine Learning
 - [Time Series Forecasting](https://github.com/TravisH0301/learning/blob/master/data_science/time_series_forecasting.md): Time series forecasting using statistical modelling
