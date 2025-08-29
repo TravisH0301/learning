@@ -132,7 +132,7 @@ Repository containing brief notes made during learning.
 - [VGG model](https://github.com/TravisH0301/learning/blob/master/data_science/vgg_model.md): Variation of convolutional neural network
 
 ### LLM
-- [Prompt Engineering](https://github.com/TravisH0301/learning/blob/master/data_science/prompt_engineering.md): Methods to make more effective prompts
+- [Prompt Engineering](https://github.com/TravisH0301/learning/blob/master/data_science/prompt_engineering.md): Methods to make effective prompts
 
 ## 5. Miscellaneous
 [Back to table of contents](#Table-of-Contents)
