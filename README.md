@@ -113,6 +113,7 @@ Repository containing brief notes made during learning.
 
 ### Storage
 - [Delta Lake](https://github.com/TravisH0301/learning/blob/master/data_engineering/delta_lake.md): Mechanisms of how Delta Lake works and its benefits
+- [ACID Transaction in Open Table Format](https://github.com/TravisH0301/learning/blob/master/data_engineering/acid_open_table_format.md): How ACID transaction is achieved in open table format
 - [Nested Structure in Parquet](https://github.com/TravisH0301/learning/blob/master/data_engineering/nested_structure_parquet.md): Explains how Parquet stored nested structure using definition level & repetition level
 
 ## 4. Data Science / Machine Learning
