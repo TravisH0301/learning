@@ -119,9 +119,18 @@ Join and any operation that ends with ByKey will trigger a Shuffle. It is a cost
 With the above shuffling, operations such as sum/count/average by colours can be executed efficiently.
 
 ## Optimisation
-- Partitioning: stores data into partitions based on the partition key. Having partitions on the data table reduces data scanning. When choosing the partition key, use the attribute that can achieve good balance between evenly distributed data (to avoid skewness and hot spot) and query performance (e.g., column often used in filter/join). Also having too small or too big cardinality can result bad performance due to too less partitions or too many parititons.
-- Bucketing: stores data into buckets based on the selected column with the number of buckets. Bucketing can reduce data shuffling in join/aggregation operations. Hence, choosing columns that are widely used for join/aggregation operation can increase performance. Rule of thumb for the bucket numbers is to try to achieve 128MB for each bucket file, and choose power of 2 
-- Broadcast Join: When joining two tables, where one table is small enough to fit into a RAM of a Spark executor, using broadcast join with the small table can significantly reduce shuffling.
+- Partitioning: divides a dataset into smaller subsets called partitions based on the distinct values of one or more columns. Each distinct value creates a new partition, which is stored as a separate sub-directory in the file system.
+  - Benefit: Allows data pruning/skipping during data read using a partition key used in query filter.
+  - How to choose right partition key: Low-cardinality attribute frequently used in filters. If high-cardinality, I/O overheads become large.
+  - When to use Parititioning: To achieve data pruning with low-cardinality column often used in filters.
+- Bucketing: divides data into a fixed number of buckets based on hash value of specific column. In the file system, data is stored in separate files (buckets) within directory or sub-directory (if partitioned.) Equivalent to z-ordering in delta lake or clustering in BigQuery.
+  - Benefit: Sorts data to reduce shuffling during join or aggregate operations
+  - How to choose right bucket key: High-cardinality attribute used in join or aggregate operation. If low-cardinality, it won't fully benefit from sorting data.
+  - When to use Bucketing: To optimise join/aggregate operation with high-cardinality column. Bucketing can be used on top of paritioning to further optimise query performance
+- Handling Skewness: Data skewness can occur by skewed partition key or bucket key, which can create hot spot where data operation gets heavily focused on one or few nodes, neglecting the benefit of distributed processing. To avoid this, careful key selection is required before partitioning or bucketing (balance between even distribution vs. query optimisation). Following methods can also be considered:
+  - Salting: Adding random prefix or suffix to the key values to achieve even distribution of partitions
+  - Broadcast join: If one of tables in join is small enough to fix in memory, broadcasting the small table across all nodes can eliminate the need of shuffling the larget table thus avoiding skewness during join
+  - Adaptive Query Optimization (AQO): When enabled, Spark's AQO can dynamically detect and handle skew at run time by adjusting the number of partitions via coalescing or splitting partitions and switching join strategies to parallelise the work for the hot key.
 
 ## Spark Dataframes
 ### Create Dataframe using List
