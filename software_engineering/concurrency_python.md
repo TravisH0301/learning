@@ -3,9 +3,9 @@
 - [Concurrent Programming](#concurrent-programming)
 - [Type of Processes](#type-of-processes)
   - [What Concurrency to Use](#what-concurrency-to-use)
- - [I/O-Bound: Multi-threading]
- - [I/O-Bound: Asynchronous]
- - [CPU-Bound: Multi-processing]
+ - [I/O-Bound: Multi-threading](#io-bound-multi-threading)
+ - [I/O-Bound: Asynchronous](#io-bound-asynchronous)
+ - [CPU-Bound: Multi-processing](#cpu-bound-multi-processing)
 
 ## Concurrent Programming
 Concurrency is simultaneous occurrence of a thread/task/process. There are three methods to achieve concurrency in Python
