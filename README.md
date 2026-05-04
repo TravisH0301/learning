@@ -3,7 +3,6 @@ Repository containing brief notes made during learning.
 
 ## Table of Contents
 1. [Software Engineering](#1-Software-Engineering)
-2. [Backend Engineering](#2-Backend-Engineering)
 3. [Data Engineering](#3-Data-Engineering)
 4. [Data Science / Machine Learning](#4-data-science--machine-learning)
 5. [Miscellaneous](#5-Miscellaneous)
@@ -36,6 +35,9 @@ Repository containing brief notes made during learning.
 ### Security
 - [IAM in AWS](https://github.com/TravisH0301/learning/blob/master/software_engineering/iam_aws.md): Basic IAM concepts in AWS
 
+### Authentication
+- [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
+
 ### DevOps
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instruction to version control using Git
 - [GitOps](https://github.com/TravisH0301/learning/blob/master/software_engineering/gitops.md): Information on how GitOps streamlines continuous deployment for a system with declarative desired states (ex. Kubernetes)
@@ -43,9 +45,6 @@ Repository containing brief notes made during learning.
 - [Codefresh](https://github.com/TravisH0301/learning/blob/master/software_engineering/codefresh.md): What is Codefresh and its CI/CD pipeline with examples
 - [Test-Drive Development (TDD)](https://github.com/TravisH0301/learning/blob/master/software_engineering/tdd.md): Definition of Test-Driven Development with examples of unit test in Python using unittest module
 
-
-## 2. Backend Engineering
-[Back to table of contents](#Table-of-Contents)
 ### Internet
 - [Internet](https://github.com/TravisH0301/learning/blob/master/backend_engineering/internet.md): Basic explanation of what internet is, and how information is communicated through internet with different protocol layers
 - [HTTP](https://github.com/TravisH0301/learning/blob/master/backend_engineering/http.md): Characteristics of HTTP, how communication is made between a client and a server using HTTP request and HTTP response, and HTTP/2 & HTTP/3
@@ -53,8 +52,6 @@ Repository containing brief notes made during learning.
 ### API
 - [REST API](https://github.com/TravisH0301/learning/blob/master/backend_engineering/rest_api.md): Architectural constraints of REST API
 
-### Authentication
-- [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
 
 <!--
 ### System Design
