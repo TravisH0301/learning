@@ -2,8 +2,7 @@
 JWT or JSON Web Token is string of characters used to transmit information between partises as a JSON object.
 
 ## Use Case
-- Authorisation: Most common scenario for using JWT. Once the user is logged in (authenticated), the server issues a JWT for the user including the role, permission, expiry time, etc.
-- The user/client then uses this JWT in their HTTP authorisation header to access routes, services and resources that are permitted with this token.
+- Authorisation: Most common scenario for using JWT. Once the user is logged in (authenticated), the server issues a JWT for the user including the role, permission, expiry time, etc. The user/client then uses this JWT in their HTTP authorisation header to access routes, services and resources that are permitted with this token.
 - Information Exchange: JWT is a good way to securely transmit information between parties, because JWT can be signed, ensuring the receiver know the senders are who they say they are.
 
 ## Structure
