@@ -14,7 +14,18 @@ And OIDC is also used to provide single sign-on.
 - **Refresh Token**: Refresh tokens are used to get a new access token once the existing access token expires. These can only be used once and has a longer validity period than access tokens.
 
 ## OIDC Flow
-The primary flow of OIDC (same as OAuth 2.0) is the authorization code flow, where the Relying party (or Client in OAuth) secretly exchanges an authorization code for tokens, instead of direct handover of tokens post user authentication.
+OIDC flows are identical to OAuth 2.0 flows as it extends with the following:
+- Use of the **"OpenID" Scope**: OIDC is triggered by including the openid scope in an OAuth request, prompting the server to return an ID Token.
+- **ID Token**: The key difference is that OIDC provides an ID Token (a JWT containing user information) alongside the standard OAuth access token.
+- **UserInfo Endpoint**: OIDC adds an optional UserInfo endpoint that the client can call to get more details about the user.
+
+And here are the OAuth 2.0 flow types that OIDC flow uses too:
+- **Authorization Code flow**: only works with clients that can secure their client secret. First, the client directs the resource owner to an authorization server. Subsequently, the resource owner authenticates with the authorization server, which then redirects the resource owner back to the client with an authorization code.
+- **Implicit flow**: is designed for clients who can’t secure their client secret. This process is similar to the Authorization Code flow; however, the access token is returned to the client directly without using an intermediate authorization code.
+- **Password flow**: requires the client to collect the resource owner’s authentication details and send them to the authorization server. Only clients that the resource owner highly trusts should employ this process.
+- **Client Credentials flow**: is best when the client is also the resource owner. This involves the client undergoing authentication with the authorization server using its credentials.
+
+The primary flow of OIDC (same as OAuth 2.0) is the authorization code flow, where the Relying party (or Client in OAuth) secretly exchanges an authorization code for tokens, instead of direct handover of tokens post user authentication. The below is the authorization code flow with OIDC's authentication layer.
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/643397c2-d185-4c9e-b59e-b630eae3baa4" />
 
