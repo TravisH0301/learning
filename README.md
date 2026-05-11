@@ -38,6 +38,7 @@ Repository containing brief notes made during learning.
 ### Authentication
 - [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
 - [JSON Web Token (JWT)](https://github.com/TravisH0301/learning/blob/master/software_engineering/jwt.md): Explanation of what JWT is and its signature mechanism
+- [OIDC](https://github.com/TravisH0301/learning/blob/master/software_engineering/OIDC.md): What is Open ID Connect protocol and how it extends on OAuth
 
 ### DevOps
 - [Git](https://github.com/TravisH0301/learning/blob/master/software_engineering/git.md): Instruction to version control using Git
