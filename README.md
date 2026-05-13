@@ -32,10 +32,8 @@ Repository containing brief notes made during learning.
 - [SSH](https://github.com/TravisH0301/learning/blob/master/software_engineering/ssh.md): How to establish SSH session between server and client using public key authentication, and how to transfer files using SFTP
 - [Cloud Networking in AWS](https://github.com/TravisH0301/learning/blob/master/software_engineering/cloud_networking_aws.md): Basic networking concepts in AWS
 
-### Security
+### Identity & Access Management (IAM)
 - [IAM in AWS](https://github.com/TravisH0301/learning/blob/master/software_engineering/iam_aws.md): Basic IAM concepts in AWS
-
-### Authentication
 - [OAuth](https://github.com/TravisH0301/learning/blob/master/backend_engineering/oauth.md): Working mechanism of OAuth to delegate access to the applications
 - [JSON Web Token (JWT)](https://github.com/TravisH0301/learning/blob/master/software_engineering/jwt.md): Explanation of what JWT is and its signature mechanism
 - [OIDC](https://github.com/TravisH0301/learning/blob/master/software_engineering/OIDC.md): What is Open ID Connect protocol and how it extends on OAuth
